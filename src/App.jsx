@@ -1,13 +1,23 @@
+import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import ProductGrid from "./components/ProductGrid";
-import ProductPage from "./pages/ProductPage";
+
+const ProductPage = lazy(() => import("./pages/ProductPage"));
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<ProductGrid />} />
-      <Route path="/product/:id" element={<ProductPage />} />
-    </Routes>
+    <Suspense
+      fallback={
+        <main className="app-shell">
+          <p className="empty-state">Chargement de la page produit...</p>
+        </main>
+      }
+    >
+      <Routes>
+        <Route path="/" element={<ProductGrid />} />
+        <Route path="/product/:id" element={<ProductPage />} />
+      </Routes>
+    </Suspense>
   );
 }
 

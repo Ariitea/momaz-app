@@ -1,0 +1,63 @@
+{
+  "issue": "MOM-115",
+  "checked_at": "2026-04-12T16:11:00.846Z",
+  "status": "pass",
+  "raw": {
+    "source": "src/data/products.json.total_products",
+    "volume": 1920,
+    "generated_at": "2026-04-11T11:45:25Z",
+    "storefront": "https://a202401171449124002001685.wecatalog.cc/weshop/store/_dproQ6ja-7F03wvCcTC3V-xa_vgjgutMHry9dRw"
+  },
+  "normalized": {
+    "source": "src/data/products.json.products",
+    "volume": 1920,
+    "sha256": "2c1023a7cb4a84627dcdd43ed642ca42ddb45e97750a54dfe23efcba6f351f43"
+  },
+  "frontend": {
+    "source": "public/data/products.json.products",
+    "volume": 1920,
+    "sha256": "2c1023a7cb4a84627dcdd43ed642ca42ddb45e97750a54dfe23efcba6f351f43"
+  },
+  "diffs": {
+    "raw_vs_normalized": 0,
+    "raw_vs_frontend": 0,
+    "normalized_vs_frontend": 0,
+    "normalized_missing_in_frontend": 0,
+    "frontend_missing_in_normalized": 0
+  },
+  "identifier_bijection": {
+    "source_identifier_field": "source_id (fallback: source_link tail, then id)",
+    "frontend_identifier_field": "id",
+    "normalized_unique_identifiers": 1920,
+    "frontend_unique_identifiers": 1920,
+    "duplicates": {
+      "normalized_source_identifiers": false,
+      "frontend_identifiers": false
+    },
+    "missing_in_frontend_sample": [],
+    "missing_in_normalized_sample": [],
+    "is_bijective": true
+  },
+  "priority_brand_counts": [
+    {
+      "key": "nike",
+      "label": "Nike",
+      "count": 2
+    },
+    {
+      "key": "air_jordan",
+      "label": "Air Jordan",
+      "count": 1
+    },
+    {
+      "key": "adidas",
+      "label": "Adidas",
+      "count": 13
+    },
+    {
+      "key": "louis_vuitton",
+      "label": "Louis Vuitton",
+      "count": 335
+    }
+  ]
+}

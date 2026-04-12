@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "catalog:integrity": "node scripts/check-catalog-integrity.mjs",
+    "build": "npm run catalog:integrity && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
