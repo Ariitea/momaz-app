@@ -1,15 +1,14 @@
+import { Routes, Route } from "react-router-dom";
 import ProductGrid from "./components/ProductGrid";
-import "./index.css";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
   return (
     <main className="app-shell">
-      <header className="app-header">
-        <h1>Momaz Catalog</h1>
-        <p>Imported product catalog</p>
-      </header>
-
-      <ProductGrid />
+      <Routes>
+        <Route path="/" element={<ProductGrid />} />
+        <Route path="/product/:id" element={<ProductPage />} />
+      </Routes>
     </main>
   );
 }
