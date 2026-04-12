@@ -3,7 +3,7 @@ import { useLocation, useNavigationType, useSearchParams } from "react-router-do
 import ProductCard from "./ProductCard";
 import { useCatalogProducts } from "../data/catalogClient";
 
-const PAGE_SIZE = 24;
+const PAGE_SIZE = 12;
 const CATALOG_SCROLL_STORAGE_KEY = "momaz.catalog.scrollY";
 const SCROLL_RESTORE_MAX_AGE_MS = 10 * 60 * 1000;
 const SORT_DEFAULT = "updated_desc";
@@ -74,7 +74,7 @@ function ProductGrid() {
   const navigationType = useNavigationType();
   const [searchParams, setSearchParams] = useSearchParams();
   const urlState = useMemo(() => parseCatalogState(searchParams), [searchParams]);
-  const { products, loading, error } = useCatalogProducts();
+  const { products, loading, error } = useCatalogProducts({ mode: "lite" });
   const [searchTerm, setSearchTerm] = useState(urlState.q);
   const [selectedCategory, setSelectedCategory] = useState(urlState.cat);
   const [sortBy, setSortBy] = useState(urlState.sort);
@@ -286,7 +286,7 @@ function ProductGrid() {
       <section className="catalog-panel" aria-label="Filtres et listing catalogue">
         <div className="catalog-panel__heading">
           <h2>Inventaire Maison</h2>
-          <p>
+          <p aria-live="polite" role="status">
             {filteredProducts.length} resultat{filteredProducts.length === 1 ? "" : "s"}
             {" "}dans la source de verite active.
           </p>
@@ -378,12 +378,13 @@ function ProductGrid() {
         ) : (
           <>
             <div className="products-grid">
-              {visibleProducts.map((product) => (
+              {visibleProducts.map((product, index) => (
                 <ProductCard
                   key={product.id}
                   product={product}
                   linkSearch={location.search}
                   onNavigateToProduct={handleNavigateToProduct}
+                  motionIndex={index}
                 />
               ))}
             </div>

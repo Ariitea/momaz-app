@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-04-12T23:00:53.517Z",
+  "url": "http://127.0.0.1:4173/",
+  "lighthouseVersion": "13.1.0",
+  "scores": {
+    "performance": 89,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "seo": 92
+  },
+  "metrics": {
+    "fcpMs": 2527.5945,
+    "lcpMs": 3308.808,
+    "speedIndexMs": 2527.5945,
+    "tbtMs": 0,
+    "cls": 0.023993,
+    "totalByteWeight": 536312,
+    "unusedJavascriptBytes": 150,
+    "serverResponseTimeMs": 1
+  },
+  "acceptance": {
+    "mobilePerformanceOver80": true
+  }
+}

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "catalog:integrity": "node scripts/check-catalog-integrity.mjs",
-    "build": "npm run catalog:integrity && vite build",
+    "catalog:lite": "node scripts/build-lite-catalog.mjs",
+    "build": "npm run catalog:integrity && npm run catalog:lite && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

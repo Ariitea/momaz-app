@@ -1,0 +1,73 @@
+{
+  "issue": "MOM-134",
+  "batch": "premium-asset-p1",
+  "generatedAt": "2026-04-12",
+  "assets": [
+    {
+      "id": "hero-homepage-master",
+      "usageUiTarget": "Homepage hero",
+      "primaryFile": "docs/assets/mom-134/hero-homepage-master.jpg",
+      "masterFile": "docs/assets/mom-134/hero-homepage-master.png",
+      "ratio": "16:9",
+      "sizePx": "2560x1440",
+      "sizeBytes": 60703,
+      "alt": "Composition editoriale premium aux tons or et bleu nuit, point focal lumineux central pour annoncer la collection.",
+      "narrativeIntent": "Installer une perception luxe immediate et inviter a la decouverte du catalogue."
+    },
+    {
+      "id": "catalog-visual-01",
+      "usageUiTarget": "Product card media",
+      "primaryFile": "docs/assets/mom-134/catalog-visual-01.jpg",
+      "masterFile": "docs/assets/mom-134/catalog-visual-01.png",
+      "ratio": "4:5",
+      "sizePx": "1200x1500",
+      "sizeBytes": 29063,
+      "alt": "Visuel premium texture et matiere, composition verticale avec espace negatif controle.",
+      "narrativeIntent": "Mettre en avant la qualite percue produit des la grille catalogue."
+    },
+    {
+      "id": "catalog-visual-02",
+      "usageUiTarget": "Product card media",
+      "primaryFile": "docs/assets/mom-134/catalog-visual-02.jpg",
+      "masterFile": "docs/assets/mom-134/catalog-visual-02.png",
+      "ratio": "4:5",
+      "sizePx": "1200x1500",
+      "sizeBytes": 28149,
+      "alt": "Visuel premium avec dynamique spirale subtile et contraste doux, lecture claire du sujet.",
+      "narrativeIntent": "Soutenir la curation editoriale et la desirabilite avant clic."
+    },
+    {
+      "id": "catalog-visual-03",
+      "usageUiTarget": "Product card media",
+      "primaryFile": "docs/assets/mom-134/catalog-visual-03.jpg",
+      "masterFile": "docs/assets/mom-134/catalog-visual-03.png",
+      "ratio": "4:5",
+      "sizePx": "1200x1500",
+      "sizeBytes": 27311,
+      "alt": "Visuel premium radial, tons chauds et froids equilibres, point focal central compose.",
+      "narrativeIntent": "Renforcer la coherence de gamme et la confiance visuelle."
+    },
+    {
+      "id": "storytelling-loop-01",
+      "usageUiTarget": "Storytelling section video loop",
+      "primaryFile": "docs/assets/mom-134/storytelling-loop-01.mp4",
+      "posterFile": "docs/assets/mom-134/storytelling-loop-01-poster.jpg",
+      "ratio": "16:9",
+      "sizePx": "1280x720",
+      "durationSec": 8,
+      "sizeBytes": 120303,
+      "posterBytes": 7749,
+      "alt": "Loop video abstrait premium, mouvement lent et continu avec transition lumineuse composee.",
+      "narrativeIntent": "Apporter une respiration editoriale entre listing et narration produit."
+    }
+  ],
+  "performanceCompliance": {
+    "workflowTicket": "MOM-132",
+    "heroMaxBytes": 256000,
+    "cardMaxBytes": 153600,
+    "loopMaxBytes": 1572864,
+    "posterMaxBytes": 81920,
+    "status": "pass"
+  },
+  "formatNote": "AVIF/WebP non generes car les encodeurs ne sont pas disponibles dans cet environnement runtime; JPEG optimise utilise comme fallback conforme MOM-132."
+}

@@ -1,17 +1,41 @@
 import { useEffect, useState } from "react";
 
-const CATALOG_URL = "/data/products.json";
+const CATALOG_URLS = {
+  lite: "/data/products-lite.json",
+  full: "/data/products.json",
+};
 
-let productsCache = null;
-let productsPromise = null;
+const productsCacheByMode = {
+  lite: null,
+  full: null,
+};
 
-async function fetchCatalogProducts() {
-  if (productsCache) {
-    return productsCache;
+const productsPromiseByMode = {
+  lite: null,
+  full: null,
+};
+
+function resolveMode(mode) {
+  return mode === "full" ? "full" : "lite";
+}
+
+function normalizeProducts(payload, mode) {
+  if (mode === "lite") {
+    return Array.isArray(payload?.products) ? payload.products : [];
   }
 
-  if (!productsPromise) {
-    productsPromise = fetch(CATALOG_URL)
+  return Array.isArray(payload?.products) ? payload.products : [];
+}
+
+async function fetchCatalogProducts(mode = "lite") {
+  const resolvedMode = resolveMode(mode);
+
+  if (productsCacheByMode[resolvedMode]) {
+    return productsCacheByMode[resolvedMode];
+  }
+
+  if (!productsPromiseByMode[resolvedMode]) {
+    productsPromiseByMode[resolvedMode] = fetch(CATALOG_URLS[resolvedMode])
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Catalog request failed (${response.status})`);
@@ -20,27 +44,34 @@ async function fetchCatalogProducts() {
         return response.json();
       })
       .then((payload) => {
-        productsCache = Array.isArray(payload?.products) ? payload.products : [];
-        return productsCache;
+        productsCacheByMode[resolvedMode] = normalizeProducts(payload, resolvedMode);
+        return productsCacheByMode[resolvedMode];
       })
       .catch((error) => {
-        productsPromise = null;
+        productsPromiseByMode[resolvedMode] = null;
         throw error;
       });
   }
 
-  return productsPromise;
+  return productsPromiseByMode[resolvedMode];
 }
 
-export function useCatalogProducts() {
-  const [products, setProducts] = useState(() => productsCache || []);
-  const [loading, setLoading] = useState(() => !productsCache);
-  const [error, setError] = useState(null);
+export function prefetchFullCatalogProducts() {
+  fetchCatalogProducts("full").catch(() => {
+    // Best-effort background prefetch only.
+  });
+}
+
+export function useCatalogProducts(options = {}) {
+  const mode = resolveMode(options.mode);
+  const [products, setProducts] = useState(() => productsCacheByMode[mode] || []);
+  const [loading, setLoading] = useState(() => !productsCacheByMode[mode]);
+  const [error, setError] = useState(() => null);
 
   useEffect(() => {
     let isMounted = true;
 
-    fetchCatalogProducts()
+    fetchCatalogProducts(mode)
       .then((items) => {
         if (!isMounted) {
           return;
@@ -61,7 +92,7 @@ export function useCatalogProducts() {
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [mode]);
 
   return { products, loading, error };
 }

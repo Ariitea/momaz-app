@@ -181,12 +181,28 @@ Regles:
   - Meta: `0.75rem` a `0.85rem`, uppercase trackee
 
 ### 6.2 Palette et contraste
+<<<<<<< HEAD
 - Base: ivoire, bronze, vert profond.
 - Surfaces: eviter blanc pur uniforme; utiliser variations de tons sobres.
 - Contraste minimal:
   - texte principal >= 7:1
   - texte secondaire >= 4.5:1
 - Focus ring global: `#6d4a0f` (2px min, perceptible partout)
+=======
+- Systeme couleur officiel verrouille: Option C (Ultra Minimal Sharp), validee board.
+- Base palette officielle:
+  - `--color-white: #FFFFFF`
+  - `--color-black: #000000`
+  - `--color-gray-300: #DADADA`
+- Discipline:
+  - aucune nouvelle couleur primaire autorisee
+  - accent rare, intentionnel et non systematique
+  - coherence stricte hero/catalogue/PDP
+- Contraste minimal:
+  - texte principal >= 7:1
+  - texte secondaire >= 4.5:1
+- Focus ring global: 2px minimum, contraste >= 3:1 sur surface voisine.
+>>>>>>> c16edbe (Implement Momaz V4 immersive UX/UI)
 
 ### 6.3 Layout et grille
 - Max container: `1320px`
@@ -327,3 +343,58 @@ Risques a surveiller:
 
 Decision blocker a escalader seulement si:
 - demande explicite de privilegier esthetique au detriment des seuils perf/a11y definis.
+<<<<<<< HEAD
+=======
+
+## 11) Color system final valide (board)
+
+Decision board:
+- Option C (Ultra Minimal Sharp) est validee et devient reference officielle.
+
+Palette verrouillee:
+- `#FFFFFF` (surfaces claires dominantes)
+- `#000000` (texte principal, surfaces sombres, contrast anchors)
+- `#DADADA` (surfaces secondaires, separateurs, etat neutre)
+
+Regles non negociables:
+- ne pas introduire de nouvelles couleurs primaires
+- accent facultatif uniquement pour micro-emphase (liens ou focus ponctuel)
+- pas d'accent continu sur de grands blocs
+- coherence hero, catalogue, PDP obligatoire
+
+Quick apply final (hero + product card):
+```text
+Hero:
+- Fond dominant #FFFFFF
+- Typo principale #000000
+- Elements secondaires (rules/captions) #DADADA
+- CTA primaire: fond #000000, texte #FFFFFF
+- CTA secondaire: contour #000000, fond transparent
+
+Product card:
+- Surface carte #FFFFFF
+- Titre + prix #000000
+- Meta + separators #DADADA
+- Etat hover: elevation/ombre uniquement (pas de nouvelle couleur)
+- Focus ring: #000000 (2px min)
+```
+
+Mapping tokens implementation-ready:
+- `--surface-primary: #FFFFFF`
+- `--surface-secondary: #DADADA`
+- `--text-primary: #000000`
+- `--text-on-dark: #FFFFFF`
+- `--border-subtle: #DADADA`
+- `--action-primary-bg: #000000`
+- `--action-primary-fg: #FFFFFF`
+- `--focus-ring: #000000`
+
+Acceptance criteria de verrouillage couleur:
+- zero ajout de couleur primaire hors `#FFFFFF/#000000/#DADADA`
+- contraste AA valide sur hero, toolbar, cartes, PDP CTA
+- revue visuelle cross-page validee (hero/catalogue/PDP) sans derive chromatique
+- guideline \"accent minimal\" respectee sur toutes vues
+
+Outcome:
+- identite visuelle nette, memorable et moderne, avec discipline chromatique forte.
+>>>>>>> c16edbe (Implement Momaz V4 immersive UX/UI)

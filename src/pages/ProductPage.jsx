@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import { useCatalogProducts } from "../data/catalogClient";
+import { optimizeCatalogImageUrl } from "../utils/imageUrl";
 
 function formatPrice(product) {
   if (!product.price_amount || product.price_amount === "0.00") {
@@ -14,7 +15,7 @@ function formatPrice(product) {
 function ProductPage() {
   const { id } = useParams();
   const location = useLocation();
-  const { products, loading, error } = useCatalogProducts();
+  const { products, loading, error } = useCatalogProducts({ mode: "full" });
   const product = products.find((item) => item.id === id);
   const backSearch = location.search;
 
@@ -99,7 +100,11 @@ function ProductPage() {
   const activeImageIndex =
     galleryState.productId === id ? galleryState.activeImageIndex : 0;
   const safeImageIndex = Math.min(activeImageIndex, images.length - 1);
-  const activeImage = images[safeImageIndex];
+  const activeImage = optimizeCatalogImageUrl(images[safeImageIndex], {
+    width: 1200,
+    quality: 80,
+    format: "webp",
+  });
 
   const updateActiveImage = (nextIndex) => {
     const boundedIndex = Math.max(0, Math.min(images.length - 1, nextIndex));
@@ -157,9 +162,12 @@ function ProductPage() {
         <div className="product-detail__layout">
           <section className="product-gallery" aria-label="Galerie produit">
             <img
+              key={activeImage}
               className="product-gallery__main"
               src={activeImage}
               alt={`${product.title || "Produit"} visuel principal`}
+              decoding="async"
+              fetchPriority="high"
             />
             {images.length > 1 && (
               <ul className="product-gallery__thumbs" aria-label="Miniatures produit">
@@ -176,8 +184,14 @@ function ProductPage() {
                       aria-current={index === safeImageIndex ? "true" : undefined}
                     >
                       <img
-                        src={image}
+                        src={optimizeCatalogImageUrl(image, {
+                          width: 180,
+                          quality: 62,
+                          format: "webp",
+                        })}
                         alt={`${product.title || "Produit"} miniature ${index + 1}`}
+                        loading="lazy"
+                        decoding="async"
                       />
                     </button>
                   </li>
@@ -246,7 +260,7 @@ function ProductPage() {
       <section className="related-products" aria-label="Produits similaires">
         <div className="related-products__heading">
           <h2>Selection associee</h2>
-          <p>
+          <p aria-live="polite" role="status">
             {relatedProducts.length > 0
               ? "Pieces issues de la meme collection, triees par mise a jour recente."
               : "Aucun autre produit disponible dans cette collection."}
@@ -255,8 +269,13 @@ function ProductPage() {
 
         {relatedProducts.length > 0 && (
           <div className="products-grid">
-            {relatedProducts.map((item) => (
-              <ProductCard key={item.id} product={item} linkSearch={location.search} />
+            {relatedProducts.map((item, index) => (
+              <ProductCard
+                key={item.id}
+                product={item}
+                linkSearch={location.search}
+                motionIndex={index}
+              />
             ))}
           </div>
         )}
