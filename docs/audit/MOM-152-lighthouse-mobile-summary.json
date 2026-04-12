@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-12T23:00:53.517Z",
-  "url": "http://127.0.0.1:4173/",
+  "generatedAt": "2026-04-12T23:50:55.730Z",
   "lighthouseVersion": "13.1.0",
+  "url": "http://127.0.0.1:4173/",
   "scores": {
     "performance": 89,
     "accessibility": 100,
@@ -9,16 +9,8 @@
     "seo": 92
   },
   "metrics": {
-    "fcpMs": 2527.5945,
-    "lcpMs": 3308.808,
-    "speedIndexMs": 2527.5945,
-    "tbtMs": 0,
-    "cls": 0.023993,
-    "totalByteWeight": 536312,
-    "unusedJavascriptBytes": 150,
-    "serverResponseTimeMs": 1
-  },
-  "acceptance": {
-    "mobilePerformanceOver80": true
+    "fcpMs": 2464.6554499999997,
+    "lcpMs": 3311.6581499999998,
+    "totalByteWeight": 536730
   }
 }

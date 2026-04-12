@@ -15,6 +15,7 @@ function ProductCard({
   linkSearch = "",
   onNavigateToProduct,
   motionIndex = 0,
+  variant = "default",
 }) {
   const imageSrc = product.image || product.images?.[0] || "https://via.placeholder.com/500x500?text=No+Image";
   const optimizedImageSrc = optimizeCatalogImageUrl(imageSrc, {
@@ -34,7 +35,7 @@ function ProductCard({
         pathname: `/product/${product.id}`,
         search: linkSearch,
       }}
-      className="product-card-link"
+      className={`product-card-link product-card-link--${variant}`}
       style={{ "--card-index": String(motionIndex) }}
       onClick={onNavigateToProduct}
       onMouseEnter={prefetchFullCatalogProducts}

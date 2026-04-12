@@ -79,6 +79,7 @@ function ProductGrid() {
   const [selectedCategory, setSelectedCategory] = useState(urlState.cat);
   const [sortBy, setSortBy] = useState(urlState.sort);
   const [visibleCount, setVisibleCount] = useState(urlState.count);
+  const [heroLight, setHeroLight] = useState({ x: 50, y: 50 });
 
   useEffect(() => {
     setSearchTerm(urlState.q);
@@ -228,6 +229,28 @@ function ProductGrid() {
     );
   };
 
+  const handleHeroPointerMove = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width) * 100;
+    const y = ((event.clientY - rect.top) / rect.height) * 100;
+    setHeroLight({
+      x: Math.max(0, Math.min(100, x)),
+      y: Math.max(0, Math.min(100, y)),
+    });
+  };
+
+  const getCardVariant = (index) => {
+    if (index === 0 || index % 9 === 0) {
+      return "feature";
+    }
+
+    if (index % 5 === 0) {
+      return "tall";
+    }
+
+    return "default";
+  };
+
   if (loading) {
     return (
       <main className="app-shell">
@@ -256,8 +279,16 @@ function ProductGrid() {
 
   return (
     <main className="app-shell">
-      <section className="catalog-hero" aria-label="Presentation de la collection Momaz V2">
-        <p className="catalog-hero__kicker">Collection Momaz V2</p>
+      <section
+        className="catalog-hero"
+        style={{
+          "--hero-light-x": `${heroLight.x}%`,
+          "--hero-light-y": `${heroLight.y}%`,
+        }}
+        onPointerMove={handleHeroPointerMove}
+        aria-label="Presentation de la collection Momaz V4"
+      >
+        <p className="catalog-hero__kicker">Collection Momaz V4</p>
         <h1 className="catalog-hero__title">Commerce Premium, Curation Editoriale</h1>
         <p className="catalog-hero__subtitle">
           Un catalogue premium alimente par le flux produit en direct. Filtrez par
@@ -266,6 +297,9 @@ function ProductGrid() {
         <p className="catalog-hero__caption">
           Direction visuelle: Maison Modern, typographie editoriale et densite maitrisee.
         </p>
+        <div className="catalog-hero__line" aria-hidden="true">
+          Immersive Curated Selection
+        </div>
 
         <div className="catalog-hero__stats" aria-label="Indicateurs cles du catalogue">
           <article>
@@ -377,7 +411,7 @@ function ProductGrid() {
           </p>
         ) : (
           <>
-            <div className="products-grid">
+            <div className="products-grid products-grid--editorial">
               {visibleProducts.map((product, index) => (
                 <ProductCard
                   key={product.id}
@@ -385,6 +419,7 @@ function ProductGrid() {
                   linkSearch={location.search}
                   onNavigateToProduct={handleNavigateToProduct}
                   motionIndex={index}
+                  variant={getCardVariant(index)}
                 />
               ))}
             </div>

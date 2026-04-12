@@ -21,9 +21,9 @@ npx --yes lighthouse "http://127.0.0.1:4173/" \
 - Accessibility: `100`
 - Best practices: `100`
 - SEO: `92`
-- FCP: `2.53s`
+- FCP: `2.46s`
 - LCP: `3.31s`
-- Total transfer size: `536,312 bytes`
+- Total transfer size: `536,730 bytes`
 
 ## Acceptance
 - Mobile performance >= 80: **PASS**

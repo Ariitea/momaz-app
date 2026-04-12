@@ -19,6 +19,8 @@
   --hero-motion: 260ms;
   --card-motion: 200ms;
   --gallery-motion: 200ms;
+  --hero-light-x: 50%;
+  --hero-light-y: 50%;
 }
 
 * {
@@ -58,6 +60,11 @@ a {
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-black);
   background:
+    radial-gradient(
+      circle at var(--hero-light-x) var(--hero-light-y),
+      rgb(255 255 255 / 0.18) 0%,
+      transparent 40%
+    ),
     linear-gradient(145deg, rgb(0 0 0 / 0.98) 0%, rgb(0 0 0 / 0.85) 100%),
     repeating-linear-gradient(
       90deg,
@@ -122,6 +129,17 @@ a {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgb(255 255 255 / 0.7);
+}
+
+.catalog-hero__line {
+  margin-top: 14px;
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.62);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .catalog-hero__stats {
@@ -298,9 +316,17 @@ a {
   gap: 18px;
 }
 
+.products-grid--editorial {
+  grid-auto-flow: dense;
+}
+
 .product-card-link {
   display: block;
   height: 100%;
+}
+
+.product-card-link--feature {
+  grid-column: span 2;
 }
 
 .product-card {
@@ -315,6 +341,18 @@ a {
   transform: translateY(0);
   animation: cardEnter var(--card-motion) ease both;
   animation-delay: calc(var(--card-index, 0) * 34ms);
+}
+
+.product-card-link--feature .product-card__title {
+  font-size: clamp(1.5rem, 1.4vw + 0.9rem, 2rem);
+}
+
+.product-card-link--feature .product-card__media {
+  aspect-ratio: 16 / 10;
+}
+
+.product-card-link--tall .product-card__media {
+  aspect-ratio: 4 / 6;
 }
 
 .product-card:hover {
@@ -533,6 +571,8 @@ a {
   padding: var(--space-3);
   display: grid;
   gap: var(--space-3);
+  position: sticky;
+  top: 16px;
 }
 
 .product-detail__block {
@@ -688,6 +728,10 @@ a {
   .product-detail__layout {
     grid-template-columns: 1fr;
   }
+
+  .product-detail__panel {
+    position: static;
+  }
 }
 
 @media (max-width: 640px) {
@@ -716,6 +760,10 @@ a {
   .products-grid {
     grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
     gap: var(--space-2);
+  }
+
+  .product-card-link--feature {
+    grid-column: auto;
   }
 
   .product-card__title {
