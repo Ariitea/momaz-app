@@ -4,12 +4,10 @@ import ProductPage from "./pages/ProductPage";
 
 function App() {
   return (
-    <main className="app-shell">
-      <Routes>
-        <Route path="/" element={<ProductGrid />} />
-        <Route path="/product/:id" element={<ProductPage />} />
-      </Routes>
-    </main>
+    <Routes>
+      <Route path="/" element={<ProductGrid />} />
+      <Route path="/product/:id" element={<ProductPage />} />
+    </Routes>
   );
 }
 

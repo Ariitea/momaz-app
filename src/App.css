@@ -224,3 +224,9 @@
   cursor: pointer;
   font-size: 14px;
 }
+
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
