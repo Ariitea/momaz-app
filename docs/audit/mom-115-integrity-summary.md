@@ -1,7 +1,7 @@
 # MOM-115 Catalog Integrity Check
 
 - Status: **PASS**
-- Checked at: 2026-04-12T23:31:03.557Z
+- Checked at: 2026-04-13T10:00:55.797Z
 - Raw volume: 1920
 - Normalized volume: 1920
 - Frontend volume: 1920
@@ -14,4 +14,4 @@
 - Adidas: 13
 - Louis Vuitton: 335
 
-Report JSON: /Users/adriendesrames/Desktop/momaz-app/docs/audit/mom-115-integrity-report.json
+Report JSON: /vercel/sandbox/primary/docs/audit/mom-115-integrity-report.json
