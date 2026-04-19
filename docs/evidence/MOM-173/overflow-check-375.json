@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-04-19T13:10:43.491Z",
+  "checks": [
+    {
+      "state": "hero",
+      "bodyClientWidth": 375,
+      "bodyScrollWidth": 375,
+      "htmlClientWidth": 375,
+      "htmlScrollWidth": 375,
+      "hasHorizontalOverflow": false,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    {
+      "state": "zero-results",
+      "bodyClientWidth": 375,
+      "bodyScrollWidth": 375,
+      "htmlClientWidth": 375,
+      "htmlScrollWidth": 375,
+      "hasHorizontalOverflow": false,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    {
+      "state": "product-unavailable",
+      "bodyClientWidth": 375,
+      "bodyScrollWidth": 375,
+      "htmlClientWidth": 375,
+      "htmlScrollWidth": 375,
+      "hasHorizontalOverflow": false,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    {
+      "state": "catalog-unavailable",
+      "bodyClientWidth": 375,
+      "bodyScrollWidth": 375,
+      "htmlClientWidth": 375,
+      "htmlScrollWidth": 375,
+      "hasHorizontalOverflow": false,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "issue": "MOM-157",
+  "dependsOn": ["MOM-152", "MOM-143", "MOM-134"],
+  "generatedAt": "2026-04-13",
+  "surfaces": [
+    {
+      "surfaceId": "homepage-hero",
+      "component": "src/components/ProductGrid.jsx:catalog-hero",
+      "status": "asset_ready_not_wired",
+      "owner": {
+        "creative": "CMO",
+        "integration": "Engineering"
+      },
+      "assets": [
+        "docs/assets/mom-134/hero-homepage-master.jpg",
+        "docs/assets/mom-134/hero-homepage-master.png"
+      ]
+    },
+    {
+      "surfaceId": "catalog-card-media",
+      "component": "src/components/ProductCard.jsx:product-card__media",
+      "status": "asset_ready_not_wired",
+      "owner": {
+        "creative": "CMO",
+        "integration": "Engineering"
+      },
+      "assets": [
+        "docs/assets/mom-134/catalog-visual-01.jpg",
+        "docs/assets/mom-134/catalog-visual-02.jpg",
+        "docs/assets/mom-134/catalog-visual-03.jpg"
+      ]
+    },
+    {
+      "surfaceId": "pdp-storytelling-media",
+      "component": "src/pages/ProductPage.jsx:product-detail__panel",
+      "status": "asset_ready_no_slot",
+      "owner": {
+        "creative": "CMO",
+        "integration": "UX/Engineering"
+      },
+      "assets": [
+        "docs/assets/mom-134/storytelling-loop-01.mp4",
+        "docs/assets/mom-134/storytelling-loop-01-poster.jpg"
+      ]
+    },
+    {
+      "surfaceId": "pdp-gallery-fallback",
+      "component": "src/pages/ProductPage.jsx:product-gallery",
+      "status": "placeholder_in_use",
+      "owner": {
+        "integration": "Engineering"
+      },
+      "assets": [
+        "docs/assets/mom-134/catalog-visual-01.jpg"
+      ]
+    }
+  ],
+  "mustFixBeforeLaunch": [
+    "Wire hero media slot to local premium hero asset",
+    "Implement deterministic card fallback sequence using catalog-visual-01/02/03",
+    "Add PDP storytelling loop slot with poster fallback",
+    "Replace generic placeholder URL fallback with local premium asset"
+  ]
+}
