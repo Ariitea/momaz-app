@@ -1,6 +1,8 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import ProductGrid from "./components/ProductGrid";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const ProductPage = lazy(() => import("./pages/ProductPage"));
 
@@ -17,6 +19,8 @@ function App() {
         <Route path="/" element={<ProductGrid />} />
         <Route path="/product/:id" element={<ProductPage />} />
       </Routes>
+      <Analytics />
+      <SpeedInsights />
     </Suspense>
   );
 }

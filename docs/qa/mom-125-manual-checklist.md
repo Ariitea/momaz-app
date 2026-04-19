@@ -2,7 +2,7 @@
 
 Date: 2026-04-12
 Owner: Flavie (Frontend)
-
+npm
 ## Scope
 - Premium catalog hero and visual hierarchy
 - Premium toolbar controls (`q`, `cat`, `sort`, `count`)
