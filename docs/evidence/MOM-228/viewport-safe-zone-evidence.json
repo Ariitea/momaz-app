@@ -1,0 +1,200 @@
+{
+  "baseUrl": "http://127.0.0.1:4173",
+  "evidence": [
+    {
+      "viewport": {
+        "name": "1920x1080",
+        "width": 1920,
+        "height": 1080
+      },
+      "capturedAt": "2026-04-20T19:38:39.526Z",
+      "sceneData": [
+        {
+          "step": "S01",
+          "objectPosition": "21.5104% 34.2593%",
+          "safeZoneMode": "desktop",
+          "safeZoneStyle": {
+            "left": "5%",
+            "top": "11.1111%",
+            "width": "33.0208%",
+            "height": "46.2963%"
+          }
+        },
+        {
+          "step": "S02",
+          "objectPosition": "24.4792% 40.7407%",
+          "safeZoneMode": "desktop",
+          "safeZoneStyle": {
+            "left": "6.25%",
+            "top": "16.6667%",
+            "width": "36.4583%",
+            "height": "48.1481%"
+          }
+        },
+        {
+          "step": "S04",
+          "objectPosition": "47.9167% 40.7407%",
+          "safeZoneMode": "desktop",
+          "safeZoneStyle": {
+            "left": "28.125%",
+            "top": "16.6667%",
+            "width": "39.5833%",
+            "height": "48.1481%"
+          }
+        },
+        {
+          "step": "S07",
+          "objectPosition": "22.2917% 63.8889%",
+          "safeZoneMode": "desktop",
+          "safeZoneStyle": {
+            "left": "5%",
+            "top": "50%",
+            "width": "34.5833%",
+            "height": "27.7778%"
+          }
+        },
+        {
+          "step": "S08",
+          "objectPosition": "48.4375% 39.8148%",
+          "safeZoneMode": "desktop",
+          "safeZoneStyle": {
+            "left": "27.0833%",
+            "top": "20.3704%",
+            "width": "42.7083%",
+            "height": "38.8889%"
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "name": "1366x768",
+        "width": 1366,
+        "height": 768
+      },
+      "capturedAt": "2026-04-20T19:38:41.715Z",
+      "sceneData": [
+        {
+          "step": "S01",
+          "objectPosition": "21.5104% 34.2593%",
+          "safeZoneMode": "desktop",
+          "safeZoneStyle": {
+            "left": "5%",
+            "top": "11.1111%",
+            "width": "33.0208%",
+            "height": "46.2963%"
+          }
+        },
+        {
+          "step": "S02",
+          "objectPosition": "24.4792% 40.7407%",
+          "safeZoneMode": "desktop",
+          "safeZoneStyle": {
+            "left": "6.25%",
+            "top": "16.6667%",
+            "width": "36.4583%",
+            "height": "48.1481%"
+          }
+        },
+        {
+          "step": "S04",
+          "objectPosition": "47.9167% 40.7407%",
+          "safeZoneMode": "desktop",
+          "safeZoneStyle": {
+            "left": "28.125%",
+            "top": "16.6667%",
+            "width": "39.5833%",
+            "height": "48.1481%"
+          }
+        },
+        {
+          "step": "S07",
+          "objectPosition": "22.2917% 63.8889%",
+          "safeZoneMode": "desktop",
+          "safeZoneStyle": {
+            "left": "5%",
+            "top": "50%",
+            "width": "34.5833%",
+            "height": "27.7778%"
+          }
+        },
+        {
+          "step": "S08",
+          "objectPosition": "48.4375% 39.8148%",
+          "safeZoneMode": "desktop",
+          "safeZoneStyle": {
+            "left": "27.0833%",
+            "top": "20.3704%",
+            "width": "42.7083%",
+            "height": "38.8889%"
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "name": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "capturedAt": "2026-04-20T19:38:43.685Z",
+      "sceneData": [
+        {
+          "step": "S01",
+          "objectPosition": "50% 47.1564%",
+          "safeZoneMode": "portrait",
+          "safeZoneStyle": {
+            "left": "8.20513%",
+            "top": "11.3744%",
+            "width": "83.5897%",
+            "height": "71.564%"
+          }
+        },
+        {
+          "step": "S02",
+          "objectPosition": "48.7179% 46.8009%",
+          "safeZoneMode": "portrait",
+          "safeZoneStyle": {
+            "left": "7.17949%",
+            "top": "13.0332%",
+            "width": "83.0769%",
+            "height": "67.5355%"
+          }
+        },
+        {
+          "step": "S04",
+          "objectPosition": "48.7179% 45.0237%",
+          "safeZoneMode": "portrait",
+          "safeZoneStyle": {
+            "left": "7.69231%",
+            "top": "11.8483%",
+            "width": "82.0513%",
+            "height": "66.3507%"
+          }
+        },
+        {
+          "step": "S07",
+          "objectPosition": "48.7179% 47.9858%",
+          "safeZoneMode": "portrait",
+          "safeZoneStyle": {
+            "left": "7.17949%",
+            "top": "13.0332%",
+            "width": "83.0769%",
+            "height": "69.9052%"
+          }
+        },
+        {
+          "step": "S08",
+          "objectPosition": "47.9487% 48.9336%",
+          "safeZoneMode": "portrait",
+          "safeZoneStyle": {
+            "left": "6.15385%",
+            "top": "11.3744%",
+            "width": "83.5897%",
+            "height": "75.1185%"
+          }
+        }
+      ]
+    }
+  ]
+}

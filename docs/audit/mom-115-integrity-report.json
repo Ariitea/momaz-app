@@ -1,6 +1,10 @@
 {
   "issue": "MOM-115",
+<<<<<<< HEAD
   "checked_at": "2026-04-20T01:26:55.326Z",
+=======
+  "checked_at": "2026-04-20T22:57:46.061Z",
+>>>>>>> 2664cf3 (Final approval — MOM-232 immersive catalog + S08 conversion compliance)
   "status": "pass",
   "raw": {
     "source": "src/data/products.json.total_products",

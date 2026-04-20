@@ -1,258 +1,153 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { Link, useParams } from "react-router-dom";
-import {
-  CATALOG_FALLBACK_IMAGES,
-  PDP_STORYTELLING_POSTER,
-  PDP_STORYTELLING_VIDEO,
-} from "../config/premiumAssets";
+import { CATALOG_FALLBACK_IMAGES } from "../config/premiumAssets";
 import { useCatalogProducts } from "../data/catalogClient";
 import { optimizeCatalogImageUrl } from "../utils/imageUrl";
 import { getCategoryLabel, getDisplayTitle } from "../utils/copy";
 
-const SELECTION_STORAGE_KEY = "momaz.selection.list";
-
 function formatPrice(product) {
   if (!product?.price_amount || product.price_amount === "0.00") {
-    return "Price on request";
+    return "Price upon request";
   }
 
   return `${product.price_amount} ${product.currency || ""}`.trim();
 }
 
+function getAvailabilityLabel(rawAvailability) {
+  const normalized = typeof rawAvailability === "string"
+    ? rawAvailability.replaceAll("_", " ").trim().toLowerCase()
+    : "";
+
+  if (!normalized || normalized === "unknown") {
+    return "Selected edition";
+  }
+
+  return normalized;
+}
+
 function ProductPage() {
   const { id } = useParams();
-  const currentProductId = id || "";
   const { products, loading, error } = useCatalogProducts({ mode: "full" });
-  const [size, setSize] = useState("M");
-  const [added, setAdded] = useState(false);
-  const [storytellingVideoState, setStorytellingVideoState] = useState({
-    productId: currentProductId,
-    index: 0,
-    failed: false,
-  });
-  const [transitionProgress, setTransitionProgress] = useState(0);
-  const rafRef = useRef(0);
-  const progressRef = useRef(0);
-
   const product = useMemo(() => products.find((item) => item.id === id), [products, id]);
-  const storytellingVideoIndex =
-    storytellingVideoState.productId === currentProductId ? storytellingVideoState.index : 0;
-  const storytellingVideoFailed =
-    storytellingVideoState.productId === currentProductId ? storytellingVideoState.failed : false;
+  const rootRef = useRef(null);
 
   useEffect(() => {
-    const clamp = (value) => Math.min(1, Math.max(0, value));
-    const triggerOffset = 28;
-    const transitionDistance = 360;
-
-    const computeTarget = () => {
-      if (typeof window === "undefined") {
-        return 0;
-      }
-      const raw = (window.scrollY - triggerOffset) / transitionDistance;
-      return clamp(raw);
-    };
-
-    const animate = () => {
-      const target = computeTarget();
-      const current = progressRef.current;
-      const next = current + (target - current) * 0.12;
-      const snapped = Math.abs(target - next) < 0.001 ? target : next;
-
-      progressRef.current = snapped;
-      setTransitionProgress(snapped);
-
-      if (typeof document !== "undefined") {
-        document.body.classList.toggle("product-immersive-active", snapped > 0.6);
-      }
-
-      if (Math.abs(target - snapped) > 0.001) {
-        rafRef.current = window.requestAnimationFrame(animate);
-      } else {
-        rafRef.current = 0;
-      }
-    };
-
-    const onScroll = () => {
-      if (rafRef.current === 0) {
-        rafRef.current = window.requestAnimationFrame(animate);
-      }
-    };
-
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      if (rafRef.current) {
-        window.cancelAnimationFrame(rafRef.current);
-      }
-      document.body.classList.remove("product-immersive-active");
-    };
-  }, []);
-
-  if (loading) {
-    return <main className="product-page"><p className="catalog-state">Loading product page...</p></main>;
-  }
-
-  if (error) {
-    return (
-      <main className="product-page">
-        <div className="catalog-state catalog-state--error">
-          <h1>Catalog unavailable</h1>
-          <p>We cannot load the product feed right now. Please try again shortly.</p>
-        </div>
-        <Link className="product-back" to="/">Back to catalog</Link>
-      </main>
-    );
-  }
-
-  if (!product) {
-    return (
-      <main className="product-page">
-        <div className="catalog-state catalog-state--error">
-          <h1>Product unavailable</h1>
-          <p>This product is not available in the current catalog feed.</p>
-        </div>
-        <Link className="product-back" to="/">Back to catalog</Link>
-      </main>
-    );
-  }
-
-  const images = Array.isArray(product.images) && product.images.length > 0 ? product.images : [];
-  const frontImageSource = images[0] || CATALOG_FALLBACK_IMAGES[0] || "";
-  const frontImage = optimizeCatalogImageUrl(frontImageSource, { width: 920, quality: 76, format: "webp" });
-  const sideImage = optimizeCatalogImageUrl(images[1] || images[0] || "", { width: 600, quality: 68, format: "webp" });
-  const productTitle = getDisplayTitle(product.title, { fallback: "Untitled product", maxLength: 110 });
-  const productCategory = getCategoryLabel(product.category);
-  const storytellingVideoCandidates = [product.storytelling_video, product.video, PDP_STORYTELLING_VIDEO]
-    .filter((value) => typeof value === "string" && value.trim().length > 0)
-    .map((source) => source.trim());
-  const activeStorytellingVideo = storytellingVideoCandidates[storytellingVideoIndex] || "";
-  const prefersReducedMotion =
-    typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const shouldUseStorytellingPoster =
-    prefersReducedMotion || storytellingVideoFailed || !activeStorytellingVideo;
-
-  const addToSelection = () => {
-    let current = [];
-    try {
-      const parsed = JSON.parse(localStorage.getItem(SELECTION_STORAGE_KEY) || "[]");
-      current = Array.isArray(parsed) ? parsed : [];
-    } catch {
-      current = [];
+    if (!rootRef.current) {
+      return undefined;
     }
 
-    const alreadyExists = current.some((item) => item.id === product.id);
-    const next = alreadyExists
-      ? current
-      : [...current, { id: product.id, title: product.title || "Untitled", size, productUrl: product.product_url || "" }];
+    const sceneNodes = rootRef.current.querySelectorAll("[data-story-scene]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-active");
+          } else {
+            entry.target.classList.remove("is-active");
+          }
+        });
+      },
+      {
+        threshold: 0.55,
+      },
+    );
 
-    localStorage.setItem(SELECTION_STORAGE_KEY, JSON.stringify(next));
-    window.dispatchEvent(new Event("momaz-selection-updated"));
-    setAdded(true);
-  };
+    sceneNodes.forEach((node) => observer.observe(node));
+    return () => observer.disconnect();
+  }, [product?.id]);
+
+  if (loading) {
+    return (
+      <main className="product-story" aria-label="Product storytelling page">
+        <section className="catalog-state" role="status">
+          <h1>Loading product chapter</h1>
+          <p>Preparing immersive scenes.</p>
+        </section>
+      </main>
+    );
+  }
+
+  if (error || !product) {
+    return (
+      <main className="product-story" aria-label="Product storytelling page">
+        <section className="catalog-state catalog-state--error" role="alert">
+          <h1>Product unavailable</h1>
+          <p>This piece could not be loaded.</p>
+          <Link to="/">Return to sequence</Link>
+        </section>
+      </main>
+    );
+  }
+
+  const title = getDisplayTitle(product.title, { fallback: "Untitled product", maxLength: 110 });
+  const category = getCategoryLabel(product.category);
+  const price = formatPrice(product);
+  const images = Array.isArray(product.images) && product.images.length > 0
+    ? product.images
+    : [product.image, ...CATALOG_FALLBACK_IMAGES].filter(Boolean);
+
+  const heroImage = optimizeCatalogImageUrl(images[0] || "", {
+    width: 1800,
+    quality: 76,
+    format: "webp",
+  });
+
+  const detailImages = images.slice(1, 4).map((source) =>
+    optimizeCatalogImageUrl(source || "", {
+      width: 1320,
+      quality: 72,
+      format: "webp",
+    }),
+  ).filter(Boolean);
 
   return (
-    <main
-      className="product-page product-page--immersive"
-      style={{ "--immersive-progress": transitionProgress }}
-    >
-      <section className="product-stage" aria-label="Editorial product stage">
-        <div className="product-stage__left">
-          <p>{productCategory}</p>
-          <h1>{productTitle}</h1>
-          <p className="product-stage__description">
-            {`${productTitle} belongs to the ${productCategory} collection. This page clarifies the piece and its premium positioning at a glance.`}
-          </p>
-
-          <div className="product-stage__sizes">
-            { ["XS", "S", "M", "L", "XL"].map((sizeOption) => (
-              <button
-                key={sizeOption}
-                type="button"
-                className={sizeOption === size ? "is-active" : ""}
-                onClick={() => setSize(sizeOption)}
-              >
-                {sizeOption}
-              </button>
-            ))}
-          </div>
+    <main ref={rootRef} className="product-story" aria-label="Immersive product storytelling page">
+      <section className="product-story__hero" data-story-scene>
+        <div className="product-story__hero-media" aria-hidden="true">
+          {heroImage ? <img src={heroImage} alt="" /> : <div className="catalog-scene__fallback" />}
         </div>
+        <div className="product-story__veil" />
 
-        <div className="product-stage__center">
-          {frontImage ? <img src={frontImage} alt={productTitle || "Product visual"} /> : <div className="editorial-card__placeholder" />}
-        </div>
-
-        <aside className="product-stage__right">
-          <section className="product-storytelling" aria-label="Editorial storytelling media">
-            {shouldUseStorytellingPoster ? (
-              <img
-                src={PDP_STORYTELLING_POSTER}
-                alt={`${productTitle} storytelling visual`}
-                loading="lazy"
-                decoding="async"
-              />
-            ) : (
-              <video
-                key={activeStorytellingVideo}
-                className="product-storytelling__video product-storytelling__video--immersive"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="metadata"
-                poster={PDP_STORYTELLING_POSTER}
-                onError={() => {
-                  setStorytellingVideoState((current) => {
-                    const base =
-                      current.productId === currentProductId
-                        ? current
-                        : { productId: currentProductId, index: 0, failed: false };
-                    const next = base.index + 1;
-
-                    if (next < storytellingVideoCandidates.length) {
-                      return { productId: currentProductId, index: next, failed: false };
-                    }
-
-                    return { productId: currentProductId, index: base.index, failed: true };
-                  });
-                }}
-              >
-                <source src={activeStorytellingVideo} type="video/mp4" />
-              </video>
-            )}
-            <p className="product-storytelling__caption">Story sequence</p>
-          </section>
-
-          <strong>{formatPrice(product)}</strong>
-          <p>Save this piece to your selection list for inquiry.</p>
-          <button type="button" onClick={addToSelection}>
-            {added ? "Added to selection" : "Add to selection"}
-          </button>
-          {product.product_url ? (
-            <>
-              <a href={product.product_url} target="_blank" rel="noreferrer">
-                View external source
-              </a>
-              <p className="product-stage__source-note">The source link opens the origin site in a new tab.</p>
-            </>
-          ) : (
-            <p className="product-stage__source-note" role="status">
-              No external source is available for this product.
-            </p>
-          )}
-        </aside>
-
-        <div className="product-stage__blur product-stage__blur--left" aria-hidden="true">
-          {sideImage ? <img src={sideImage} alt="" /> : null}
-        </div>
-        <div className="product-stage__blur product-stage__blur--right" aria-hidden="true">
-          {sideImage ? <img src={sideImage} alt="" /> : null}
-        </div>
+        <article className="product-story__hero-copy">
+          <Link to="/" className="product-story__back">Back to sequence</Link>
+          <p>{category}</p>
+          <h1>{title}</h1>
+          <strong>{price}</strong>
+        </article>
       </section>
 
-      <Link className="product-back" to="/">Back to catalog</Link>
+      <section className="product-story__chapter product-story__chapter--material" data-story-scene>
+        <article>
+          <h2>Material expression</h2>
+          <p>
+            Focus on silhouette, finish, and presence. The storytelling remains vertical and
+            uninterrupted so attention stays on one object at a time.
+          </p>
+          <p>
+            Availability: {getAvailabilityLabel(product.availability)}
+          </p>
+        </article>
+      </section>
+
+      {detailImages.map((source, index) => (
+        <section
+          key={`${product.id}-detail-${index}`}
+          className={`product-story__frame ${index % 2 === 0 ? "product-story__frame--anchored" : "product-story__frame--offset"}`}
+          data-story-scene
+        >
+          <figure>
+            <img src={source} alt="" loading="lazy" decoding="async" />
+          </figure>
+        </section>
+      ))}
+
+      <section className="product-story__action product-story__action--finale" data-story-scene>
+        <article>
+          <h2>Start tailored redesign</h2>
+          <p>Return to the sequence and begin your tailored redesign path.</p>
+          <Link to="/#tailored-redesign">Start tailored redesign</Link>
+        </article>
+      </section>
     </main>
   );
 }

@@ -75,7 +75,7 @@ function ProductFocusOverlay({ product, onClose, onOpenDetail }) {
         <p>{category}</p>
         <h2>{title}</h2>
         <strong>{formatPrice(product)}</strong>
-        <p>{`SKU ${product.sku || "N/A"} · ID ${product.id || "N/A"}`}</p>
+        <p>{`Edition ${product.sku || "N/A"} · Reference ${product.id || "N/A"}`}</p>
         <div className="focus-overlay__actions">
           <Link to={`/product/${product.id}`} onClick={onOpenDetail}>
             Open full product detail

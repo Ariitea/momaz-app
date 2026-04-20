@@ -1,0 +1,21 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="S07 - Conversion Prompt">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4a4e69"/>
+      <stop offset="100%" stop-color="#6c757d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.78" cy="0.22" r="0.55">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#glow)"/>
+  <g opacity="0.22" fill="#ffffff">
+    <circle cx="280" cy="190" r="120"/>
+    <circle cx="1660" cy="860" r="180"/>
+    <circle cx="1220" cy="370" r="90"/>
+  </g>
+  <text x="120" y="860" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="700">S07 - Conversion Prompt</text>
+  <text x="120" y="925" fill="#f6f6f6" font-family="Georgia, 'Times New Roman', serif" font-size="34">Fallback stable frame</text>
+</svg>
