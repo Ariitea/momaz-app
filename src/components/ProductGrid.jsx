@@ -1,8 +1,9 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import HeroLanding from "./HeroLanding";
 import ProductCard from "./ProductCard";
+import ProductFocusOverlay from "./ProductFocusOverlay";
+import UtilityRail from "./UtilityRail";
 import { useCatalogProducts } from "../data/catalogClient";
-import { getCategoryLabel } from "../utils/copy";
 
 const SORT_OPTIONS = {
   recent: "recent",
@@ -10,26 +11,143 @@ const SORT_OPTIONS = {
   priceDesc: "price-desc",
 };
 
+const CATALOG_SCROLL_KEY = "momaz.catalog.scroll";
+
+const SCENE_TEMPLATES = [
+  {
+    type: "prologue",
+    heading: "Prologue",
+    line: "Slow opening with hero pieces and broad silhouettes.",
+    label: "Chapter I",
+  },
+  {
+    type: "contrast",
+    heading: "Contrast Study",
+    line: "A denser cut with tighter rhythm and controlled tension.",
+    label: "Chapter II",
+  },
+  {
+    type: "cadence",
+    heading: "Cadence",
+    line: "Settled pacing with focal products in a calm sequence.",
+    label: "Chapter III",
+  },
+  {
+    type: "echo",
+    heading: "Echo",
+    line: "Final chapter that lets the strongest pieces breathe.",
+    label: "Chapter IV",
+  },
+];
+
+function normalizePriceValue(rawPrice, emptyFallback) {
+  const value = Number.parseFloat(rawPrice);
+  return Number.isFinite(value) ? value : emptyFallback;
+}
+
+function sortProducts(products, sortBy) {
+  if (sortBy === SORT_OPTIONS.priceAsc) {
+    return [...products].sort(
+      (left, right) =>
+        normalizePriceValue(left.price_amount, Number.POSITIVE_INFINITY) -
+        normalizePriceValue(right.price_amount, Number.POSITIVE_INFINITY)
+    );
+  }
+
+  if (sortBy === SORT_OPTIONS.priceDesc) {
+    return [...products].sort(
+      (left, right) =>
+        normalizePriceValue(right.price_amount, Number.NEGATIVE_INFINITY) -
+        normalizePriceValue(left.price_amount, Number.NEGATIVE_INFINITY)
+    );
+  }
+
+  return [...products].sort(
+    (left, right) =>
+      (right.updated_at_unix_ms || 0) - (left.updated_at_unix_ms || 0)
+  );
+}
+
+function buildScenes(products) {
+  const limit = products.slice(0, 24);
+  const scenes = [];
+
+  for (let index = 0; index < limit.length; index += 4) {
+    const productsChunk = limit.slice(index, index + 4);
+    if (productsChunk.length === 0) {
+      break;
+    }
+
+    const sceneIndex = Math.floor(index / 4);
+    const template = SCENE_TEMPLATES[sceneIndex % SCENE_TEMPLATES.length];
+
+    scenes.push({
+      id: `scene-${sceneIndex + 1}`,
+      type: template.type,
+      heading: template.heading,
+      line: template.line,
+      label: template.label,
+      products: productsChunk,
+    });
+  }
+
+  return scenes;
+}
+
 function ProductGrid() {
   const { products, loading, error } = useCatalogProducts({ mode: "lite" });
   const [category, setCategory] = useState("all");
   const [sortBy, setSortBy] = useState(SORT_OPTIONS.recent);
   const [query, setQuery] = useState("");
+  const [focusedProduct, setFocusedProduct] = useState(null);
+  const [isRailCollapsed, setIsRailCollapsed] = useState(false);
+  const [activeSceneId, setActiveSceneId] = useState("");
+  const previousScrollYRef = useRef(0);
+
+  useEffect(() => {
+    const restoreValue = Number.parseFloat(
+      sessionStorage.getItem(CATALOG_SCROLL_KEY) || "NaN"
+    );
+    if (Number.isFinite(restoreValue)) {
+      window.scrollTo({ top: restoreValue, behavior: "auto" });
+      sessionStorage.removeItem(CATALOG_SCROLL_KEY);
+    }
+
+    const onScroll = () => setIsRailCollapsed(window.scrollY > 220);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!focusedProduct) {
+      document.body.style.removeProperty("overflow");
+      return;
+    }
+
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.removeProperty("overflow");
+    };
+  }, [focusedProduct]);
 
   const categories = useMemo(() => {
     const unique = new Set(products.map((item) => item.category).filter(Boolean));
     return ["all", ...Array.from(unique).sort((a, b) => a.localeCompare(b))];
   }, [products]);
 
-  const visibleProducts = useMemo(() => {
+  const filteredProducts = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
-    const filteredByCategory =
+    const categoryFiltered =
       category === "all"
         ? products
-        : products.filter((product) => (product.category || "") === category);
+        : products.filter((item) => (item.category || "") === category);
 
-    const filtered = normalizedQuery
-      ? filteredByCategory.filter((product) => {
+    const queryFiltered = normalizedQuery
+      ? categoryFiltered.filter((product) => {
           const title = (product.title || "").toLowerCase();
           const categoryLabel = (product.category || "").toLowerCase();
           const sku = (product.sku || "").toLowerCase();
@@ -41,143 +159,144 @@ function ProductGrid() {
             id.includes(normalizedQuery)
           );
         })
-      : filteredByCategory;
+      : categoryFiltered;
 
-    return [...filtered].sort((left, right) => {
-      if (sortBy === SORT_OPTIONS.priceAsc) {
-        return Number.parseFloat(left.price_amount || "Infinity") - Number.parseFloat(right.price_amount || "Infinity");
-      }
-
-      if (sortBy === SORT_OPTIONS.priceDesc) {
-        return Number.parseFloat(right.price_amount || "-Infinity") - Number.parseFloat(left.price_amount || "-Infinity");
-      }
-
-      return (right.updated_at_unix_ms || 0) - (left.updated_at_unix_ms || 0);
-    });
+    return sortProducts(queryFiltered, sortBy);
   }, [products, category, sortBy, query]);
 
-  const selectedCategoryLabel = category === "all" ? "All categories" : getCategoryLabel(category);
-  const hasDefaultFilters = category === "all" && sortBy === SORT_OPTIONS.recent && query.trim() === "";
+  const scenes = useMemo(() => buildScenes(filteredProducts), [filteredProducts]);
+
+  useEffect(() => {
+    if (scenes.length === 0) {
+      setActiveSceneId("");
+      return;
+    }
+
+    setActiveSceneId((current) => current || scenes[0].id);
+
+    const sceneNodes = Array.from(document.querySelectorAll("[data-scene-id]"));
+    if (sceneNodes.length === 0) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((left, right) => right.intersectionRatio - left.intersectionRatio);
+
+        if (visible[0]) {
+          const nextSceneId = visible[0].target.getAttribute("data-scene-id") || "";
+          if (nextSceneId) {
+            setActiveSceneId(nextSceneId);
+          }
+        }
+      },
+      {
+        threshold: [0.2, 0.35, 0.5, 0.7],
+        rootMargin: "-20% 0px -35% 0px",
+      }
+    );
+
+    sceneNodes.forEach((node) => observer.observe(node));
+    return () => observer.disconnect();
+  }, [scenes]);
+
+  const openFocusMode = (product) => {
+    previousScrollYRef.current = window.scrollY;
+    setFocusedProduct(product);
+  };
+
+  const closeFocusMode = () => {
+    setFocusedProduct(null);
+    window.scrollTo({ top: previousScrollYRef.current, behavior: "auto" });
+  };
+
+  const markScrollBeforeRoute = () => {
+    sessionStorage.setItem(CATALOG_SCROLL_KEY, String(window.scrollY));
+  };
+
+  const activeSceneIndex = scenes.findIndex((scene) => scene.id === activeSceneId);
+  const chapterProgress =
+    scenes.length > 0
+      ? Math.round((((activeSceneIndex >= 0 ? activeSceneIndex : 0) + 1) / scenes.length) * 100)
+      : 0;
 
   return (
-    <main className="catalog-page">
+    <main className="catalog-page catalog-page--editorial">
       <HeroLanding />
 
-      <section id="catalog-section" className="catalog-shell" aria-label="Catalog gallery">
-        <aside className="catalog-sidebar">
-          <p>Collections</p>
-          <ul>
-            {categories.slice(1, 9).map((item) => (
-              <li key={item}>
-                <button
-                  type="button"
-                  className={item === category ? "is-active" : ""}
-                  onClick={() => setCategory(item)}
-                >
-                  {item}
-                </button>
-              </li>
-            ))}
-          </ul>
+      <UtilityRail
+        query={query}
+        onQueryChange={setQuery}
+        category={category}
+        onCategoryChange={setCategory}
+        categories={categories}
+        sortBy={sortBy}
+        onSortByChange={setSortBy}
+        itemCount={filteredProducts.length}
+        isCollapsed={isRailCollapsed}
+        activeSceneLabel={activeSceneIndex >= 0 ? scenes[activeSceneIndex]?.label || "" : ""}
+        chapterProgress={chapterProgress}
+      />
 
-          <div className="catalog-sidebar__switch">
-            <button type="button" onClick={() => setCategory("all")} className={category === "all" ? "is-active" : ""}>
-              all
-            </button>
-            <button type="button" className="is-muted" aria-disabled="true">
-              grid
-            </button>
-          </div>
-        </aside>
+      {loading && <p className="catalog-state">Loading curated products...</p>}
+      {error && (
+        <div className="catalog-state catalog-state--error">
+          <h3>Catalog unavailable</h3>
+          <p>We cannot load the product feed right now. Please try again shortly.</p>
+        </div>
+      )}
 
-        <section className="catalog-main">
-          <header className="catalog-panel__heading">
-            <h2>The Collection</h2>
-            <p role="status">{`${visibleProducts.length} piece(s) ready to explore.`}</p>
-          </header>
+      {!loading && !error && scenes.length === 0 && (
+        <p className="catalog-state">No product matches these filters. Broaden your search.</p>
+      )}
 
-          <div className="catalog-toolbar">
-            <label>
-              Search
-              <input
-                type="search"
-                className="catalog-toolbar__search"
-                value={query}
-                placeholder="Piece name or collection"
-                onChange={(event) => setQuery(event.target.value)}
-              />
-            </label>
-
-            <label>
-              Collection
-              <select value={category} onChange={(event) => setCategory(event.target.value)}>
-                {categories.map((item) => (
-                  <option key={item} value={item}>
-                    {item === "all" ? "All categories" : getCategoryLabel(item)}
-                  </option>
-                ))}
-              </select>
-            </label>
-
-            <label>
-              Sort by
-              <select value={sortBy} onChange={(event) => setSortBy(event.target.value)}>
-                <option value={SORT_OPTIONS.recent}>Most recent</option>
-                <option value={SORT_OPTIONS.priceAsc}>Price low to high</option>
-                <option value={SORT_OPTIONS.priceDesc}>Price high to low</option>
-              </select>
-            </label>
-
-            <button
-              type="button"
-              className="catalog-toolbar__reset"
-              onClick={() => {
-                setQuery("");
-                setCategory("all");
-                setSortBy(SORT_OPTIONS.recent);
-              }}
-            >
-              Reset
-            </button>
-          </div>
-
-          <div className="catalog-toolbar__chips" aria-live="polite">
-            {hasDefaultFilters && <span className="catalog-toolbar__chip catalog-toolbar__chip--default">Curated view</span>}
-            {query.trim() !== "" && <span className="catalog-toolbar__chip">{`Query: ${query.trim()}`}</span>}
-            {category !== "all" && <span className="catalog-toolbar__chip">{`Collection: ${selectedCategoryLabel}`}</span>}
-            {sortBy !== SORT_OPTIONS.recent && (
-              <span className="catalog-toolbar__chip">
-                {`Sort: ${sortBy === SORT_OPTIONS.priceAsc ? "Price low to high" : "Price high to low"}`}
-              </span>
-            )}
-            <span className="catalog-toolbar__chip">{`Pieces: ${visibleProducts.length}`}</span>
-          </div>
-
-          {loading && <p className="catalog-state">Loading curated products...</p>}
-          {error && (
-            <div className="catalog-state catalog-state--error">
-              <h3>Catalog unavailable</h3>
-              <p>We cannot load the product feed right now. Please try again shortly.</p>
-            </div>
-          )}
-
-          {!loading && !error && visibleProducts.length === 0 && (
-            <p className="catalog-state">No product matches these filters. Broaden your search.</p>
-          )}
-
-          {!loading && !error && visibleProducts.length > 0 && (
-            <div className="editorial-grid">
-              {visibleProducts.map((product, index) => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                  variant={index % 8 === 0 ? "hero" : "default"}
-                />
-              ))}
-            </div>
-          )}
+      {!loading && !error && scenes.length > 0 && (
+        <section className="editorial-stream" aria-label="Immersive editorial stream">
+          {scenes.map((scene, sceneIndex) => {
+            const isActive = scene.id === activeSceneId;
+            return (
+              <article
+                key={scene.id}
+                className={`editorial-scene editorial-scene--${scene.type} ${isActive ? "is-active" : ""}`}
+                data-scene-id={scene.id}
+                aria-label={`${scene.label}: ${scene.heading}`}
+              >
+                <header>
+                  <p className="editorial-scene__label">{scene.label}</p>
+                  <h2>{scene.heading}</h2>
+                  <p className="editorial-scene__line">{scene.line}</p>
+                </header>
+                <div className="editorial-scene__rail">
+                  {scene.products.map((product, productIndex) => (
+                    <ProductCard
+                      key={product.id}
+                      product={product}
+                      layout={
+                        productIndex === 0
+                          ? "hero"
+                          : sceneIndex % 2 === 0 && productIndex === 2
+                            ? "landscape"
+                            : "portrait"
+                      }
+                      onFocus={openFocusMode}
+                    />
+                  ))}
+                </div>
+              </article>
+            );
+          })}
         </section>
-      </section>
+      )}
+
+      {focusedProduct ? (
+        <ProductFocusOverlay
+          product={focusedProduct}
+          onClose={closeFocusMode}
+          onOpenDetail={markScrollBeforeRoute}
+        />
+      ) : null}
     </main>
   );
 }

@@ -1,4 +1,3 @@
-import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { buildCatalogImageCandidates } from "../config/premiumAssets";
 import { optimizeCatalogImageUrl } from "../utils/imageUrl";
@@ -12,54 +11,45 @@ function formatPrice(product) {
   return `${product.price_amount} ${product.currency || ""}`.trim();
 }
 
-function ProductCard({ product, variant = "default" }) {
-  const imageCandidates = useMemo(
-    () =>
-      buildCatalogImageCandidates(product).map((source) =>
-        optimizeCatalogImageUrl(source, { width: 820, quality: 68, format: "webp" })
-      ),
-    [product]
-  );
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
-  const title = getDisplayTitle(product.title, { fallback: "Untitled", maxLength: 64 });
-  const category = getCategoryLabel(product.category);
-  const imageSrc = imageCandidates[activeImageIndex] || "";
+function resolvePrimaryImage(product) {
+  const firstCandidate = buildCatalogImageCandidates(product)[0] || "";
+  return firstCandidate
+    ? optimizeCatalogImageUrl(firstCandidate, {
+        width: 1400,
+        quality: 74,
+        format: "webp",
+      })
+    : "";
+}
 
-  useEffect(() => {
-    setActiveImageIndex(0);
-  }, [product.id]);
+function ProductCard({ product, layout = "portrait", onFocus }) {
+  const title = getDisplayTitle(product?.title, { fallback: "Untitled", maxLength: 84 });
+  const category = getCategoryLabel(product?.category);
+  const image = resolvePrimaryImage(product);
 
   return (
-    <Link to={`/product/${product.id}`} className={`editorial-card editorial-card--${variant}`}>
-      <article>
-        <div className="editorial-card__media">
-          {imageSrc ? (
-            <img
-              src={imageSrc}
-              alt={title}
-              loading="lazy"
-              decoding="async"
-              onError={() => {
-                setActiveImageIndex((current) => {
-                  const next = current + 1;
-                  return next < imageCandidates.length ? next : current;
-                });
-              }}
-            />
-          ) : (
-            <div className="editorial-card__placeholder" aria-hidden="true" />
-          )}
+    <article className={`scene-tile scene-tile--${layout}`}>
+      <div className="scene-tile__media">
+        {image ? (
+          <img src={image} alt={title} loading="lazy" decoding="async" />
+        ) : (
+          <div className="scene-tile__placeholder" aria-hidden="true" />
+        )}
+      </div>
+      <div className="scene-tile__veil" aria-hidden="true" />
+      <div className="scene-tile__content">
+        <p className="scene-tile__category">{category}</p>
+        <h3>{title}</h3>
+        <strong>{formatPrice(product)}</strong>
+        <p className="scene-tile__meta">{`SKU ${product?.sku || "N/A"}`}</p>
+        <div className="scene-tile__actions">
+          <button type="button" onClick={() => onFocus(product)}>
+            Enter focus
+          </button>
+          <Link to={`/product/${product.id}`}>Open detail</Link>
         </div>
-
-        <div className="editorial-card__reveal">
-          <p>{category}</p>
-          <h2>{title}</h2>
-          <strong>{formatPrice(product)}</strong>
-          <p className="editorial-card__meta">{`ID ${product.id || "N/A"}`}</p>
-          <span className="editorial-card__cta">View full profile</span>
-        </div>
-      </article>
-    </Link>
+      </div>
+    </article>
   );
 }
 

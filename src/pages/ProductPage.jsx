@@ -21,21 +21,24 @@ function formatPrice(product) {
 
 function ProductPage() {
   const { id } = useParams();
+  const currentProductId = id || "";
   const { products, loading, error } = useCatalogProducts({ mode: "full" });
   const [size, setSize] = useState("M");
   const [added, setAdded] = useState(false);
-  const [storytellingVideoIndex, setStorytellingVideoIndex] = useState(0);
-  const [storytellingVideoFailed, setStorytellingVideoFailed] = useState(false);
+  const [storytellingVideoState, setStorytellingVideoState] = useState({
+    productId: currentProductId,
+    index: 0,
+    failed: false,
+  });
   const [transitionProgress, setTransitionProgress] = useState(0);
   const rafRef = useRef(0);
   const progressRef = useRef(0);
 
   const product = useMemo(() => products.find((item) => item.id === id), [products, id]);
-
-  useEffect(() => {
-    setStorytellingVideoIndex(0);
-    setStorytellingVideoFailed(false);
-  }, [product?.id]);
+  const storytellingVideoIndex =
+    storytellingVideoState.productId === currentProductId ? storytellingVideoState.index : 0;
+  const storytellingVideoFailed =
+    storytellingVideoState.productId === currentProductId ? storytellingVideoState.failed : false;
 
   useEffect(() => {
     const clamp = (value) => Math.min(1, Math.max(0, value));
@@ -201,13 +204,18 @@ function ProductPage() {
                 preload="metadata"
                 poster={PDP_STORYTELLING_POSTER}
                 onError={() => {
-                  setStorytellingVideoIndex((current) => {
-                    const next = current + 1;
+                  setStorytellingVideoState((current) => {
+                    const base =
+                      current.productId === currentProductId
+                        ? current
+                        : { productId: currentProductId, index: 0, failed: false };
+                    const next = base.index + 1;
+
                     if (next < storytellingVideoCandidates.length) {
-                      return next;
+                      return { productId: currentProductId, index: next, failed: false };
                     }
-                    setStorytellingVideoFailed(true);
-                    return current;
+
+                    return { productId: currentProductId, index: base.index, failed: true };
                   });
                 }}
               >
