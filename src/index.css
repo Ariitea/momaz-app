@@ -847,11 +847,15 @@ body.product-immersive-active .shortlist-panel {
 .shortlist-panel__item button:focus-visible,
 .shortlist-panel__cta:focus-visible,
 .hero-landing__scroll:focus-visible,
+.utility-rail__toggle:focus-visible,
+.utility-rail__controls input:focus-visible,
+.utility-rail__controls select:focus-visible,
 .catalog-sidebar button:focus-visible,
 .catalog-toolbar__search:focus-visible,
 .catalog-toolbar select:focus-visible,
 .catalog-toolbar__reset:focus-visible,
 .editorial-card:focus-visible,
+.scene-tile__actions button:focus-visible,
 .product-stage__right button:focus-visible,
 .product-stage__right a:focus-visible,
 .product-back:focus-visible {
@@ -1036,29 +1040,24 @@ body.product-immersive-active .shortlist-panel {
   color: #4d402e;
 }
 
-.utility-rail__controls {
-  display: grid;
-  grid-template-columns: 1.7fr 1fr 1fr;
-  gap: 10px;
+.utility-rail__line,
+.utility-rail__position {
+  margin: 0;
+  color: #4f4435;
 }
 
-.utility-rail__controls label {
-  display: grid;
-  gap: 4px;
+.utility-rail__line {
+  font-size: 0.88rem;
+  line-height: 1.42;
+  max-width: 68ch;
+}
+
+.utility-rail__position {
+  justify-self: end;
   font-size: 0.68rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #53493a;
-}
-
-.utility-rail__controls input,
-.utility-rail__controls select {
-  font: inherit;
-  border: 1px solid #beb6a8;
-  border-radius: 10px;
-  height: 38px;
-  padding: 0 10px;
-  background: rgb(255 255 255 / 82%);
+  color: #5e5140;
 }
 
 .editorial-stream {
@@ -1120,8 +1119,30 @@ body.product-immersive-active .shortlist-panel {
 
 .editorial-scene__rail {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.92fr);
+  gap: 16px;
+}
+
+.editorial-scene__support {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.editorial-scene__support-note {
+  margin: 0;
+  border: 1px solid #cabca8;
+  border-radius: 16px;
+  background: rgb(255 255 255 / 62%);
+  padding: 14px;
+  align-self: end;
+}
+
+.editorial-scene__support-note p {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: #4f4334;
 }
 
 .scene-tile {
@@ -1131,24 +1152,48 @@ body.product-immersive-active .shortlist-panel {
   overflow: hidden;
   min-height: clamp(220px, 42vw, 380px);
   background: #f3ede2;
-  grid-column: span 3;
+  grid-column: auto;
   transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .scene-tile--hero {
-  grid-column: span 6;
   min-height: clamp(280px, 50vw, 500px);
 }
 
 .scene-tile--landscape {
-  grid-column: span 6;
+  min-height: clamp(280px, 46vw, 460px);
+}
+
+.scene-tile--panorama {
+  min-height: clamp(300px, 56vw, 560px);
+}
+
+.scene-tile--aside-tall {
+  min-height: clamp(260px, 48vw, 440px);
+}
+
+.scene-tile--aside-wide {
+  min-height: clamp(220px, 34vw, 320px);
+}
+
+.scene-tile--focal {
+  min-height: clamp(340px, 60vw, 620px);
+}
+
+.scene-tile--supporting .scene-tile__content h3 {
+  font-size: clamp(0.96rem, 1.4vw, 1.3rem);
+}
+
+.scene-tile--supporting .scene-tile__actions button {
+  min-height: 32px;
+  font-size: 0.68rem;
 }
 
 .scene-tile:hover,
 .scene-tile:focus-within {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 36px rgb(18 13 8 / 26%);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgb(18 13 8 / 24%);
 }
 
 .scene-tile__media,
@@ -1200,7 +1245,7 @@ body.product-immersive-active .shortlist-panel {
 
 .scene-tile__content h3 {
   font-family: "Syne", sans-serif;
-  font-size: clamp(1rem, 1.6vw, 1.7rem);
+  font-size: clamp(1.1rem, 2vw, 2rem);
   line-height: 0.96;
 }
 
@@ -1226,7 +1271,7 @@ body.product-immersive-active .shortlist-panel {
 .scene-tile__actions a {
   border: 1px solid rgb(255 255 255 / 72%);
   border-radius: 999px;
-  min-height: 34px;
+  min-height: 36px;
   padding: 0 12px;
   display: inline-flex;
   align-items: center;
@@ -1236,12 +1281,6 @@ body.product-immersive-active .shortlist-panel {
   background: rgb(12 10 8 / 38%);
   color: #fff;
   cursor: pointer;
-}
-
-.scene-tile__actions a {
-  background: rgb(255 255 255 / 92%);
-  color: #14100a;
-  border-color: rgb(255 255 255 / 92%);
 }
 
 .focus-overlay {
@@ -1380,14 +1419,8 @@ body.product-immersive-active .shortlist-panel {
 }
 
 @media (max-width: 1120px) {
-  .utility-rail__controls {
+  .editorial-scene__rail {
     grid-template-columns: 1fr;
-  }
-
-  .scene-tile,
-  .scene-tile--hero,
-  .scene-tile--landscape {
-    grid-column: span 6;
   }
 
   .focus-overlay {
@@ -1419,8 +1452,11 @@ body.product-immersive-active .shortlist-panel {
 
   .scene-tile,
   .scene-tile--hero,
-  .scene-tile--landscape {
-    grid-column: span 12;
+  .scene-tile--landscape,
+  .scene-tile--panorama,
+  .scene-tile--aside-tall,
+  .scene-tile--aside-wide {
+    min-height: clamp(250px, 64vw, 480px);
   }
 
   .focus-overlay {

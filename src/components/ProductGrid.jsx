@@ -5,81 +5,65 @@ import ProductFocusOverlay from "./ProductFocusOverlay";
 import UtilityRail from "./UtilityRail";
 import { useCatalogProducts } from "../data/catalogClient";
 
-const SORT_OPTIONS = {
-  recent: "recent",
-  priceAsc: "price-asc",
-  priceDesc: "price-desc",
-};
-
 const CATALOG_SCROLL_KEY = "momaz.catalog.scroll";
 
 const SCENE_TEMPLATES = [
   {
     type: "prologue",
     heading: "Prologue",
-    line: "Slow opening with hero pieces and broad silhouettes.",
+    line: "A slow reveal with one dominant silhouette and quiet supporting echoes.",
     label: "Chapter I",
+    chunkSize: 3,
+    focalLayout: "hero",
+    supportLayouts: ["aside-tall", "aside-wide"],
   },
   {
     type: "contrast",
     heading: "Contrast Study",
-    line: "A denser cut with tighter rhythm and controlled tension.",
+    line: "A tighter passage where material and proportion sharpen the gaze.",
     label: "Chapter II",
+    chunkSize: 3,
+    focalLayout: "panorama",
+    supportLayouts: ["portrait", "portrait"],
   },
   {
     type: "cadence",
     heading: "Cadence",
-    line: "Settled pacing with focal products in a calm sequence.",
+    line: "A calmer tempo with breathing space around the core piece.",
     label: "Chapter III",
+    chunkSize: 3,
+    focalLayout: "landscape",
+    supportLayouts: ["portrait", "portrait"],
   },
   {
     type: "echo",
     heading: "Echo",
-    line: "Final chapter that lets the strongest pieces breathe.",
+    line: "Final movement where the strongest shape lingers in memory.",
     label: "Chapter IV",
+    chunkSize: 2,
+    focalLayout: "hero",
+    supportLayouts: ["aside-wide"],
   },
 ];
 
-function normalizePriceValue(rawPrice, emptyFallback) {
-  const value = Number.parseFloat(rawPrice);
-  return Number.isFinite(value) ? value : emptyFallback;
-}
-
-function sortProducts(products, sortBy) {
-  if (sortBy === SORT_OPTIONS.priceAsc) {
-    return [...products].sort(
-      (left, right) =>
-        normalizePriceValue(left.price_amount, Number.POSITIVE_INFINITY) -
-        normalizePriceValue(right.price_amount, Number.POSITIVE_INFINITY)
-    );
-  }
-
-  if (sortBy === SORT_OPTIONS.priceDesc) {
-    return [...products].sort(
-      (left, right) =>
-        normalizePriceValue(right.price_amount, Number.NEGATIVE_INFINITY) -
-        normalizePriceValue(left.price_amount, Number.NEGATIVE_INFINITY)
-    );
-  }
-
+function sortByStoryMomentum(products) {
   return [...products].sort(
-    (left, right) =>
-      (right.updated_at_unix_ms || 0) - (left.updated_at_unix_ms || 0)
+    (left, right) => (right.updated_at_unix_ms || 0) - (left.updated_at_unix_ms || 0)
   );
 }
 
 function buildScenes(products) {
-  const limit = products.slice(0, 24);
+  const limit = products.slice(0, 18);
   const scenes = [];
+  let cursor = 0;
+  let sceneIndex = 0;
 
-  for (let index = 0; index < limit.length; index += 4) {
-    const productsChunk = limit.slice(index, index + 4);
+  while (cursor < limit.length) {
+    const template = SCENE_TEMPLATES[sceneIndex % SCENE_TEMPLATES.length];
+    const productsChunk = limit.slice(cursor, cursor + template.chunkSize);
     if (productsChunk.length === 0) {
       break;
     }
-
-    const sceneIndex = Math.floor(index / 4);
-    const template = SCENE_TEMPLATES[sceneIndex % SCENE_TEMPLATES.length];
 
     scenes.push({
       id: `scene-${sceneIndex + 1}`,
@@ -87,8 +71,18 @@ function buildScenes(products) {
       heading: template.heading,
       line: template.line,
       label: template.label,
-      products: productsChunk,
+      focal: {
+        product: productsChunk[0],
+        layout: template.focalLayout,
+      },
+      supporting: productsChunk.slice(1, 3).map((product, productIndex) => ({
+        product,
+        layout: template.supportLayouts[productIndex] || "portrait",
+      })),
     });
+
+    cursor += productsChunk.length;
+    sceneIndex += 1;
   }
 
   return scenes;
@@ -96,9 +90,6 @@ function buildScenes(products) {
 
 function ProductGrid() {
   const { products, loading, error } = useCatalogProducts({ mode: "lite" });
-  const [category, setCategory] = useState("all");
-  const [sortBy, setSortBy] = useState(SORT_OPTIONS.recent);
-  const [query, setQuery] = useState("");
   const [focusedProduct, setFocusedProduct] = useState(null);
   const [isRailCollapsed, setIsRailCollapsed] = useState(false);
   const [activeSceneId, setActiveSceneId] = useState("");
@@ -113,7 +104,10 @@ function ProductGrid() {
       sessionStorage.removeItem(CATALOG_SCROLL_KEY);
     }
 
-    const onScroll = () => setIsRailCollapsed(window.scrollY > 220);
+    const onScroll = () => {
+      const collapsed = window.scrollY > 220;
+      setIsRailCollapsed(collapsed);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
 
@@ -134,37 +128,8 @@ function ProductGrid() {
     };
   }, [focusedProduct]);
 
-  const categories = useMemo(() => {
-    const unique = new Set(products.map((item) => item.category).filter(Boolean));
-    return ["all", ...Array.from(unique).sort((a, b) => a.localeCompare(b))];
-  }, [products]);
-
-  const filteredProducts = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase();
-    const categoryFiltered =
-      category === "all"
-        ? products
-        : products.filter((item) => (item.category || "") === category);
-
-    const queryFiltered = normalizedQuery
-      ? categoryFiltered.filter((product) => {
-          const title = (product.title || "").toLowerCase();
-          const categoryLabel = (product.category || "").toLowerCase();
-          const sku = (product.sku || "").toLowerCase();
-          const id = (product.id || "").toLowerCase();
-          return (
-            title.includes(normalizedQuery) ||
-            categoryLabel.includes(normalizedQuery) ||
-            sku.includes(normalizedQuery) ||
-            id.includes(normalizedQuery)
-          );
-        })
-      : categoryFiltered;
-
-    return sortProducts(queryFiltered, sortBy);
-  }, [products, category, sortBy, query]);
-
-  const scenes = useMemo(() => buildScenes(filteredProducts), [filteredProducts]);
+  const curatedProducts = useMemo(() => sortByStoryMomentum(products), [products]);
+  const scenes = useMemo(() => buildScenes(curatedProducts), [curatedProducts]);
 
   useEffect(() => {
     if (scenes.length === 0) {
@@ -225,17 +190,12 @@ function ProductGrid() {
       <HeroLanding />
 
       <UtilityRail
-        query={query}
-        onQueryChange={setQuery}
-        category={category}
-        onCategoryChange={setCategory}
-        categories={categories}
-        sortBy={sortBy}
-        onSortByChange={setSortBy}
-        itemCount={filteredProducts.length}
+        itemCount={curatedProducts.length}
         isCollapsed={isRailCollapsed}
         activeSceneLabel={scenes[effectiveActiveSceneIndex]?.label || ""}
+        activeSceneLine={scenes[effectiveActiveSceneIndex]?.line || ""}
         chapterProgress={chapterProgress}
+        sceneCount={scenes.length}
       />
 
       {loading && <p className="catalog-state">Loading curated products...</p>}
@@ -247,7 +207,7 @@ function ProductGrid() {
       )}
 
       {!loading && !error && scenes.length === 0 && (
-        <p className="catalog-state">No product matches these filters. Broaden your search.</p>
+        <p className="catalog-state">No product is available to compose the sequence right now.</p>
       )}
 
       {!loading && !error && scenes.length > 0 && (
@@ -269,20 +229,31 @@ function ProductGrid() {
                   <p className="editorial-scene__line">{scene.line}</p>
                 </header>
                 <div className="editorial-scene__rail">
-                  {scene.products.map((product, productIndex) => (
-                    <ProductCard
-                      key={product.id}
-                      product={product}
-                      layout={
-                        productIndex === 0
-                          ? "hero"
-                          : sceneIndex % 2 === 0 && productIndex === 2
-                            ? "landscape"
-                            : "portrait"
-                      }
-                      onFocus={openFocusMode}
-                    />
-                  ))}
+                  <ProductCard
+                    key={scene.focal.product.id}
+                    product={scene.focal.product}
+                    layout={scene.focal.layout}
+                    emphasis="focal"
+                    onFocus={openFocusMode}
+                  />
+
+                  <div className="editorial-scene__support">
+                    {scene.supporting.map((sceneProduct) => (
+                      <ProductCard
+                        key={sceneProduct.product.id}
+                        product={sceneProduct.product}
+                        layout={sceneProduct.layout}
+                        emphasis="supporting"
+                        onFocus={openFocusMode}
+                      />
+                    ))}
+                  </div>
+
+                  {scene.supporting.length === 0 ? (
+                    <aside className="editorial-scene__support-note">
+                      <p>This chapter holds the focal piece in isolation to preserve visual dominance.</p>
+                    </aside>
+                  ) : null}
                 </div>
               </article>
             );
