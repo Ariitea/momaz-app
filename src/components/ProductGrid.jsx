@@ -168,11 +168,8 @@ function ProductGrid() {
 
   useEffect(() => {
     if (scenes.length === 0) {
-      setActiveSceneId("");
       return;
     }
-
-    setActiveSceneId((current) => current || scenes[0].id);
 
     const sceneNodes = Array.from(document.querySelectorAll("[data-scene-id]"));
     if (sceneNodes.length === 0) {
@@ -217,9 +214,10 @@ function ProductGrid() {
   };
 
   const activeSceneIndex = scenes.findIndex((scene) => scene.id === activeSceneId);
+  const effectiveActiveSceneIndex = activeSceneIndex >= 0 ? activeSceneIndex : 0;
   const chapterProgress =
     scenes.length > 0
-      ? Math.round((((activeSceneIndex >= 0 ? activeSceneIndex : 0) + 1) / scenes.length) * 100)
+      ? Math.round(((effectiveActiveSceneIndex + 1) / scenes.length) * 100)
       : 0;
 
   return (
@@ -236,7 +234,7 @@ function ProductGrid() {
         onSortByChange={setSortBy}
         itemCount={filteredProducts.length}
         isCollapsed={isRailCollapsed}
-        activeSceneLabel={activeSceneIndex >= 0 ? scenes[activeSceneIndex]?.label || "" : ""}
+        activeSceneLabel={scenes[effectiveActiveSceneIndex]?.label || ""}
         chapterProgress={chapterProgress}
       />
 
@@ -255,7 +253,9 @@ function ProductGrid() {
       {!loading && !error && scenes.length > 0 && (
         <section className="editorial-stream" aria-label="Immersive editorial stream">
           {scenes.map((scene, sceneIndex) => {
-            const isActive = scene.id === activeSceneId;
+            const isActive = activeSceneId
+              ? scene.id === activeSceneId
+              : sceneIndex === 0;
             return (
               <article
                 key={scene.id}
