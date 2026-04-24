@@ -1,13 +1,24 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/react";
 import Navigation from "./components/Navigation";
 import ProductGrid from "./components/ProductGrid";
 
 const ProductPage = lazy(() => import("./pages/ProductPage"));
 
 function App() {
+  const [backTransition, setBackTransition] = useState(false);
+
+  useEffect(() => {
+    function onBackTransition() {
+      setBackTransition(true);
+      window.setTimeout(() => setBackTransition(false), 950);
+    }
+
+    window.addEventListener("momaz:pdp-back-transition", onBackTransition);
+    return () => window.removeEventListener("momaz:pdp-back-transition", onBackTransition);
+  }, []);
+
   return (
     <>
       <Navigation />
@@ -23,8 +34,12 @@ function App() {
           <Route path="/product/:id" element={<ProductPage />} />
         </Routes>
       </Suspense>
+
+      {backTransition ? (
+        <div className="global-back-transition-layer" aria-hidden="true" />
+      ) : null}
+
       <Analytics />
-      <SpeedInsights />
     </>
   );
 }

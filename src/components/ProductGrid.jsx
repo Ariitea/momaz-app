@@ -22,20 +22,23 @@ function cleanCategory(category = "") {
   return cleaned || "curated";
 }
 
-
-
 function ProductGrid() {
+  const navigate = useNavigate();
   const { products, loading, error } = useCatalogProducts({ mode: "lite" });
   const visibleProducts = useMemo(() => products.slice(0, 24), [products]);
   const [activeProductId, setActiveProductId] = useState(null);
+  const [leavingProductId, setLeavingProductId] = useState(null);
   const [rowY, setRowY] = useState(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0, visible: false });
-  const [leavingProductId, setLeavingProductId] = useState(null);
-  const navigate = useNavigate();
 
   const activeProduct =
     visibleProducts.find((product) => product.id === activeProductId) ||
     visibleProducts[0];
+
+  const activeProductIndex = Math.max(
+    0,
+    visibleProducts.findIndex((product) => product.id === activeProduct?.id),
+  );
 
   const activeImage =
     activeProduct?.images?.[0] ||
@@ -48,8 +51,7 @@ function ProductGrid() {
     setRowY(rect.top + rect.height / 2);
   }
 
-  function openProduct(event, productId) {
-    event.preventDefault();
+  function openProduct(productId) {
     setActiveProductId(productId);
     setLeavingProductId(productId);
     window.setTimeout(() => {
@@ -77,25 +79,25 @@ function ProductGrid() {
       </aside>
 
       <section className="catalog-list-panel">
-        <div key={`bg-${activeProduct?.id || "empty"}`} className="catalog-list-panel__bg">
+        <div className="catalog-list-panel__bg">
           {activeImage ? <img key={activeProduct?.id} src={activeImage} alt="" /> : null}
         </div>
 
         <div
-  className="catalog-list"
-  onMouseMove={(event) =>
-    setCursor({
-      x: event.clientX,
-      y: event.clientY,
-      visible: true,
-    })
-  }
-  onMouseLeave={() => {
-    setCursor((current) => ({ ...current, visible: false }));
-    setRowY(null);
-    setActiveProductId(null);
-  }}
->
+          className="catalog-list"
+          onMouseMove={(event) =>
+            setCursor({
+              x: event.clientX,
+              y: event.clientY,
+              visible: true,
+            })
+          }
+          onMouseLeave={() => {
+            setCursor((current) => ({ ...current, visible: false }));
+            setRowY(null);
+            setActiveProductId(null);
+          }}
+        >
           {visibleProducts.map((product, index) => (
             <button
               key={product.id}
@@ -103,7 +105,7 @@ function ProductGrid() {
               className={`catalog-row ${product.id === activeProduct?.id ? "is-active" : ""} ${product.id === leavingProductId ? "is-leaving" : ""}`}
               onMouseEnter={(event) => activateProduct(event, product.id)}
               onFocus={(event) => activateProduct(event, product.id)}
-              onClick={(event) => openProduct(event, product.id)}
+              onClick={() => openProduct(product.id)}
             >
               <span>{String(index + 1).padStart(3, "0")}</span>
               <strong>{cleanTitle(product.title)}</strong>
@@ -112,6 +114,13 @@ function ProductGrid() {
           ))}
         </div>
       </section>
+
+      <aside className="catalog-right-panel" aria-label="Active product details">
+        <span>{String(activeProductIndex + 1).padStart(3, "0")}</span>
+        <strong>{cleanTitle(activeProduct?.title)}</strong>
+        <em>{cleanCategory(activeProduct?.category)}</em>
+        <p>Hover selection / click to open product view</p>
+      </aside>
 
       <div
         key={`preview-${activeProduct?.id || "empty"}`}
@@ -122,7 +131,7 @@ function ProductGrid() {
           top: `${cursor.y}px`,
         }}
       >
-        {activeImage ? <img key={activeProduct?.id} src={activeImage} alt="" /> : null}
+        {activeImage ? <img src={activeImage} alt="" /> : null}
       </div>
     </main>
   );

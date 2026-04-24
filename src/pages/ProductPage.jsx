@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useCatalogProducts } from "../data/catalogClient";
 
 function cleanText(text = "") {
@@ -12,6 +12,7 @@ function cleanText(text = "") {
 
 export default function ProductPage() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const { products, loading } = useCatalogProducts({ mode: "full" });
 
   const product = useMemo(
@@ -21,6 +22,7 @@ export default function ProductPage() {
 
   const railRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isLeaving, setIsLeaving] = useState(false);
 
   const baseImages = product?.images?.length
     ? product.images
@@ -105,8 +107,18 @@ export default function ProductPage() {
   const realImageIndex = baseImages.length ? (activeIndex % baseImages.length) + 1 : 1;
 
   return (
-    <main className="pdp pdp--focus">
-      <Link to="/" className="pdp-back">← Back</Link>
+    <main className={`pdp pdp--focus ${isLeaving ? "is-leaving" : ""}`}>
+      <button
+        type="button"
+        className="pdp-back"
+        onClick={() => {
+          setIsLeaving(true);
+          window.dispatchEvent(new Event("momaz:pdp-back-transition"));
+          window.setTimeout(() => navigate("/"), 80);
+        }}
+      >
+        ← Back
+      </button>
 
       <div className="pdp-focus">
         <div ref={railRef} className="pdp-focus__rail">
