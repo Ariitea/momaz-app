@@ -1,56 +1,115 @@
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useCatalogProducts } from "../data/catalogClient";
 
+const categories = ["all knitwear", "dress", "shorts", "leggings", "skirts", "joggers", "sweater"];
+
+function removeChinese(text = "") {
+  return text
+    .replace(/[\u3400-\u9FFF]+/g, "")
+    .replace(/[^\w\s-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function cleanTitle(title = "") {
+  const cleaned = removeChinese(title);
+  return cleaned || "Selected piece";
+}
+
+function cleanCategory(category = "") {
+  const cleaned = removeChinese(category);
+  return cleaned || "curated";
+}
+
+
+
 function ProductGrid() {
   const { products, loading, error } = useCatalogProducts({ mode: "lite" });
+  const visibleProducts = useMemo(() => products.slice(0, 24), [products]);
+  const [activeProductId, setActiveProductId] = useState(null);
+  const [rowY, setRowY] = useState(null);
+  const [cursor, setCursor] = useState({ x: 0, y: 0, visible: false });
 
-  if (loading) {
-    return (
-      <main className="catalog">
-        <p>Loading products...</p>
-      </main>
-    );
+  const activeProduct =
+    visibleProducts.find((product) => product.id === activeProductId) ||
+    visibleProducts[0];
+
+  const activeImage =
+    activeProduct?.images?.[0] ||
+    activeProduct?.image ||
+    "";
+
+  function activateProduct(event, productId) {
+    const rect = event.currentTarget.getBoundingClientRect();
+    setActiveProductId(productId);
+    setRowY(rect.top + rect.height / 2);
   }
 
-  if (error || !products?.length) {
-    return (
-      <main className="catalog">
-        <p>Unable to load products.</p>
-      </main>
-    );
-  }
+  if (loading) return <main className="catalog-page">Loading products...</main>;
+  if (error || !visibleProducts.length) return <main className="catalog-page">Unable to load products.</main>;
 
   return (
-    <main className="catalog">
-      <section className="catalog-grid">
-        {products.slice(0, 20).map((product) => {
-          const image =
-            product?.images?.[0] ||
-            product?.image ||
-            "";
+    <main className="catalog-page catalog-page--list">
+      <div
+        className={`catalog-hover-band ${rowY ? "is-visible" : ""}`}
+        style={rowY ? { top: `${rowY}px` } : undefined}
+        aria-hidden="true"
+      />
 
-          return (
+      <aside className="catalog-side">
+        {categories.map((category) => (
+          <a key={category} href={`#${category.replaceAll(" ", "-")}`}>
+            {category}
+          </a>
+        ))}
+      </aside>
+
+      <section className="catalog-list-panel">
+        <div className="catalog-list-panel__bg">
+          {activeImage ? <img src={activeImage} alt="" /> : null}
+        </div>
+
+        <div
+  className="catalog-list"
+  onMouseMove={(event) =>
+    setCursor({
+      x: event.clientX,
+      y: event.clientY,
+      visible: true,
+    })
+  }
+  onMouseLeave={() => {
+    setCursor((current) => ({ ...current, visible: false }));
+    setRowY(null);
+  }}
+>
+          {visibleProducts.map((product, index) => (
             <Link
               key={product.id}
               to={`/product/${product.id}`}
-              className="catalog-item"
+              className={`catalog-row ${product.id === activeProduct?.id ? "is-active" : ""}`}
+              onMouseEnter={(event) => activateProduct(event, product.id)}
+              onFocus={(event) => activateProduct(event, product.id)}
             >
-              <div className="catalog-item__media">
-                {image ? (
-                  <img src={image} alt={product.title} />
-                ) : (
-                  <div className="catalog-item__placeholder" />
-                )}
-              </div>
-
-              <div className="catalog-item__info">
-                <h3>{product.title}</h3>
-                <p>{product.price_amount || "—"} {product.currency || ""}</p>
-              </div>
+              <span>{String(index + 1).padStart(3, "0")}</span>
+              <strong>{cleanTitle(product.title)}</strong>
+              <em>{cleanCategory(product.category)}</em>
             </Link>
-          );
-        })}
+          ))}
+        </div>
       </section>
+
+      <div
+        className={`catalog-cursor-preview ${cursor.visible ? "is-visible" : ""}`}
+        aria-hidden="true"
+        style={{
+          left: `${cursor.x}px`,
+          top: `${cursor.y}px`,
+        }}
+      >
+        {activeImage ? <img src={activeImage} alt="" /> : null}
+      </div>
     </main>
   );
 }
