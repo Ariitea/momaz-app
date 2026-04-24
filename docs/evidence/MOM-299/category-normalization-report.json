@@ -1,0 +1,711 @@
+{
+  "generatedAt": "2026-04-24T18:32:30.473Z",
+  "ticket": "MOM-299",
+  "productsReviewed": 1920,
+  "productsAffected": 1920,
+  "categoryCountBefore": 59,
+  "categoryCountAfter": 67,
+  "categoriesAfter": [
+    {
+      "category": "canada goose jackets",
+      "count": 264
+    },
+    {
+      "category": "louis vuitton accessories",
+      "count": 166
+    },
+    {
+      "category": "louis vuitton bags",
+      "count": 154
+    },
+    {
+      "category": "hublot watches",
+      "count": 137
+    },
+    {
+      "category": "cartier watches",
+      "count": 102
+    },
+    {
+      "category": "versace accessories",
+      "count": 88
+    },
+    {
+      "category": "audemars piguet watches",
+      "count": 88
+    },
+    {
+      "category": "gucci hats",
+      "count": 78
+    },
+    {
+      "category": "omega watches",
+      "count": 75
+    },
+    {
+      "category": "rolex watches",
+      "count": 74
+    },
+    {
+      "category": "jaeger-lecoultre watches",
+      "count": 70
+    },
+    {
+      "category": "vacheron constantin watches",
+      "count": 57
+    },
+    {
+      "category": "patek philippe watches",
+      "count": 43
+    },
+    {
+      "category": "panerai watches",
+      "count": 43
+    },
+    {
+      "category": "prada bags",
+      "count": 33
+    },
+    {
+      "category": "chanel shoes",
+      "count": 31
+    },
+    {
+      "category": "chanel accessories",
+      "count": 30
+    },
+    {
+      "category": "balenciaga bags",
+      "count": 29
+    },
+    {
+      "category": "chanel bags",
+      "count": 28
+    },
+    {
+      "category": "yves saint laurent bags",
+      "count": 24
+    },
+    {
+      "category": "moncler pants",
+      "count": 23
+    },
+    {
+      "category": "miumiu bags",
+      "count": 21
+    },
+    {
+      "category": "loro piana accessories",
+      "count": 21
+    },
+    {
+      "category": "dior bags",
+      "count": 19
+    },
+    {
+      "category": "calvin klein jackets",
+      "count": 13
+    },
+    {
+      "category": "balenciaga set",
+      "count": 13
+    },
+    {
+      "category": "louis vuitton set",
+      "count": 13
+    },
+    {
+      "category": "tudor watches",
+      "count": 13
+    },
+    {
+      "category": "dior wallets",
+      "count": 12
+    },
+    {
+      "category": "gucci accessories",
+      "count": 11
+    },
+    {
+      "category": "calvin klein pants",
+      "count": 11
+    },
+    {
+      "category": "dior set",
+      "count": 11
+    },
+    {
+      "category": "celine bags",
+      "count": 10
+    },
+    {
+      "category": "gucci bags",
+      "count": 9
+    },
+    {
+      "category": "dolce&gabbana pants",
+      "count": 9
+    },
+    {
+      "category": "adidas pants",
+      "count": 9
+    },
+    {
+      "category": "dior pants",
+      "count": 9
+    },
+    {
+      "category": "gucci pants",
+      "count": 7
+    },
+    {
+      "category": "chanel pants",
+      "count": 7
+    },
+    {
+      "category": "chanel set",
+      "count": 6
+    },
+    {
+      "category": "richard mille watches",
+      "count": 6
+    },
+    {
+      "category": "the north face pants",
+      "count": 5
+    },
+    {
+      "category": "fendi pants",
+      "count": 5
+    },
+    {
+      "category": "gucci set",
+      "count": 5
+    },
+    {
+      "category": "celine scarves",
+      "count": 4
+    },
+    {
+      "category": "prada accessories",
+      "count": 3
+    },
+    {
+      "category": "canada goose pants",
+      "count": 3
+    },
+    {
+      "category": "lululemon pants",
+      "count": 3
+    },
+    {
+      "category": "adidas shoes",
+      "count": 3
+    },
+    {
+      "category": "miumiu accessories",
+      "count": 2
+    },
+    {
+      "category": "celine pants",
+      "count": 2
+    },
+    {
+      "category": "burberry pants",
+      "count": 2
+    },
+    {
+      "category": "loewe bags",
+      "count": 2
+    },
+    {
+      "category": "mcm bags",
+      "count": 1
+    },
+    {
+      "category": "dolce&gabbana set",
+      "count": 1
+    },
+    {
+      "category": "celine accessories",
+      "count": 1
+    },
+    {
+      "category": "bvlgari earrings",
+      "count": 1
+    },
+    {
+      "category": "louis vuitton apparel",
+      "count": 1
+    },
+    {
+      "category": "kilian fragrance",
+      "count": 1
+    },
+    {
+      "category": "nike accessories",
+      "count": 1
+    },
+    {
+      "category": "yves saint laurent shoes",
+      "count": 1
+    },
+    {
+      "category": "nike shoes",
+      "count": 1
+    },
+    {
+      "category": "louis vuitton belts",
+      "count": 1
+    },
+    {
+      "category": "givenchy set",
+      "count": 1
+    },
+    {
+      "category": "burberry apparel",
+      "count": 1
+    },
+    {
+      "category": "fendi apparel",
+      "count": 1
+    },
+    {
+      "category": "iwc watches",
+      "count": 1
+    }
+  ],
+  "mapping": [
+    {
+      "oldCategory": "uncategorized",
+      "newCategories": [
+        "adidas shoes",
+        "burberry apparel",
+        "celine accessories",
+        "chanel accessories",
+        "chanel shoes",
+        "fendi apparel",
+        "gucci accessories",
+        "kilian fragrance",
+        "loewe bags",
+        "loro piana accessories",
+        "louis vuitton accessories",
+        "louis vuitton apparel",
+        "louis vuitton belts",
+        "miumiu accessories",
+        "nike accessories",
+        "nike shoes",
+        "prada accessories",
+        "rolex watches",
+        "yves saint laurent shoes"
+      ],
+      "oldCount": 280
+    },
+    {
+      "oldCategory": "goose / 大鹅 衣",
+      "newCategories": [
+        "canada goose jackets"
+      ],
+      "oldCount": 264
+    },
+    {
+      "oldCategory": "louis vuitton / 女包",
+      "newCategories": [
+        "louis vuitton bags"
+      ],
+      "oldCount": 154
+    },
+    {
+      "oldCategory": "hublot / 男表",
+      "newCategories": [
+        "hublot watches"
+      ],
+      "oldCount": 137
+    },
+    {
+      "oldCategory": "audemars piguet / 男表",
+      "newCategories": [
+        "audemars piguet watches"
+      ],
+      "oldCount": 88
+    },
+    {
+      "oldCategory": "versace / 皮带",
+      "newCategories": [
+        "versace accessories"
+      ],
+      "oldCount": 88
+    },
+    {
+      "oldCategory": "gucci /帽子",
+      "newCategories": [
+        "gucci hats"
+      ],
+      "oldCount": 78
+    },
+    {
+      "oldCategory": "omega / 男表",
+      "newCategories": [
+        "omega watches"
+      ],
+      "oldCount": 74
+    },
+    {
+      "oldCategory": "cartier / 男表",
+      "newCategories": [
+        "cartier watches"
+      ],
+      "oldCount": 58
+    },
+    {
+      "oldCategory": "vacheron constantin / 男表",
+      "newCategories": [
+        "vacheron constantin watches"
+      ],
+      "oldCount": 57
+    },
+    {
+      "oldCategory": "jaeger-lecoultre / 男表",
+      "newCategories": [
+        "jaeger-lecoultre watches"
+      ],
+      "oldCount": 53
+    },
+    {
+      "oldCategory": "cartier / 女表",
+      "newCategories": [
+        "cartier watches"
+      ],
+      "oldCount": 44
+    },
+    {
+      "oldCategory": "panerai / 男表",
+      "newCategories": [
+        "panerai watches"
+      ],
+      "oldCount": 43
+    },
+    {
+      "oldCategory": "datejust series/日志型",
+      "newCategories": [
+        "rolex watches"
+      ],
+      "oldCount": 33
+    },
+    {
+      "oldCategory": "prada /女包",
+      "newCategories": [
+        "prada bags"
+      ],
+      "oldCount": 33
+    },
+    {
+      "oldCategory": "patek philippe / 男表",
+      "newCategories": [
+        "patek philippe watches"
+      ],
+      "oldCount": 31
+    },
+    {
+      "oldCategory": "balenciaga / 女包",
+      "newCategories": [
+        "balenciaga bags"
+      ],
+      "oldCount": 29
+    },
+    {
+      "oldCategory": "chanel / 女包",
+      "newCategories": [
+        "chanel bags"
+      ],
+      "oldCount": 28
+    },
+    {
+      "oldCategory": "daytona/迪通拿",
+      "newCategories": [
+        "rolex watches"
+      ],
+      "oldCount": 27
+    },
+    {
+      "oldCategory": "yves saint laurent / 女包",
+      "newCategories": [
+        "yves saint laurent bags"
+      ],
+      "oldCount": 24
+    },
+    {
+      "oldCategory": "moncler / 裤",
+      "newCategories": [
+        "moncler pants"
+      ],
+      "oldCount": 23
+    },
+    {
+      "oldCategory": "miumiu/女包",
+      "newCategories": [
+        "miumiu bags"
+      ],
+      "oldCount": 21
+    },
+    {
+      "oldCategory": "dior / 女包",
+      "newCategories": [
+        "dior bags"
+      ],
+      "oldCount": 19
+    },
+    {
+      "oldCategory": "jaeger-lecoultre / 女表",
+      "newCategories": [
+        "jaeger-lecoultre watches"
+      ],
+      "oldCount": 17
+    },
+    {
+      "oldCategory": "balenciaga/套装",
+      "newCategories": [
+        "balenciaga set"
+      ],
+      "oldCount": 13
+    },
+    {
+      "oldCategory": "calvin klein/衣",
+      "newCategories": [
+        "calvin klein jackets"
+      ],
+      "oldCount": 13
+    },
+    {
+      "oldCategory": "louis vuitton/套装",
+      "newCategories": [
+        "louis vuitton set"
+      ],
+      "oldCount": 13
+    },
+    {
+      "oldCategory": "tudor / 男表",
+      "newCategories": [
+        "tudor watches"
+      ],
+      "oldCount": 13
+    },
+    {
+      "oldCategory": "dior/钱包",
+      "newCategories": [
+        "dior wallets"
+      ],
+      "oldCount": 12
+    },
+    {
+      "oldCategory": "patek philippe / 女表",
+      "newCategories": [
+        "patek philippe watches"
+      ],
+      "oldCount": 12
+    },
+    {
+      "oldCategory": "calvin klein/裤",
+      "newCategories": [
+        "calvin klein pants"
+      ],
+      "oldCount": 11
+    },
+    {
+      "oldCategory": "dior/套装",
+      "newCategories": [
+        "dior set"
+      ],
+      "oldCount": 11
+    },
+    {
+      "oldCategory": "celine / 女包",
+      "newCategories": [
+        "celine bags"
+      ],
+      "oldCount": 10
+    },
+    {
+      "oldCategory": "adidas/裤",
+      "newCategories": [
+        "adidas pants"
+      ],
+      "oldCount": 9
+    },
+    {
+      "oldCategory": "dior / 裤",
+      "newCategories": [
+        "dior pants"
+      ],
+      "oldCount": 9
+    },
+    {
+      "oldCategory": "dolce&gabbana/裤",
+      "newCategories": [
+        "dolce&gabbana pants"
+      ],
+      "oldCount": 9
+    },
+    {
+      "oldCategory": "gucci / 女包",
+      "newCategories": [
+        "gucci bags"
+      ],
+      "oldCount": 9
+    },
+    {
+      "oldCategory": "chanel / 裤",
+      "newCategories": [
+        "chanel pants"
+      ],
+      "oldCount": 7
+    },
+    {
+      "oldCategory": "gucci / 裤",
+      "newCategories": [
+        "gucci pants"
+      ],
+      "oldCount": 7
+    },
+    {
+      "oldCategory": "chanel/套装",
+      "newCategories": [
+        "chanel set"
+      ],
+      "oldCount": 6
+    },
+    {
+      "oldCategory": "richard miller / 男表",
+      "newCategories": [
+        "richard mille watches"
+      ],
+      "oldCount": 6
+    },
+    {
+      "oldCategory": "fendi / 裤",
+      "newCategories": [
+        "fendi pants"
+      ],
+      "oldCount": 5
+    },
+    {
+      "oldCategory": "gucci/套装",
+      "newCategories": [
+        "gucci set"
+      ],
+      "oldCount": 5
+    },
+    {
+      "oldCategory": "rolex/女表",
+      "newCategories": [
+        "rolex watches"
+      ],
+      "oldCount": 5
+    },
+    {
+      "oldCategory": "thenorthface / 北面 裤",
+      "newCategories": [
+        "the north face pants"
+      ],
+      "oldCount": 5
+    },
+    {
+      "oldCategory": "celine /围巾",
+      "newCategories": [
+        "celine scarves"
+      ],
+      "oldCount": 4
+    },
+    {
+      "oldCategory": "greenwich series/格林尼治",
+      "newCategories": [
+        "rolex watches"
+      ],
+      "oldCount": 4
+    },
+    {
+      "oldCategory": "goose / 裤",
+      "newCategories": [
+        "canada goose pants"
+      ],
+      "oldCount": 3
+    },
+    {
+      "oldCategory": "lululemon / 裤",
+      "newCategories": [
+        "lululemon pants"
+      ],
+      "oldCount": 3
+    },
+    {
+      "oldCategory": "burberry / 裤",
+      "newCategories": [
+        "burberry pants"
+      ],
+      "oldCount": 2
+    },
+    {
+      "oldCategory": "celine / 裤",
+      "newCategories": [
+        "celine pants"
+      ],
+      "oldCount": 2
+    },
+    {
+      "oldCategory": "explorer/探险家",
+      "newCategories": [
+        "rolex watches"
+      ],
+      "oldCount": 2
+    },
+    {
+      "oldCategory": "bvlgari / 耳环",
+      "newCategories": [
+        "bvlgari earrings"
+      ],
+      "oldCount": 1
+    },
+    {
+      "oldCategory": "dolce&gabbana/套装",
+      "newCategories": [
+        "dolce&gabbana set"
+      ],
+      "oldCount": 1
+    },
+    {
+      "oldCategory": "givenchy/套装",
+      "newCategories": [
+        "givenchy set"
+      ],
+      "oldCount": 1
+    },
+    {
+      "oldCategory": "iwc / 男表",
+      "newCategories": [
+        "iwc watches"
+      ],
+      "oldCount": 1
+    },
+    {
+      "oldCategory": "mcm / 女包",
+      "newCategories": [
+        "mcm bags"
+      ],
+      "oldCount": 1
+    },
+    {
+      "oldCategory": "omega / 女表",
+      "newCategories": [
+        "omega watches"
+      ],
+      "oldCount": 1
+    },
+    {
+      "oldCategory": "submariner/潜航者",
+      "newCategories": [
+        "rolex watches"
+      ],
+      "oldCount": 1
+    }
+  ]
+}
