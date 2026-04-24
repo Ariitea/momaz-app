@@ -1,89 +1,138 @@
-import { useMemo, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useParams, Link } from "react-router-dom";
 import { useCatalogProducts } from "../data/catalogClient";
 
-function formatPrice(product) {
-  if (!product?.price_amount || product.price_amount === "0.00") {
-    return "Price upon request";
-  }
-
-  return `${product.price_amount} ${product.currency || ""}`.trim();
+function cleanText(text = "") {
+  return text
+    .replace(/[\u3400-\u9FFF]+/g, "")
+    .replace(/[^\w\s-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
-function ProductPage() {
+export default function ProductPage() {
   const { id } = useParams();
-  const { products, loading, error } = useCatalogProducts({ mode: "full" });
-  const product = useMemo(() => products.find((item) => item.id === id), [products, id]);
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const { products, loading } = useCatalogProducts({ mode: "full" });
 
-  if (loading) {
-    return <main className="pdp"><p>Loading product...</p></main>;
-  }
+  const product = useMemo(
+    () => products.find((p) => p.id === id),
+    [products, id]
+  );
 
-  if (error || !product) {
-    return (
-      <main className="pdp">
-        <p>Product unavailable.</p>
-        <Link to="/">Back to products</Link>
-      </main>
-    );
-  }
+  const railRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const images = Array.isArray(product.images) && product.images.length > 0
+  const baseImages = product?.images?.length
     ? product.images
-    : [product.image].filter(Boolean);
+    : [product?.image].filter(Boolean);
 
-  const activeImage = images[activeImageIndex] || images[0] || "";
-  const price = formatPrice(product);
+  // 🔁 triple array (infinite illusion)
+  const images = [...baseImages, ...baseImages, ...baseImages];
+
+  // 🎯 center on middle set
+  useEffect(() => {
+    const rail = railRef.current;
+    if (!rail) return;
+
+    const items = rail.querySelectorAll(".pdp-focus__item");
+    if (!items.length) return;
+
+    const itemWidth = items[0].offsetWidth + 90;
+    const centerIndex = Math.floor(images.length / 3);
+
+    rail.scrollLeft = centerIndex * itemWidth;
+  }, [product?.id]);
+
+  // 🧠 detect center image
+  useEffect(() => {
+    const rail = railRef.current;
+    if (!rail) return;
+
+    let raf = null;
+
+    function update() {
+      const center = rail.scrollLeft + rail.clientWidth / 2;
+      const items = Array.from(
+        rail.querySelectorAll(".pdp-focus__item")
+      );
+
+      let closest = 0;
+      let min = Infinity;
+
+      items.forEach((el, i) => {
+        const rect = el.offsetLeft + el.offsetWidth / 2;
+        const dist = Math.abs(rect - center);
+
+        if (dist < min) {
+          min = dist;
+          closest = i;
+        }
+      });
+
+      setActiveIndex(closest);
+    }
+
+    function onScroll() {
+      if (raf) cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(update);
+
+      // infinite reposition
+      const total = rail.scrollWidth;
+      const visible = rail.clientWidth;
+
+      if (rail.scrollLeft < visible * 0.5) {
+        rail.scrollLeft += total / 3;
+      } else if (rail.scrollLeft > total - visible * 1.5) {
+        rail.scrollLeft -= total / 3;
+      }
+    }
+
+    rail.addEventListener("scroll", onScroll, { passive: true });
+    update();
+
+    return () => {
+      if (raf) cancelAnimationFrame(raf);
+      rail.removeEventListener("scroll", onScroll);
+    };
+  }, [product?.id, images.length]);
+
+  if (loading || !product) {
+    return <main className="pdp">Loading...</main>;
+  }
+
+  const displayTitle = cleanText(product.title) || "Selected piece";
+  const displayCategory = cleanText(product.category) || "Curated selection";
+  const realImageIndex = baseImages.length ? (activeIndex % baseImages.length) + 1 : 1;
 
   return (
-    <main className="pdp">
-      <Link className="pdp__back" to="/">← Back</Link>
+    <main className="pdp pdp--focus">
+      <Link to="/" className="pdp-back">← Back</Link>
 
-      <section className="pdp__layout">
-        <div className="pdp__gallery">
-          <div className="pdp__main-image">
-            {activeImage ? (
-              <img src={activeImage} alt={product.title} />
-            ) : (
-              <div className="pdp__placeholder" />
-            )}
-          </div>
-
-          {images.length > 1 ? (
-            <div className="pdp__thumbs" aria-label="Product images">
-              {images.slice(0, 8).map((image, index) => (
-                <button
-                  key={`${image}-${index}`}
-                  type="button"
-                  className={index === activeImageIndex ? "is-active" : ""}
-                  onClick={() => setActiveImageIndex(index)}
-                  aria-label={`View image ${index + 1}`}
-                >
-                  <img src={image} alt="" />
-                </button>
-              ))}
+      <div className="pdp-focus">
+        <div ref={railRef} className="pdp-focus__rail">
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className={
+                "pdp-focus__item " +
+                (i === activeIndex ? "is-active" : "")
+              }
+            >
+              <img src={img} alt="" />
             </div>
-          ) : null}
+          ))}
         </div>
 
-        <aside className="pdp__info" aria-label="Product information">
-          <p className="pdp__category">{product.category || "Selected piece"}</p>
-          <h1>{product.title}</h1>
-          <p className="pdp__price">{price}</p>
-
-          <div className="pdp__meta">
-            <p><span>Availability</span>{product.availability || "Selected edition"}</p>
-            <p><span>Source</span>{product.source || "Curated feed"}</p>
-          </div>
-
-          <a className="pdp__cta" href="/#tailored-redesign">
-            Start tailored redesign
-          </a>
+        <aside className="pdp-focus__info">
+          <p>{displayCategory}</p>
+          <h1>{displayTitle}</h1>
         </aside>
-      </section>
+
+        <aside className="pdp-focus__summary">
+          <span>{String(realImageIndex).padStart(2, "0")} / {String(baseImages.length).padStart(2, "0")}</span>
+          <a href="/#tailored-redesign">Start tailored redesign</a>
+        </aside>
+      </div>
     </main>
   );
 }
-
-export default ProductPage;
