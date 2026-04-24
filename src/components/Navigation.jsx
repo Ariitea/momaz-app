@@ -1,50 +1,35 @@
 import { Link } from "react-router-dom";
 
-const navItems = [
-  "New",
-  "Clothes",
-  "Shoes",
-  "Bags",
-  "Accessories",
-  "Watches",
-  "Archive",
-];
-
 function Navigation() {
   return (
-    <header className="apple-nav" aria-label="Primary navigation">
-      <div className="apple-nav__inner">
-        <Link className="apple-nav__brand" to="/" aria-label="Momaz home">
-          MOMAZ
-        </Link>
+    <header className="reference-nav" aria-label="Primary navigation">
+      <Link className="reference-nav__brand" to="/">
+        MOMAZ™
+      </Link>
 
-        <nav className="apple-nav__menu">
-          {navItems.map((item) => (
-            <a key={item} href={`/#${item.toLowerCase()}`}>
-              {item}
-            </a>
-          ))}
-        </nav>
+      <div className="reference-nav__group">
+        <a href="/#about">About</a>
+        <span>Paris</span>
+        <span className="reference-nav__coords">48.8566° N, 2.3522° E</span>
+      </div>
 
-        <div className="apple-nav__actions">
+      <nav className="reference-nav__group reference-nav__catalog" aria-label="Catalog">
+        <a href="/#catalog">Catalog</a>
+        <a href="/#clothes">Clothes</a>
+        <a href="/#shoes">Shoes</a>
+        <a href="/#bags">Bags</a>
+        <a href="/#watches">Watches</a>
+      </nav>
 
-          {/* SEARCH ICON */}
-          <a href="/#search" aria-label="Search" className="apple-icon">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
-              <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="1.5"/>
-              <line x1="16.65" y1="16.65" x2="21" y2="21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-            </svg>
-          </a>
+      <div className="reference-nav__group">
+        <a href="/#drops">Drops</a>
+        <a href="/#new">New</a>
+        <a href="/#archive">Archive</a>
+      </div>
 
-          {/* BAG ICON */}
-          <a href="/#bag" aria-label="Bag" className="apple-icon">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
-              <path d="M6 7h12l-1 13H7L6 7z" stroke="currentColor" strokeWidth="1.5"/>
-              <path d="M9 7a3 3 0 016 0" stroke="currentColor" strokeWidth="1.5"/>
-            </svg>
-          </a>
-
-        </div>
+      <div className="reference-nav__group reference-nav__right">
+        <a href="/#bag">Bag 0</a>
+        <a href="/#account">Account</a>
       </div>
     </header>
   );
