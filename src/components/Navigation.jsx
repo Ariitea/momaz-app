@@ -1,27 +1,23 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+const categories = ["New", "Clothes", "Shoes", "Bags", "Accessories", "Watches"];
 
 function Navigation() {
-  const location = useLocation();
-  const isSceneFlow = location.pathname === "/";
-
   return (
     <header className="site-nav" aria-label="Primary navigation">
-      <Link className="site-nav__icon-button" to="/" aria-label="Go to scene home">
-        <span aria-hidden="true">⌂</span>
-      </Link>
+      <Link className="site-nav__logo" to="/">MOMAZ</Link>
 
-      <Link className="site-nav__logo" to="/">
-        MOMAZ
-      </Link>
+      <nav className="site-nav__categories" aria-label="Categories">
+        {categories.map((category) => (
+          <a key={category} href={`/#${category.toLowerCase()}`}>
+            {category}
+          </a>
+        ))}
+      </nav>
 
       <div className="site-nav__actions">
-        {isSceneFlow ? (
-          <span className="site-nav__meta">Scene flow</span>
-        ) : (
-          <Link className="site-nav__icon-button" to="/" aria-label="Back to scene flow">
-            <span aria-hidden="true">←</span>
-          </Link>
-        )}
+        <a href="/#selection">Selection</a>
+        <a href="/#tailored-redesign">Apply</a>
       </div>
     </header>
   );
