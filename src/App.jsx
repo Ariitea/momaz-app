@@ -1,20 +1,27 @@
 import { lazy, Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
-import Layout from "./components/Layout";
+import { Routes, Route } from "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import ProductGrid from "./components/ProductGrid";
 
 const ProductPage = lazy(() => import("./pages/ProductPage"));
 
 function App() {
   return (
-    <Layout>
-      <Suspense fallback={<p className="app-loading">Loading MOMAZ experience...</p>}>
+    <>
+      <Suspense
+        fallback={
+          <main className="app-shell">
+            <p className="empty-state">Chargement de la page produit...</p>
+          </main>
+        }
+      >
         <Routes>
           <Route path="/" element={<ProductGrid />} />
           <Route path="/product/:id" element={<ProductPage />} />
         </Routes>
       </Suspense>
-    </Layout>
+      <SpeedInsights />
+    </>
   );
 }
 
