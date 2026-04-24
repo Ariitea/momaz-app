@@ -82,6 +82,7 @@ function ProductGrid() {
   onMouseLeave={() => {
     setCursor((current) => ({ ...current, visible: false }));
     setRowY(null);
+    setActiveProductId(null);
   }}
 >
           {visibleProducts.map((product, index) => (
