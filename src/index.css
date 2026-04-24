@@ -1128,3 +1128,60 @@ body {
 .catalog-cursor-preview.is-visible img {
   opacity: 1;
 }
+
+
+/* ===== MOBILE FIX (CLEAN GRID MODE) ===== */
+
+@media (max-width: 820px) {
+
+  /* hide desktop stuff */
+  .catalog-side,
+  .catalog-hover-band,
+  .catalog-cursor-preview,
+  .catalog-list-panel__bg {
+    display: none !important;
+  }
+
+  /* reset layout */
+  .catalog-list-panel {
+    padding: 80px 16px !important;
+    display: block !important;
+  }
+
+  .catalog-list {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .catalog-row {
+    all: unset;
+    display: block;
+  }
+
+  .catalog-row span {
+    display: none;
+  }
+
+  .catalog-row em {
+    display: none;
+  }
+
+  .catalog-row strong {
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 6px;
+  }
+
+  /* product card */
+  .catalog-row::after {
+    content: "";
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: #eee;
+    margin-bottom: 6px;
+  }
+
+}
+
