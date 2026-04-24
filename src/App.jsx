@@ -7,16 +7,29 @@ import ProductGrid from "./components/ProductGrid";
 const ProductPage = lazy(() => import("./pages/ProductPage"));
 
 function App() {
-  const [backTransition, setBackTransition] = useState(false);
+  const [transition, setTransition] = useState(null);
 
   useEffect(() => {
     function onBackTransition() {
-      setBackTransition(true);
-      window.setTimeout(() => setBackTransition(false), 950);
+      setTransition({ type: "back", y: "50vh" });
+      window.setTimeout(() => setTransition(null), 1100);
+    }
+
+    function onProductTransition(event) {
+      setTransition({
+        type: "product",
+        y: `${event.detail?.y || window.innerHeight / 2}px`,
+      });
+      window.setTimeout(() => setTransition(null), 1100);
     }
 
     window.addEventListener("momaz:pdp-back-transition", onBackTransition);
-    return () => window.removeEventListener("momaz:pdp-back-transition", onBackTransition);
+    window.addEventListener("momaz:catalog-product-transition", onProductTransition);
+
+    return () => {
+      window.removeEventListener("momaz:pdp-back-transition", onBackTransition);
+      window.removeEventListener("momaz:catalog-product-transition", onProductTransition);
+    };
   }, []);
 
   return (
@@ -35,8 +48,12 @@ function App() {
         </Routes>
       </Suspense>
 
-      {backTransition ? (
-        <div className="global-back-transition-layer" aria-hidden="true" />
+      {transition ? (
+        <div
+          className={`momaz-transition-layer momaz-transition-layer--${transition.type}`}
+          style={{ "--transition-y": transition.y }}
+          aria-hidden="true"
+        />
       ) : null}
 
       <Analytics />

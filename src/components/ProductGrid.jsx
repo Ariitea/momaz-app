@@ -54,9 +54,16 @@ function ProductGrid() {
   function openProduct(productId) {
     setActiveProductId(productId);
     setLeavingProductId(productId);
+
+    window.dispatchEvent(
+      new CustomEvent("momaz:catalog-product-transition", {
+        detail: { y: rowY || window.innerHeight / 2 },
+      }),
+    );
+
     window.setTimeout(() => {
       navigate(`/product/${productId}`);
-    }, 520);
+    }, 80);
   }
 
   if (loading) return <main className="catalog-page">Loading products...</main>;
