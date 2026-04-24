@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import Navigation from "./components/Navigation";
 import ProductGrid from "./components/ProductGrid";
@@ -7,7 +7,17 @@ import ProductGrid from "./components/ProductGrid";
 const ProductPage = lazy(() => import("./pages/ProductPage"));
 
 function App() {
+  const location = useLocation();
   const [transition, setTransition] = useState(null);
+
+  useEffect(() => {
+    document.body.classList.toggle("route-product", location.pathname.startsWith("/product/"));
+    document.body.classList.toggle("route-home", location.pathname === "/");
+
+    return () => {
+      document.body.classList.remove("route-product", "route-home");
+    };
+  }, [location.pathname]);
 
   useEffect(() => {
     function onBackTransition() {
