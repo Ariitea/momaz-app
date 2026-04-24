@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useCatalogProducts } from "../data/catalogClient";
 
 const categories = ["all knitwear", "dress", "shorts", "leggings", "skirts", "joggers", "sweater"];
@@ -30,6 +30,8 @@ function ProductGrid() {
   const [activeProductId, setActiveProductId] = useState(null);
   const [rowY, setRowY] = useState(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0, visible: false });
+  const [leavingProductId, setLeavingProductId] = useState(null);
+  const navigate = useNavigate();
 
   const activeProduct =
     visibleProducts.find((product) => product.id === activeProductId) ||
@@ -46,11 +48,20 @@ function ProductGrid() {
     setRowY(rect.top + rect.height / 2);
   }
 
+  function openProduct(event, productId) {
+    event.preventDefault();
+    setActiveProductId(productId);
+    setLeavingProductId(productId);
+    window.setTimeout(() => {
+      navigate(`/product/${productId}`);
+    }, 520);
+  }
+
   if (loading) return <main className="catalog-page">Loading products...</main>;
   if (error || !visibleProducts.length) return <main className="catalog-page">Unable to load products.</main>;
 
   return (
-    <main className="catalog-page catalog-page--list">
+    <main className={`catalog-page catalog-page--list ${leavingProductId ? "is-leaving" : ""}`}>
       <div
         className={`catalog-hover-band ${rowY ? "is-visible" : ""}`}
         style={rowY ? { top: `${rowY}px` } : undefined}
@@ -66,8 +77,8 @@ function ProductGrid() {
       </aside>
 
       <section className="catalog-list-panel">
-        <div className="catalog-list-panel__bg">
-          {activeImage ? <img src={activeImage} alt="" /> : null}
+        <div key={`bg-${activeProduct?.id || "empty"}`} className="catalog-list-panel__bg">
+          {activeImage ? <img key={activeProduct?.id} src={activeImage} alt="" /> : null}
         </div>
 
         <div
@@ -86,22 +97,24 @@ function ProductGrid() {
   }}
 >
           {visibleProducts.map((product, index) => (
-            <Link
+            <button
               key={product.id}
-              to={`/product/${product.id}`}
-              className={`catalog-row ${product.id === activeProduct?.id ? "is-active" : ""}`}
+              type="button"
+              className={`catalog-row ${product.id === activeProduct?.id ? "is-active" : ""} ${product.id === leavingProductId ? "is-leaving" : ""}`}
               onMouseEnter={(event) => activateProduct(event, product.id)}
               onFocus={(event) => activateProduct(event, product.id)}
+              onClick={(event) => openProduct(event, product.id)}
             >
               <span>{String(index + 1).padStart(3, "0")}</span>
               <strong>{cleanTitle(product.title)}</strong>
               <em>{cleanCategory(product.category)}</em>
-            </Link>
+            </button>
           ))}
         </div>
       </section>
 
       <div
+        key={`preview-${activeProduct?.id || "empty"}`}
         className={`catalog-cursor-preview ${cursor.visible ? "is-visible" : ""}`}
         aria-hidden="true"
         style={{
@@ -109,7 +122,7 @@ function ProductGrid() {
           top: `${cursor.y}px`,
         }}
       >
-        {activeImage ? <img src={activeImage} alt="" /> : null}
+        {activeImage ? <img key={activeProduct?.id} src={activeImage} alt="" /> : null}
       </div>
     </main>
   );

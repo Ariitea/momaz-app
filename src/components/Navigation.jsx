@@ -1,8 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Navigation() {
+  const location = useLocation();
+  const isProductPage = location.pathname.startsWith("/product/");
+
   return (
-    <header className="reference-nav" aria-label="Primary navigation">
+    <header
+      className={`reference-nav ${isProductPage ? "reference-nav--product" : ""}`}
+      aria-label="Primary navigation"
+    >
       <Link className="reference-nav__brand" to="/">
         MOMAZ™
       </Link>

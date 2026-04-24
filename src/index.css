@@ -1480,3 +1480,583 @@ body {
   letter-spacing: -0.02em;
 }
 
+
+/* ===== PRODUCT SELECTION ANIMATION ===== */
+
+.catalog-hover-band {
+  transition:
+    opacity 160ms ease,
+    top 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.catalog-row {
+  transition:
+    color 180ms ease,
+    transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.catalog-row.is-active,
+.catalog-row:hover,
+.catalog-row:focus-visible {
+  transform: translateX(10px);
+}
+
+.catalog-cursor-preview img {
+  animation: productPreviewReveal 360ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.catalog-list-panel__bg img {
+  animation: productBackgroundReveal 520ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes productPreviewReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.94);
+    filter: blur(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes productBackgroundReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ===== STRONG PRODUCT HOVER REVEAL ANIMATION ===== */
+
+.catalog-cursor-preview.is-visible {
+  animation: cursorPreviewPop 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.catalog-cursor-preview.is-visible img {
+  animation: cursorImageReveal 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.catalog-list-panel__bg {
+  animation: bgImageReveal 560ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes cursorPreviewPop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -46%) scale(0.84);
+    clip-path: inset(18% 18% 18% 18%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes cursorImageReveal {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(1.08);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+@keyframes bgImageReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ===== PRODUCT PAGE ENTRY TRANSITION FROM CATALOG ===== */
+
+.catalog-row {
+  border: 0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.catalog-page--list.is-leaving .catalog-row:not(.is-leaving) {
+  opacity: 0.16;
+  transition: opacity 260ms ease;
+}
+
+.catalog-page--list.is-leaving .catalog-side {
+  opacity: 0;
+  transform: translateX(-18px);
+  transition:
+    opacity 260ms ease,
+    transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.catalog-page--list.is-leaving .catalog-list-panel__bg {
+  opacity: 0.22 !important;
+  transform: scale(1.08);
+  transition:
+    opacity 420ms ease,
+    transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.catalog-page--list.is-leaving .catalog-cursor-preview {
+  opacity: 1 !important;
+  transform: translate(-50%, -50%) scale(1.42);
+  transition:
+    opacity 420ms ease,
+    transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.catalog-page--list.is-leaving .catalog-hover-band {
+  height: 100vh;
+  top: 50vh !important;
+  opacity: 1;
+  transition:
+    height 520ms cubic-bezier(0.16, 1, 0.3, 1),
+    top 520ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 220ms ease;
+}
+
+.catalog-page--list.is-leaving .catalog-row.is-leaving {
+  color: #fff !important;
+  transform: translateX(18px);
+  transition:
+    color 200ms ease,
+    transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ===== HOME NO-SCROLL MODE ===== */
+
+.catalog-page--list {
+  height: calc(100vh - 76px) !important;
+  min-height: calc(100vh - 76px) !important;
+  overflow: hidden !important;
+}
+
+.catalog-page--list .catalog-list-panel {
+  min-height: calc(100vh - 76px) !important;
+  height: calc(100vh - 76px) !important;
+  overflow: hidden !important;
+}
+
+.catalog-page--list .catalog-list {
+  max-height: calc(100vh - 190px);
+  overflow: hidden;
+}
+
+/* ===== PDP TRANSITION CONTINUITY ===== */
+
+.pdp {
+  position: relative;
+  background: #f2f2f0 !important;
+  min-height: calc(100vh - 76px);
+  padding-top: clamp(42px, 7vw, 90px);
+  animation: pdpSoftEnter 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  overflow-x: hidden;
+}
+
+/* black overlay matching catalog selection band, fading out on PDP arrival */
+.pdp::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: #050505;
+  pointer-events: none;
+  animation: pdpBlackRevealOut 620ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.pdp__back {
+  color: rgba(0, 0, 0, 0.46) !important;
+}
+
+.pdp__layout {
+  max-width: 1180px;
+  margin: 0 auto;
+  align-items: center !important;
+}
+
+.pdp__main-image {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.pdp__main-image img {
+  object-fit: contain !important;
+  filter: drop-shadow(0 26px 60px rgba(0, 0, 0, 0.12));
+  animation: pdpImageIn 680ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.pdp__info {
+  border-top: none !important;
+  padding-top: 0 !important;
+  animation: pdpInfoIn 760ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.pdp__info h1 {
+  max-width: 10ch;
+}
+
+.pdp__meta {
+  border-top-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.pdp__cta {
+  background: #050505 !important;
+  color: #fff !important;
+}
+
+@keyframes pdpBlackRevealOut {
+  0% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+
+  100% {
+    opacity: 0;
+    clip-path: inset(48% 0 48% 0);
+  }
+}
+
+@keyframes pdpSoftEnter {
+  from {
+    opacity: 0.96;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pdpImageIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pdpInfoIn {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 820px) {
+  .catalog-page--list {
+    height: calc(100vh - 64px) !important;
+    min-height: calc(100vh - 64px) !important;
+  }
+
+  .catalog-page--list .catalog-list-panel {
+    height: calc(100vh - 132px) !important;
+    min-height: calc(100vh - 132px) !important;
+    overflow: hidden !important;
+  }
+
+  .catalog-page--list .catalog-list {
+    max-height: calc(100vh - 210px);
+    overflow: hidden;
+  }
+
+  .pdp::before {
+    display: none;
+  }
+}
+
+/* ===== PDP DARK MODE (MATCH SELECTOR) ===== */
+
+.pdp {
+  background: #050505 !important;
+  color: #ffffff !important;
+}
+
+/* overlay transition → maintenant cohérente */
+.pdp::before {
+  background: #050505 !important;
+}
+
+/* texte principal */
+.pdp__info h1,
+.pdp__info h2,
+.pdp__info strong {
+  color: #ffffff !important;
+}
+
+/* texte secondaire */
+.pdp__info p,
+.pdp__meta,
+.pdp__back {
+  color: rgba(255, 255, 255, 0.62) !important;
+}
+
+/* séparateurs */
+.pdp__meta {
+  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+/* CTA */
+.pdp__cta {
+  background: #ffffff !important;
+  color: #050505 !important;
+  border: none !important;
+}
+
+/* image → plus clean sur fond noir */
+.pdp__main-image img {
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* enlever tout fond résiduel */
+.pdp__main-image,
+.pdp__layout,
+.pdp__info {
+  background: transparent !important;
+}
+
+/* hover subtil */
+.pdp__cta:hover {
+  opacity: 0.86;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 820px) {
+  .pdp {
+    background: #050505 !important;
+  }
+}
+
+
+/* ===== FIX PDP SCROLL ZOOM / TRANSFORM BUG ===== */
+
+.pdp,
+.pdp__layout,
+.pdp__gallery,
+.pdp__main-image,
+.pdp__main-image img,
+.pdp__info {
+  transform: none !important;
+  scale: none !important;
+  animation: none !important;
+}
+
+.pdp__main-image {
+  overflow: hidden;
+}
+
+.pdp__main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+}
+
+/* remove black reveal overlay if it causes scroll/zoom artifacts */
+.pdp::before {
+  display: none !important;
+}
+
+/* keep PDP stable */
+.pdp {
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+
+/* ===== PDP HEADER TRANSPARENT + READABLE ===== */
+
+/* header transparent uniquement sur la page produit */
+.pdp .reference-nav {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* texte en blanc pour lisibilité sur fond noir */
+.pdp .reference-nav,
+.pdp .reference-nav a,
+.pdp .reference-nav span {
+  color: #ffffff !important;
+}
+
+/* texte secondaire (plus subtil) */
+.pdp .reference-nav__group {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* coord GPS */
+.pdp .reference-nav__coords {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* hover propre */
+.pdp .reference-nav a:hover {
+  opacity: 0.7;
+}
+
+
+/* ===== FIX PDP HEADER USING :has() ===== */
+
+body:has(.pdp) .reference-nav {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+body:has(.pdp) .reference-nav,
+body:has(.pdp) .reference-nav a,
+body:has(.pdp) .reference-nav span {
+  color: #ffffff !important;
+}
+
+body:has(.pdp) .reference-nav__group {
+  color: rgba(255, 255, 255, 0.62) !important;
+}
+
+body:has(.pdp) .reference-nav__coords {
+  color: rgba(255, 255, 255, 0.42) !important;
+}
+
+body:has(.pdp) .reference-nav a:hover {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+
+/* ===== HARD FORCE REFERENCE NAV TRANSPARENT ===== */
+
+.reference-nav,
+.reference-nav::before,
+.reference-nav::after {
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* PDP readable nav */
+body:has(.pdp) .reference-nav,
+body:has(.pdp) .reference-nav *,
+body:has(.pdp) .reference-nav a,
+body:has(.pdp) .reference-nav span {
+  color: #ffffff !important;
+}
+
+body:has(.pdp) .reference-nav__coords {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+
+/* ===== PRODUCT PAGE NAV OVERRIDE — DIRECT CLASS ===== */
+
+.reference-nav.reference-nav--product {
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+.reference-nav.reference-nav--product,
+.reference-nav.reference-nav--product *,
+.reference-nav.reference-nav--product a,
+.reference-nav.reference-nav--product span {
+  color: #ffffff !important;
+}
+
+.reference-nav.reference-nav--product .reference-nav__group {
+  color: rgba(255, 255, 255, 0.62) !important;
+}
+
+.reference-nav.reference-nav--product .reference-nav__coords {
+  color: rgba(255, 255, 255, 0.42) !important;
+}
+
+.reference-nav.reference-nav--product a:hover {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+
+/* ===== KILL PDP HEADER / ANIMATION OVERLAY ARTIFACTS ===== */
+
+/* supprime tout calque d’animation global sur PDP */
+.pdp::before,
+.pdp::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* force le noir derrière le header sur PDP */
+body:has(.pdp),
+body:has(.pdp) #root {
+  background: #050505 !important;
+}
+
+/* la PDP remonte sous le header sans calque blanc */
+.pdp {
+  background: #050505 !important;
+  margin-top: -76px !important;
+  padding-top: calc(76px + clamp(42px, 7vw, 90px)) !important;
+}
+
+/* header produit totalement transparent */
+.reference-nav.reference-nav--product {
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  isolation: auto !important;
+}
+
+/* aucun pseudo-calque sur le header */
+.reference-nav.reference-nav--product::before,
+.reference-nav.reference-nav--product::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* texte lisible */
+.reference-nav.reference-nav--product,
+.reference-nav.reference-nav--product * {
+  color: #fff !important;
+}
+
