@@ -5465,3 +5465,53 @@ body.route-home .pdp-back {
   display: none !important;
 }
 
+
+/* ===== LIGHT MODE READABILITY FIX ONLY ===== */
+
+@media (prefers-color-scheme: light) {
+  .catalog-page--list {
+    background: #f3f3f1 !important;
+    color: #050505 !important;
+  }
+
+  .catalog-row,
+  .catalog-row span,
+  .catalog-row strong,
+  .catalog-row em {
+    color: #050505 !important;
+  }
+
+  .catalog-row.is-active span,
+  .catalog-row.is-active strong,
+  .catalog-row.is-active em,
+  .catalog-row:hover span,
+  .catalog-row:hover strong,
+  .catalog-row:hover em,
+  .catalog-row:focus-visible span,
+  .catalog-row:focus-visible strong,
+  .catalog-row:focus-visible em {
+    color: #ffffff !important;
+  }
+
+  .catalog-side,
+  .catalog-side a,
+  .catalog-right-panel,
+  .catalog-right-panel span,
+  .catalog-right-panel strong,
+  .catalog-right-panel em,
+  .catalog-right-panel p {
+    color: #050505 !important;
+  }
+
+  .catalog-side a:not(:first-child),
+  .catalog-right-panel span,
+  .catalog-right-panel em,
+  .catalog-right-panel p {
+    color: rgba(5, 5, 5, 0.48) !important;
+  }
+
+  .catalog-hover-band {
+    background: #050505 !important;
+  }
+}
+
