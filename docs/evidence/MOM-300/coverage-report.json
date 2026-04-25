@@ -1,0 +1,58 @@
+{
+  "issue": "MOM-300",
+  "generatedAt": "2026-04-25T07:51:54.018Z",
+  "objective": "Expand generated visual coverage for weak catalog images without changing frontend behavior.",
+  "reviewed_products": 1920,
+  "improved_products": 54,
+  "weak_image_criteria": [
+    "single image only (low visual coverage)",
+    "category-matched generated concept asset appended as supplemental image"
+  ],
+  "categories_impacted": [
+    "audemars piguet / 男表",
+    "datejust series/日志型",
+    "daytona/迪通拿",
+    "dior / 女包",
+    "goose / 大鹅 衣",
+    "hublot / 男表",
+    "louis vuitton / 女包",
+    "omega / 男表",
+    "prada /女包",
+    "tudor / 男表",
+    "uncategorized",
+    "versace / 皮带",
+    "yves saint laurent / 女包"
+  ],
+  "generated_asset_location": "public/assets/generated/mom-300/",
+  "generated_assets_used": [
+    "/assets/generated/mom-300/bag-dior-concept.svg",
+    "/assets/generated/mom-300/bag-generic-concept.svg",
+    "/assets/generated/mom-300/bag-lv-concept.svg",
+    "/assets/generated/mom-300/bag-prada-concept.svg",
+    "/assets/generated/mom-300/bag-ysl-concept.svg",
+    "/assets/generated/mom-300/belt-concept.svg",
+    "/assets/generated/mom-300/outerwear-concept.svg",
+    "/assets/generated/mom-300/watch-audemars-concept.svg",
+    "/assets/generated/mom-300/watch-datejust-concept.svg",
+    "/assets/generated/mom-300/watch-daytona-concept.svg",
+    "/assets/generated/mom-300/watch-hublot-concept.svg",
+    "/assets/generated/mom-300/watch-omega-concept.svg",
+    "/assets/generated/mom-300/watch-tudor-concept.svg"
+  ],
+  "before_after_product_counts": {
+    "before": 1920,
+    "after": 1920
+  },
+  "files_modified": [
+    "src/data/products.json",
+    "public/data/products.json",
+    "public/data/products-lite.json",
+    "docs/evidence/MOM-300/coverage-report.json",
+    "docs/evidence/MOM-300/coverage-summary.md",
+    "docs/evidence/MOM-300/selection-sample.json"
+  ],
+  "notes": [
+    "Original source images were preserved for all products.",
+    "Generated concept assets are non-official placeholders and do not reproduce logos."
+  ]
+}
