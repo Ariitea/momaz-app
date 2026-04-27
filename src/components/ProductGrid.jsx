@@ -1,8 +1,75 @@
-import { useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useMemo, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useCatalogProducts } from "../data/catalogClient";
 
-const categories = ["all knitwear", "dress", "shorts", "leggings", "skirts", "joggers", "sweater"];
+const categories = [
+  { label: "all", value: "all" },
+  { label: "watches", value: "watches" },
+  { label: "bags", value: "bags" },
+  { label: "shoes", value: "shoes" },
+  { label: "clothes", value: "clothes" },
+];
+
+const sortOptions = [
+  { label: "Default (relevance)", value: "relevance" },
+  { label: "A -> Z", value: "az" },
+  { label: "Z -> A", value: "za" },
+];
+
+const DEBOUNCE_MS = 200;
+const PAGE_SIZE = 24;
+
+const categoryTokens = {
+  watches: [
+    "watch",
+    "watches",
+    "rolex",
+    "daytona",
+    "datejust",
+    "submariner",
+    "patek",
+    "philippe",
+    "richard",
+    "mille",
+    "rm011",
+    "rm27",
+    "tudor",
+    "omega",
+    "hublot",
+    "audemars",
+    "男表",
+    "迪通拿",
+    "日志型",
+  ],
+  bags: ["bag", "bags", "handbag", "dior", "chanel", "lv", "louis", "vuitton", "ysl", "prada", "女包"],
+  shoes: ["shoe", "shoes", "sneaker", "sneakers", "boot", "boots", "鞋"],
+  clothes: [
+    "clothes",
+    "clothing",
+    "jacket",
+    "jackets",
+    "parka",
+    "coat",
+    "outerwear",
+    "shirt",
+    "tee",
+    "hoodie",
+    "pants",
+    "trousers",
+    "sweatpants",
+    "joggers",
+    "衣",
+    "裤",
+  ],
+};
+
+function normalizeSearchText(text = "") {
+  return String(text)
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
 function removeChinese(text = "") {
   return text
@@ -14,7 +81,35 @@ function removeChinese(text = "") {
 
 function cleanTitle(title = "") {
   const cleaned = removeChinese(title);
-  return cleaned || "Selected piece";
+  if (!cleaned) return "Selected piece";
+
+  const normalized = cleaned
+    .replace(/\b(BBF|Factory|Extreme|Reproduction|custom edition|replica|ultimate|highest|version|market|product|classic|sale|hot|new|model|watch|watches|series)\b/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const modelPatterns = [
+    { pattern: /cosmograph\s+daytona|daytona/i, label: "Daytona" },
+    { pattern: /date\s*just\s*41|datejust\s*41/i, label: "Datejust 41" },
+    { pattern: /date\s*just\s*36|datejust\s*36/i, label: "Datejust 36" },
+    { pattern: /date\s*just|datejust/i, label: "Datejust" },
+    { pattern: /submariner/i, label: "Submariner" },
+    { pattern: /nautilus/i, label: "Nautilus" },
+    { pattern: /calatrava/i, label: "Calatrava" },
+    { pattern: /rm\s*011|rm011/i, label: "RM 011" },
+    { pattern: /rm\s*027|rm27/i, label: "RM 027" },
+    { pattern: /big\s*bang/i, label: "Big Bang" },
+    { pattern: /sang\s*bleu/i, label: "Big Bang Sang Bleu" },
+    { pattern: /royal\s*oak/i, label: "Royal Oak" },
+    { pattern: /speedmaster/i, label: "Speedmaster" },
+    { pattern: /seamaster/i, label: "Seamaster" },
+  ];
+
+  const modelMatch = modelPatterns.find(({ pattern }) => pattern.test(cleaned));
+  if (modelMatch) return modelMatch.label;
+
+  const preferred = normalized || cleaned;
+  return preferred.length > 28 ? `${preferred.slice(0, 28).trim()}…` : preferred;
 }
 
 function cleanCategory(category = "") {
@@ -22,28 +117,157 @@ function cleanCategory(category = "") {
   return cleaned || "curated";
 }
 
+function searchTokens(query = "") {
+  return normalizeSearchText(query).split(" ").filter(Boolean);
+}
+
+function getProductSearchFields(product = {}) {
+  return {
+    title: normalizeSearchText(product.title),
+    category: normalizeSearchText(product.category),
+    brand: normalizeSearchText(product.brand),
+  };
+}
+
+function productSearchText(product = {}) {
+  return [
+    product.title,
+    product.category,
+    product.brand,
+    product.name,
+    product.sku,
+    ...(Array.isArray(product.tags) ? product.tags : []),
+  ]
+    .map(normalizeSearchText)
+    .filter(Boolean)
+    .join(" ");
+}
+
+function matchesCategory(product, category) {
+  if (category === "all") return true;
+  const text = productSearchText(product);
+  return (categoryTokens[category] || []).some((token) => text.includes(normalizeSearchText(token)));
+}
+
+function matchesQuery(product, queryTokens) {
+  if (!queryTokens.length) return true;
+
+  const fields = getProductSearchFields(product);
+  const merged = [fields.title, fields.category, fields.brand].filter(Boolean).join(" ");
+  return queryTokens.every((token) => merged.includes(token));
+}
+
+function computeRelevance(product, queryTokens) {
+  if (!queryTokens.length) return 0;
+
+  const fields = getProductSearchFields(product);
+  const merged = [fields.title, fields.category, fields.brand].filter(Boolean).join(" ");
+
+  return queryTokens.reduce((score, token) => {
+    if (!merged.includes(token)) return score;
+    if (fields.title.includes(token)) return score + 5;
+    if (fields.brand.includes(token)) return score + 3;
+    return score + 2;
+  }, 0);
+}
+
+function sortProducts(products, sortBy, queryTokens) {
+  if (sortBy === "az") {
+    return [...products].sort((a, b) => cleanTitle(a.title).localeCompare(cleanTitle(b.title)));
+  }
+
+  if (sortBy === "za") {
+    return [...products].sort((a, b) => cleanTitle(b.title).localeCompare(cleanTitle(a.title)));
+  }
+
+  if (!queryTokens.length) return products;
+
+  return [...products].sort((a, b) => {
+    const byScore = computeRelevance(b, queryTokens) - computeRelevance(a, queryTokens);
+    if (byScore !== 0) return byScore;
+    return cleanTitle(a.title).localeCompare(cleanTitle(b.title));
+  });
+}
+
+function getDisplayIndex(pageIndex, indexOnPage) {
+  return String(pageIndex * PAGE_SIZE + indexOnPage + 1).padStart(3, "0");
+}
+
 function ProductGrid() {
   const navigate = useNavigate();
+  const location = useLocation();
   const { products, loading, error } = useCatalogProducts({ mode: "lite" });
-  const visibleProducts = useMemo(() => products.slice(0, 24), [products]);
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [debouncedQuery, setDebouncedQuery] = useState("");
+  const [sortBy, setSortBy] = useState("relevance");
+  const [pageIndex, setPageIndex] = useState(0);
   const [activeProductId, setActiveProductId] = useState(null);
   const [leavingProductId, setLeavingProductId] = useState(null);
   const [rowY, setRowY] = useState(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0, visible: false });
+  const [isEnteringFromHome, setIsEnteringFromHome] = useState(() => location.state?.entryTransition === "crossfade");
 
-  const activeProduct =
-    visibleProducts.find((product) => product.id === activeProductId) ||
-    visibleProducts[0];
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setDebouncedQuery(searchQuery);
+    }, DEBOUNCE_MS);
 
-  const activeProductIndex = Math.max(
-    0,
-    visibleProducts.findIndex((product) => product.id === activeProduct?.id),
+    return () => window.clearTimeout(timer);
+  }, [searchQuery]);
+
+  useEffect(() => {
+    if (!location.state?.entryTransition) return undefined;
+
+    const timer = window.setTimeout(() => {
+      setIsEnteringFromHome(false);
+      window.history.replaceState({}, document.title);
+    }, 520);
+
+    return () => window.clearTimeout(timer);
+  }, [location.state]);
+
+  const queryTokens = useMemo(() => searchTokens(debouncedQuery), [debouncedQuery]);
+  const categoryFilteredProducts = useMemo(
+    () => products.filter((product) => matchesCategory(product, activeCategory)),
+    [products, activeCategory],
+  );
+  const searchedProducts = useMemo(
+    () => categoryFilteredProducts.filter((product) => matchesQuery(product, queryTokens)),
+    [categoryFilteredProducts, queryTokens],
+  );
+  const filteredProducts = useMemo(
+    () => sortProducts(searchedProducts, sortBy, queryTokens),
+    [searchedProducts, sortBy, queryTokens],
   );
 
-  const activeImage =
-    activeProduct?.images?.[0] ||
-    activeProduct?.image ||
-    "";
+  const totalResults = filteredProducts.length;
+  const pageCount = Math.max(1, Math.ceil(totalResults / PAGE_SIZE));
+  const currentPageIndex = Math.min(pageIndex, pageCount - 1);
+  const visibleProducts = useMemo(() => {
+    const startIndex = currentPageIndex * PAGE_SIZE;
+    return filteredProducts.slice(startIndex, startIndex + PAGE_SIZE);
+  }, [filteredProducts, currentPageIndex]);
+
+  const activeProduct = visibleProducts.find((product) => product.id === activeProductId) || visibleProducts[0];
+  const activeProductIndex = Math.max(0, visibleProducts.findIndex((product) => product.id === activeProduct?.id));
+
+  const activeImage = activeProduct?.images?.[0] || activeProduct?.image || "";
+
+  function resetInteractionState() {
+    setActiveProductId(null);
+    setRowY(null);
+    setCursor((current) => ({ ...current, visible: false }));
+  }
+
+  function clearFilters() {
+    setActiveCategory("all");
+    setSearchQuery("");
+    setDebouncedQuery("");
+    setSortBy("relevance");
+    setPageIndex(0);
+    resetInteractionState();
+  }
 
   function activateProduct(event, productId) {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -67,10 +291,12 @@ function ProductGrid() {
   }
 
   if (loading) return <main className="catalog-page">Loading products...</main>;
-  if (error || !visibleProducts.length) return <main className="catalog-page">Unable to load products.</main>;
+  if (error || !products.length) return <main className="catalog-page">Unable to load products.</main>;
 
   return (
-    <main className={`catalog-page catalog-page--list ${leavingProductId ? "is-leaving" : ""}`}>
+    <main
+      className={`catalog-page catalog-page--list ${leavingProductId ? "is-leaving" : ""} ${isEnteringFromHome ? "is-entering" : ""}`}
+    >
       <div
         className={`catalog-hover-band ${rowY ? "is-visible" : ""}`}
         style={rowY ? { top: `${rowY}px` } : undefined}
@@ -79,15 +305,62 @@ function ProductGrid() {
 
       <aside className="catalog-side">
         {categories.map((category) => (
-          <a key={category} href={`#${category.replaceAll(" ", "-")}`}>
-            {category}
-          </a>
+          <button
+            key={category.value}
+            type="button"
+            className={activeCategory === category.value ? "is-active" : undefined}
+            onClick={() => {
+              setActiveCategory(category.value);
+              setPageIndex(0);
+              resetInteractionState();
+            }}
+          >
+            {category.label}
+          </button>
         ))}
       </aside>
 
       <section className="catalog-list-panel">
-        <div className="catalog-list-panel__bg">
-          {activeImage ? <img key={activeProduct?.id} src={activeImage} alt="" /> : null}
+        <div className="catalog-list-panel__bg">{activeImage ? <img key={activeProduct?.id} src={activeImage} alt="" /> : null}</div>
+
+        <header className="catalog-toolbar">
+          <label className="catalog-toolbar__search" htmlFor="catalog-search-input">
+            <span>Search</span>
+            <input
+              id="catalog-search-input"
+              type="search"
+              value={searchQuery}
+              onChange={(event) => {
+                setSearchQuery(event.target.value);
+                setPageIndex(0);
+                resetInteractionState();
+              }}
+              placeholder="Search title, category, brand"
+              autoComplete="off"
+            />
+          </label>
+          <label className="catalog-toolbar__sort" htmlFor="catalog-sort-select">
+            <span>Sort</span>
+            <select
+              id="catalog-sort-select"
+              value={sortBy}
+              onChange={(event) => {
+                setSortBy(event.target.value);
+                setPageIndex(0);
+                resetInteractionState();
+              }}
+            >
+              {sortOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </label>
+        </header>
+
+        <div className="catalog-results-meta">
+          <p>{`${totalResults} result${totalResults === 1 ? "" : "s"}`}</p>
         </div>
 
         <div
@@ -105,6 +378,15 @@ function ProductGrid() {
             setActiveProductId(null);
           }}
         >
+          {!visibleProducts.length ? (
+            <div className="catalog-empty-state" role="status" aria-live="polite">
+              <strong>No results found</strong>
+              <button type="button" onClick={clearFilters}>
+                Clear filters
+              </button>
+            </div>
+          ) : null}
+
           {visibleProducts.map((product, index) => (
             <button
               key={product.id}
@@ -114,13 +396,39 @@ function ProductGrid() {
               onFocus={(event) => activateProduct(event, product.id)}
               onClick={() => openProduct(product.id)}
             >
-              <span>{String(index + 1).padStart(3, "0")}</span>
+              <span>{getDisplayIndex(currentPageIndex, index)}</span>
               <strong>{cleanTitle(product.title)}</strong>
               <em>{cleanCategory(product.category)}</em>
             </button>
           ))}
         </div>
       </section>
+
+      {totalResults > PAGE_SIZE ? (
+        <nav className="catalog-pagination" aria-label="Catalog pagination">
+          <button
+            type="button"
+            onClick={() => {
+              setPageIndex((current) => Math.max(current - 1, 0));
+              resetInteractionState();
+            }}
+            disabled={currentPageIndex === 0}
+          >
+            Prev
+          </button>
+          <span>{`${String(currentPageIndex + 1).padStart(2, "0")} / ${String(pageCount).padStart(2, "0")}`}</span>
+          <button
+            type="button"
+            onClick={() => {
+              setPageIndex((current) => Math.min(current + 1, pageCount - 1));
+              resetInteractionState();
+            }}
+            disabled={currentPageIndex >= pageCount - 1}
+          >
+            Next
+          </button>
+        </nav>
+      ) : null}
 
       <aside className="catalog-right-panel" aria-label="Active product details">
         <span>{String(activeProductIndex + 1).padStart(3, "0")}</span>
