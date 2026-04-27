@@ -5994,3 +5994,74 @@ input[type="search"] {
   display: none !important;
 }
 
+
+/* ===== MOM-313 ACTUAL TOOLBAR JSX FIX ===== */
+
+.catalog-toolbar {
+  position: fixed !important;
+  top: 18px !important;
+  right: clamp(145px, 10vw, 210px) !important;
+  left: auto !important;
+  bottom: auto !important;
+  z-index: 520 !important;
+  width: 190px !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.catalog-toolbar__search {
+  display: block !important;
+  width: 100% !important;
+}
+
+.catalog-toolbar__search > span {
+  display: none !important;
+}
+
+#catalog-search-input {
+  display: block !important;
+  width: 100% !important;
+  height: 17px !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.38) !important;
+  background: transparent !important;
+  color: rgba(255,255,255,0.82) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 0.62rem !important;
+  outline: none !important;
+}
+
+#catalog-search-input::placeholder {
+  color: rgba(255,255,255,0.34) !important;
+}
+
+.catalog-toolbar__sort,
+#catalog-sort-select {
+  display: none !important;
+}
+
+.catalog-results-meta,
+.catalog-results-meta p {
+  display: none !important;
+}
+
+.catalog-pagination {
+  font-size: 0.54rem !important;
+  gap: 7px !important;
+  bottom: 26px !important;
+}
+
+.catalog-pagination span {
+  font-size: 0.58rem !important;
+}
+
+.catalog-pagination button {
+  font-size: 0.52rem !important;
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
