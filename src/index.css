@@ -1350,7 +1350,13 @@ body {
   height: 76px;
   padding: 18px clamp(18px, 4vw, 54px);
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1.1fr 1fr 0.9fr;
+  grid-template-columns: 
+    auto
+    auto
+    auto
+    auto
+    minmax(120px, 180px)
+    auto !important;
   gap: clamp(18px, 3vw, 56px);
   align-items: start;
   background: rgba(255, 255, 255, 0.82);
@@ -1388,6 +1394,12 @@ body {
 .reference-nav__right {
   align-items: flex-end;
   text-align: right;
+  white-space: nowrap;
+}
+
+.reference-nav__search {
+  width: 140px;
+  max-width: 140px;
 }
 
 .reference-nav__catalog {
@@ -4952,7 +4964,13 @@ body:has(.pdp) #root {
   z-index: 50000 !important;
   padding: 18px clamp(18px, 4vw, 54px) !important;
   display: grid !important;
-  grid-template-columns: 1.2fr 1fr 1.1fr 1fr 0.9fr !important;
+  grid-template-columns:
+    auto
+    auto
+    auto
+    auto
+    minmax(120px, 180px)
+    auto !important;
   gap: clamp(18px, 3vw, 56px) !important;
   align-items: start !important;
   background: transparent !important;
@@ -5010,6 +5028,16 @@ body:has(.pdp) #root {
 .momaz-nav__right {
   align-items: flex-end !important;
   text-align: right !important;
+  white-space: nowrap !important;
+}
+
+.momaz-nav .reference-nav__search {
+  width: 140px !important;
+  max-width: 140px !important;
+}
+
+.reference-nav__account {
+  white-space: nowrap;
 }
 
 @media (max-width: 820px) {
@@ -5531,6 +5559,10 @@ body.route-home .pdp-back {
   left: auto !important;
   bottom: auto !important;
   z-index: 9999 !important;
+}
+
+.catalog-search label,
+.catalog-toolbar label {
   display: block !important;
   width: 150px !important;
   height: 18px !important;
@@ -6025,4 +6057,3 @@ body.route-home .pdp-back {
 .catalog-results-meta p {
   display: none !important;
 }
-
