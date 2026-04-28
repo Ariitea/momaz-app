@@ -1,0 +1,960 @@
+{
+  "issue": "MOM-304",
+  "generated_at": "2026-04-26T20:59:37.553Z",
+  "sample_size": 50,
+  "method": "deterministic_worst_case_ranking",
+  "source": "LOW confidence tier from full report",
+  "rank_formula": "score=(abs(original_length-cleaned_length)/original_length)*100 + original_length",
+  "checks": [
+    {
+      "id": "_diLqfibV_saKYRB19qTd4Th1sy-NxTm_dc6lyYA",
+      "sku": "default",
+      "category": "vacheron constantin / 男表",
+      "brand": "Vacheron Constantin",
+      "original_title": "Vacheron Constantin Complete",
+      "cleaned_title": "Vacheron Constantin Complete",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 28,
+        "cleaned_length": 28,
+        "modification_score": 28
+      }
+    },
+    {
+      "id": "_drzqfs6UVZrfRNJ0eq1X1UO57q-3fdvZZYqw_tQ",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet masterpiece",
+      "cleaned_title": "Audemars Piguet masterpiece",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 27,
+        "cleaned_length": 27,
+        "modification_score": 27
+      }
+    },
+    {
+      "id": "_dTcqfsV61LPd5cWdXw-zGOQrgeV5o2pX7AQbNOw",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet masterpiece",
+      "cleaned_title": "Audemars Piguet masterpiece",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 27,
+        "cleaned_length": 27,
+        "modification_score": 27
+      }
+    },
+    {
+      "id": "_dAlqf3gGhKI7K-TJWs8SfzKxXLTfa7SGB9rSR3g",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet masterpiece",
+      "cleaned_title": "Audemars Piguet masterpiece",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 27,
+        "cleaned_length": 27,
+        "modification_score": 27
+      }
+    },
+    {
+      "id": "_djoqfR3iQCgUWkjUczMJLUGJ6rlN1_KwbkPGC3w",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet masterpiece",
+      "cleaned_title": "Audemars Piguet masterpiece",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 27,
+        "cleaned_length": 27,
+        "modification_score": 27
+      }
+    },
+    {
+      "id": "_dCSqfk8c0N9Z-jgzRiHzMskE-0102E9tppoASNg",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet masterpiece",
+      "cleaned_title": "Audemars Piguet masterpiece",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 27,
+        "cleaned_length": 27,
+        "modification_score": 27
+      }
+    },
+    {
+      "id": "_dxYqfIOJkjCjeZfCUgrTLXJu7v4Fn4CGVciytyg",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegante raffinato classico",
+      "cleaned_title": "Elegante raffinato classico",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 27,
+        "cleaned_length": 27,
+        "modification_score": 27
+      }
+    },
+    {
+      "id": "_dw-qf7PMKEzTs3USNasPWoGeDMdRP9Z6TKp_Ojg",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegante raffinato classico",
+      "cleaned_title": "Elegante raffinato classico",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 27,
+        "cleaned_length": 27,
+        "modification_score": 27
+      }
+    },
+    {
+      "id": "_dnQqfmTlwusUVPn1Qz6pExG3VDKeQ_Pk9bhxNqw",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegante raffinato classico",
+      "cleaned_title": "Elegante raffinato classico",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 27,
+        "cleaned_length": 27,
+        "modification_score": 27
+      }
+    },
+    {
+      "id": "_dkXqfp2E8RHEEz-n6VTFH5ZmppPQ14iTznqmvhQ",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegante raffinato classico",
+      "cleaned_title": "Elegante raffinato classico",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 27,
+        "cleaned_length": 27,
+        "modification_score": 27
+      }
+    },
+    {
+      "id": "_dsNqf1gJ289LjzHpBnYs0YkkVV7z8VHMRq9S3sQ",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegante raffinato classico",
+      "cleaned_title": "Elegante raffinato classico",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 27,
+        "cleaned_length": 27,
+        "modification_score": 27
+      }
+    },
+    {
+      "id": "_dqvqfJrGVGjv-b2-buRuPUBHk18it3Ae6NdR3dw",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegante raffinato classico",
+      "cleaned_title": "Elegante raffinato classico",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 27,
+        "cleaned_length": 27,
+        "modification_score": 27
+      }
+    },
+    {
+      "id": "_dlLqfxff9pqkVfkjgwNE0VK5gCCPP4QQdluKbMQ",
+      "sku": "default",
+      "category": "jaeger-lecoultre / 男表",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Factory2023 masterpiece The",
+      "cleaned_title": "Factory2023 masterpiece The",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 27,
+        "cleaned_length": 27,
+        "modification_score": 27
+      }
+    },
+    {
+      "id": "_dp9qf5Uxkz75QY6YCLbPP1sX9hNXtU6NXKsdEHw",
+      "sku": "default",
+      "category": "jaeger-lecoultre / 男表",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Master harmonious tradition",
+      "cleaned_title": "Master harmonious tradition",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 27,
+        "cleaned_length": 27,
+        "modification_score": 27
+      }
+    },
+    {
+      "id": "_ddIqfcD2W16URzEz8ZXas-RVmLcdKvCDzWWNrlQ",
+      "sku": "default",
+      "category": "jaeger-lecoultre / 男表",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Master harmonious tradition",
+      "cleaned_title": "Master harmonious tradition",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 27,
+        "cleaned_length": 27,
+        "modification_score": 27
+      }
+    },
+    {
+      "id": "_d-tqfqbQ9qLt_y2M1m7D_XlzhIMMc-OpMj3Jq4g",
+      "sku": "default",
+      "category": "cartier / 女表",
+      "brand": "Cartier",
+      "original_title": "Classico versatile vendita",
+      "cleaned_title": "Classico versatile vendita",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 26,
+        "cleaned_length": 26,
+        "modification_score": 26
+      }
+    },
+    {
+      "id": "_d9iqfuXKoJEVMHh85N6K8GhXuT_GI1ueIYp_RKA",
+      "sku": "default",
+      "category": "cartier / 女表",
+      "brand": "Cartier",
+      "original_title": "Classico versatile vendita",
+      "cleaned_title": "Classico versatile vendita",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 26,
+        "cleaned_length": 26,
+        "modification_score": 26
+      }
+    },
+    {
+      "id": "_dxJqfoIcxYtezGPr7enq8MFX1x6kfbgKat0XxSw",
+      "sku": "default",
+      "category": "panerai / 男表",
+      "brand": "Panerai",
+      "original_title": "SUBMERSIBLE Dwayne Johnson",
+      "cleaned_title": "SUBMERSIBLE Dwayne Johnson",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 26,
+        "cleaned_length": 26,
+        "modification_score": 26
+      }
+    },
+    {
+      "id": "_dpfqftk0WnC6dKnblmsUv_Q0OfSUo4g-Z-I7zJA",
+      "sku": "default",
+      "category": "panerai / 男表",
+      "brand": "Panerai",
+      "original_title": "SUBMERSIBLE Dwayne Johnson",
+      "cleaned_title": "SUBMERSIBLE Dwayne Johnson",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 26,
+        "cleaned_length": 26,
+        "modification_score": 26
+      }
+    },
+    {
+      "id": "_dehqfBzaU83PNow82zb4ZbBbGgY86NnH9TYDlwQ",
+      "sku": "default",
+      "category": "cartier / 男表",
+      "brand": "Cartier",
+      "original_title": "London ultra-thin Genuine",
+      "cleaned_title": "London ultra-thin Genuine",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 25,
+        "cleaned_length": 25,
+        "modification_score": 25
+      }
+    },
+    {
+      "id": "_dssqfxIq4Q_w8D98zowwUC-5QP2mQCkzWC0AHXw",
+      "sku": "default",
+      "category": "hublot / 男表",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 25,
+        "cleaned_length": 25,
+        "modification_score": 25
+      }
+    },
+    {
+      "id": "_dwyqfU8N1lDJXY5JXM6KZE4oyClPTaFmdodOr3Q",
+      "sku": "default",
+      "category": "hublot / 男表",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 25,
+        "cleaned_length": 25,
+        "modification_score": 25
+      }
+    },
+    {
+      "id": "_dk0qfhqZpSOP4hPY59THisx2OI2rNis-VHA0ZAA",
+      "sku": "default",
+      "category": "hublot / 男表",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 25,
+        "cleaned_length": 25,
+        "modification_score": 25
+      }
+    },
+    {
+      "id": "_dDzqfKYqQcn2xxL7Fk-VAqvpXmzAbh-5pMvJK4g",
+      "sku": "default",
+      "category": "hublot / 男表",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 25,
+        "cleaned_length": 25,
+        "modification_score": 25
+      }
+    },
+    {
+      "id": "_ddnqfMtElM7pWo0qCva-ualnnITGWK368KBkbww",
+      "sku": "default",
+      "category": "hublot / 男表",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 25,
+        "cleaned_length": 25,
+        "modification_score": 25
+      }
+    },
+    {
+      "id": "_dm_qfhCfc9Z3S-hNdDLAQR9dhPHWO_7ekocxyRA",
+      "sku": "default",
+      "category": "hublot / 男表",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 25,
+        "cleaned_length": 25,
+        "modification_score": 25
+      }
+    },
+    {
+      "id": "_dkqqfKRzGxvABQLM_mMpHMH8KT2Co-VIq3NQUtA",
+      "sku": "default",
+      "category": "hublot / 男表",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 25,
+        "cleaned_length": 25,
+        "modification_score": 25
+      }
+    },
+    {
+      "id": "_d9PqfACrudr5_1R4ItByK-KDBwvOHHqDDbLN8Pw",
+      "sku": "default",
+      "category": "hublot / 男表",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 25,
+        "cleaned_length": 25,
+        "modification_score": 25
+      }
+    },
+    {
+      "id": "_dj1qfKbi9G8k5qoWHRC_7lrH3Tg71BOLmwSMaeQ",
+      "sku": "default",
+      "category": "hublot / 男表",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 25,
+        "cleaned_length": 25,
+        "modification_score": 25
+      }
+    },
+    {
+      "id": "_dnWqf0pZPDZdbFK5S_m6i17I94ICniA88PYEYaA",
+      "sku": "default",
+      "category": "patek philippe / 男表",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe three-hand",
+      "cleaned_title": "Patek Philippe three-hand",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 25,
+        "cleaned_length": 25,
+        "modification_score": 25
+      }
+    },
+    {
+      "id": "_dUqqf0PebtAUa9xe38FcBkoqV9DKghUqBvgANcw",
+      "sku": "default",
+      "category": "patek philippe / 男表",
+      "brand": "Patek Philippe",
+      "original_title": "Elegant noble temperament",
+      "cleaned_title": "Elegant noble temperament",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 25,
+        "cleaned_length": 25,
+        "modification_score": 25
+      }
+    },
+    {
+      "id": "_dFbqfiQqUdyR0CjIff65FejPksxUHk7wgVaf_ng",
+      "sku": "default",
+      "category": "jaeger-lecoultre / 男表",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "simple two-hand exquisite",
+      "cleaned_title": "simple two-hand exquisite",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 25,
+        "cleaned_length": 25,
+        "modification_score": 25
+      }
+    },
+    {
+      "id": "_daOqflviq3LmXytEhrB0X0LgzxrSMuAUwUsHgcg",
+      "sku": "default",
+      "category": "cartier / 女表",
+      "brand": "Cartier",
+      "original_title": "Cartier-CARTIER MINI due",
+      "cleaned_title": "Cartier-CARTIER MINI due",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_dE9qfAenOyQMmHd1VnkT_iuvJyKXMUtVf4Lp-jQ",
+      "sku": "default",
+      "category": "cartier / 女表",
+      "brand": "Cartier",
+      "original_title": "Edizione limitata fascia",
+      "cleaned_title": "Edizione limitata fascia",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_dtJqfxoeonOrXZLDsrBcEgJ4EWhkosZFT8Q23Ew",
+      "sku": "default",
+      "category": "jaeger-lecoultre / 女表",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Rendez-Vous The upgraded",
+      "cleaned_title": "Rendez-Vous The upgraded",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_dqHqfUcoGxwgAQFWlMF1AQBcIZLEEYDdqx1Qdzg",
+      "sku": "default",
+      "category": "jaeger-lecoultre / 女表",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Rendez-Vous The upgraded",
+      "cleaned_title": "Rendez-Vous The upgraded",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_daMqf1jEZ8WgP_meCNkexw_iLpQ9S65qTrYLmPg",
+      "sku": "default",
+      "category": "jaeger-lecoultre / 女表",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Rendez-Vous The upgraded",
+      "cleaned_title": "Rendez-Vous The upgraded",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_dvlqfyxFAgiva0PeUFvUO5L6Uwxs4se63WeafFQ",
+      "sku": "default",
+      "category": "cartier / 男表",
+      "brand": "Cartier",
+      "original_title": "Design semplice elegante",
+      "cleaned_title": "Design semplice elegante",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_d-SqfoPCwoxSiUzTbYO3c0e2Y0FFT3e3LZMXwMw",
+      "sku": "default",
+      "category": "cartier / 男表",
+      "brand": "Cartier",
+      "original_title": "design elegante elegante",
+      "cleaned_title": "design elegante elegante",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_dehqfBzaU83PNow82zb4ZbBbIh4o3NnH9TYDlwQ",
+      "sku": "default",
+      "category": "cartier / 男表",
+      "brand": "Cartier",
+      "original_title": "design elegante elegante",
+      "cleaned_title": "design elegante elegante",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_disqfD6wXPu4ZNi-6J-Op_bIcazIwG-8WeMAdrw",
+      "sku": "default",
+      "category": "cartier / 男表",
+      "brand": "Cartier",
+      "original_title": "boutique stainless fully",
+      "cleaned_title": "boutique stainless fully",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_dmZqf6CtVGPXvsSBFgqOqP0lL-j9CawPWe3yP_A",
+      "sku": "default",
+      "category": "cartier / 男表",
+      "brand": "Cartier",
+      "original_title": "Square Edition Stainless",
+      "cleaned_title": "Square Edition Stainless",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_d8_qfqJWGevqa4qhUmtbihCaKs-NQUhhseL8ktw",
+      "sku": "default",
+      "category": "cartier / 男表",
+      "brand": "Cartier",
+      "original_title": "Square Edition Stainless",
+      "cleaned_title": "Square Edition Stainless",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_dcLqf8Y0PG6BYekcGWf9alXRMbhgWtysOrEM4iQ",
+      "sku": "default",
+      "category": "cartier / 男表",
+      "brand": "Cartier",
+      "original_title": "Square Edition Stainless",
+      "cleaned_title": "Square Edition Stainless",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_dM9qfvHVJhQB-nj8LE_JfuaCyJD1g7lpTe2-Xnw",
+      "sku": "default",
+      "category": "patek philippe / 男表",
+      "brand": "Patek Philippe",
+      "original_title": "Quality big manufacturer",
+      "cleaned_title": "Quality big manufacturer",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_dlBqfSDT9y0WrnWzTpYnBqFzR0mqKu1x_7t48Kw",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Exclusive price Audemars",
+      "cleaned_title": "Exclusive price Audemars",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_dmUqfNhJobRcEqHJLiUK6LHanwtyo5oU546Ok3A",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Exclusive price Audemars",
+      "cleaned_title": "Exclusive price Audemars",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_dkmqfzyy-DEIqPUPjdRNnUdkXWNuGrBRDkDxUWQ",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Exclusive price Audemars",
+      "cleaned_title": "Exclusive price Audemars",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_dq8qfCj5raPF-kT-Jmq_kVPps0WxPpbFBxYAHBQ",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet prodotto",
+      "cleaned_title": "Audemars Piguet prodotto",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    },
+    {
+      "id": "_d95qfY79620c833RK_PzORm2D4D3diaVzkDVkPw",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet prodotto",
+      "cleaned_title": "Audemars Piguet prodotto",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 24,
+        "cleaned_length": 24,
+        "modification_score": 24
+      }
+    }
+  ]
+}

@@ -1,0 +1,329 @@
+{
+  "issue": "MOM-302",
+  "mode": "sample",
+  "total_products_updated": 20,
+  "counts_by_kind": {
+    "rm011": 3,
+    "datejust": 9,
+    "daytona": 8
+  },
+  "categories_impacted": [
+    "datejust series/日志型",
+    "daytona/迪通拿",
+    "richard miller / 男表"
+  ],
+  "mapping": [
+    {
+      "id": "_dk9qf8BZxzpu4GOL9GvWtJDbEmg7iltM5lRCnMg",
+      "kind": "rm011",
+      "category": "richard miller / 男表",
+      "title": "RICHARD MILLE RM011-FM series 🎮RM. made of stainless steel Richard restored the original perfect ergonomic design consistent with the pursuit of perfection of the brand's iconic building. Every compon",
+      "before_first_image": "https://xcimg.szwego.com/img/126da278/20240701/i1719788494_3104_5.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 9,
+      "after_images": [
+        "/assets/references/mom-300/watches/RichardMille/RM_011/richard-mille-rm-011-automatic-chronograph-felipe-massa-45677.jpg",
+        "/assets/references/mom-300/watches/RichardMille/RM_011/richard-mille-rm-011-automatic-chronograph-felipe-massa-45684.jpg",
+        "/assets/references/mom-300/watches/RichardMille/RM_011/RM011-CA-TZP-6007-37-88-160505-e1594119036209.jpg.webp"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_dHIqfo9gUJTQj4omvUflSXzDyYNd7qZO_IiqOyw",
+      "kind": "rm011",
+      "category": "richard miller / 男表",
+      "title": "🎩Richard Mille Richard Mille RM0.7, the latest special model with new craftsmanship, fashionable and avant-garde hollow design, mineral scratch-resistant mirror glass, 31.L stainless steel case, wear-",
+      "before_first_image": "https://xcimg.szwego.com/img/8dae74ea/20240818/i1723912800_8803_2.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 9,
+      "after_images": [
+        "/assets/references/mom-300/watches/RichardMille/RM_011/richard-mille-rm-011-automatic-chronograph-felipe-massa-45677.jpg",
+        "/assets/references/mom-300/watches/RichardMille/RM_011/richard-mille-rm-011-automatic-chronograph-felipe-massa-45684.jpg",
+        "/assets/references/mom-300/watches/RichardMille/RM_011/RM011-CA-TZP-6007-37-88-160505-e1594119036209.jpg.webp"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_dgcqfFrMSvSmxXisMG0Y5PgCmz7FdIzyQHo9NQA",
+      "kind": "rm011",
+      "category": "richard miller / 男表",
+      "title": "🎩V2 Upgraded Richard Mille Richard Mille RM21-02 Series New upgraded .-position flywheel Equipped with fully automatic imported mechanical movement Size 40x50x1.mm The bezel and column made of carbon ",
+      "before_first_image": "https://xcimg.szwego.com/img/8dae74ea/20240117/i1705421569_6163_7.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 18,
+      "after_images": [
+        "/assets/references/mom-300/watches/RichardMille/RM_011/richard-mille-rm-011-automatic-chronograph-felipe-massa-45677.jpg",
+        "/assets/references/mom-300/watches/RichardMille/RM_011/richard-mille-rm-011-automatic-chronograph-felipe-massa-45684.jpg",
+        "/assets/references/mom-300/watches/RichardMille/RM_011/RM011-CA-TZP-6007-37-88-160505-e1594119036209.jpg.webp"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_dL0qf55PHQW9D0AW0OdhfwaGtGi0kpt-SZuCAjA",
+      "kind": "datejust",
+      "category": "datejust series/日志型",
+      "title": "Model: Datejust 126333 · Black Diamond · Jubilee\nSpecs: Ø41mm | Power Reserve 70h\n✨ Highlights\nGlossy black dial with diamond markers pops against the yellow Rolesor.\nSwiss 3235 clone with accurate da",
+      "before_first_image": "https://xcimg.szwego.com/20230712/i1689159727_8884_0.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 6,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126234-0051.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010-alt.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_dtHqfMiQlCwS_vuTuAmf4ItbeJuoL0d6WTrRPEg",
+      "kind": "datejust",
+      "category": "datejust series/日志型",
+      "title": "Model: Datejust 126334 · Blue Dial · Oyster Bracelet\nSpecs: Ø41mm | Power Reserve 70h\n✨ Highlights\nSunburst deep blue with white-gold fluted bezel—clean, versatile, business-ready.\nSwiss 3235 clone, q",
+      "before_first_image": "https://xcimg.szwego.com/20230812/i1691825885_2419_0.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 6,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126234-0051.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010-alt.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_doGqfBjuYcBG2xcVOYOqs81_T5ea7ldVlgs-3Aw",
+      "kind": "datejust",
+      "category": "datejust series/日志型",
+      "title": "Model: Datejust 126333 · Champagne Diamond · Jubilee\nSpecs: Ø41mm | Power Reserve 70h\n✨ Highlights\nSunburst champagne with diamond indices—spot-on for office or dress.\nSwiss 3235 clone, easy quick-set",
+      "before_first_image": "https://xcimg.szwego.com/20230626/i1687780466_2564_0.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 6,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126234-0051.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010-alt.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_diUqf-vrZRBPU95p9qOygHvW92qedJPQpWBhiHA",
+      "kind": "datejust",
+      "category": "datejust series/日志型",
+      "title": "Model: Datejust 126331 · Sundust Diamond · Jubilee\nSpecs: Ø41mm | Power Reserve 70h\n✨ Highlights\nEverose two-tone with sunray Sundust and diamond hours—warm and luxe.\nSwiss 3235 clone, quick-set date,",
+      "before_first_image": "https://xcimg.szwego.com/20230810/i1691661266_238_0.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 6,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126234-0051.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010-alt.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_ddxqfdLaCOOuG7hyQpXN349NPJLcyUGeeiI5AWw",
+      "kind": "datejust",
+      "category": "datejust series/日志型",
+      "title": "Model: Datejust 126334 · Green Sunray Stick · Jubilee\nSpecs: Ø41mm | Power Reserve 70h\n✨ Highlights\nRich green sunburst dial, crisp white-gold fluted bezel—clean reflections.\nSwiss 3235 clone; precise",
+      "before_first_image": "https://xcimg.szwego.com/20230810/i1691662112_5938_0.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 6,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126234-0051.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010-alt.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_ddWqfBF84qUgTeD4uCjDGX-Qj-hrdq1KEUiypHQ",
+      "kind": "datejust",
+      "category": "datejust series/日志型",
+      "title": "Model: Datejust 126334 · Black Stick · Jubilee\nSpecs: Ø41mm | Power Reserve 70h\n✨ Highlights\nTimeless black dial with a bright white-gold fluted bezel—always sharp.\nSwiss 3235 clone, quick-set date, d",
+      "before_first_image": "https://xcimg.szwego.com/20230810/i1691662212_6614_0.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 6,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126234-0051.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010-alt.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_dkUqfoZtHehm7HuiNRVRQskloQ4KkbeQGTibxUw",
+      "kind": "datejust",
+      "category": "datejust series/日志型",
+      "title": "Model: Datejust 126334 · Slate Green Roman (Wimbledon) · Jubilee\nSpecs: Ø41mm | Power Reserve 70h\n✨ Highlights\nSlate dial with green Romans—iconic Wimbledon vibe, sporty-dressy mix.\nSwiss 3235 clone; ",
+      "before_first_image": "https://xcimg.szwego.com/20230810/i1691662289_4725_0.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 6,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126234-0051.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010-alt.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_djDqfqcuiovHdjnr97UdtfPPrjnIGD3ixD2J9Cg",
+      "kind": "datejust",
+      "category": "datejust series/日志型",
+      "title": "Model: Datejust 126334 · Tiffany-Blue Stick · Jubilee\nSpecs: Ø41mm | Power Reserve 70h\n✨ Highlights\nEye-catching Tiffany-blue dial—fresh, bright, and perfect for summer.\nSwiss 3235 clone, smooth quick",
+      "before_first_image": "https://xcimg.szwego.com/20230509/i1683624296_2426_0.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 6,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126234-0051.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010-alt.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_dnkqflJOt08UZ4e7Y8Jn7_90NH3pDLWAIeD3_Sg",
+      "kind": "datejust",
+      "category": "datejust series/日志型",
+      "title": "Model: Datejust 126334 · White Diamond Dial · Jubilee\nSpecs: Ø41mm | Power Reserve 70h\n✨ Highlights\nClean white dial with 10 diamond markers—classy and super versatile.\nSwiss 3235 clone, quick-set dat",
+      "before_first_image": "https://xcimg.szwego.com/20230509/i1683624573_3682_0.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 6,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126234-0051.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010.png",
+        "/assets/references/mom-300/watches/Rolex/Datejust/m126333-0010-alt.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_dk5qftqRzzul-bxuoKs-FW8sgpkwo4E1CvtK4-Q",
+      "kind": "daytona",
+      "category": "daytona/迪通拿",
+      "title": "TW+ Factory's carbon fiber custom edition of the ROLEX Cosmograph Daytona series is not only lightweight but also durable. Each watch features a unique carbon fiber pattern. [Case] ​​The watch measure",
+      "before_first_image": "https://xcimg.szwego.com/img/78a8dd5d/20250928/i1759040888_8426_0.jpg?imageMogr2/auto-orient/thumbnail/!310x310r/quality/100/format/jpg",
+      "before_image_count": 1,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126506-0001.png",
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126508-0008.png",
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126515ln-0006.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_drkqfO75hmmdaXDSQiCqdlnyvPMDP-dskOCw6-Q",
+      "kind": "daytona",
+      "category": "daytona/迪通拿",
+      "title": "TW+ Factory's carbon fiber custom edition of the ROLEX Cosmograph Daytona series is not only lightweight but also durable. Each watch features a unique carbon fiber pattern. [Case] ​​The watch measure",
+      "before_first_image": "https://xcimg.szwego.com/img/341829ef/20250921/a1758418569550_5302.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 9,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126506-0001.png",
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126508-0008.png",
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126515ln-0006.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_dloqfTiwKsv0KPPJDnStUpYRFyo79rFqrVgSa-g",
+      "kind": "daytona",
+      "category": "daytona/迪通拿",
+      "title": "TW+ Factory's carbon fiber custom edition of the ROLEX Cosmograph Daytona series is not only lightweight but also durable. Each watch features a unique carbon fiber pattern. [Case] ​​The watch measure",
+      "before_first_image": "https://xcimg.szwego.com/img/341829ef/20250921/a1758418533696_4271.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 9,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126506-0001.png",
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126508-0008.png",
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126515ln-0006.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_dipqfTTAB_Et9hmXbDhDDElbXllwLU0ZxWdApIg",
+      "kind": "daytona",
+      "category": "daytona/迪通拿",
+      "title": "TW+ Factory's carbon fiber custom edition of the ROLEX Cosmograph Daytona series is not only lightweight but also durable. Each watch features a unique carbon fiber pattern. [Case] ​​The watch measure",
+      "before_first_image": "https://xcimg.szwego.com/img/341829ef/20250921/a1758418442954_0757.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 9,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126506-0001.png",
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126508-0008.png",
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126515ln-0006.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_darqf4CKLFtIQ2SmmhYsaXW8lkyRzjRJ3MIXcPg",
+      "kind": "daytona",
+      "category": "daytona/迪通拿",
+      "title": "TW+ Factory's carbon fiber custom edition of the ROLEX Cosmograph Daytona series is not only lightweight but also durable. Each watch features a unique carbon fiber pattern. [Case] ​​The watch measure",
+      "before_first_image": "https://xcimg.szwego.com/img/341829ef/20250921/a1758418412605_6256.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 9,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126506-0001.png",
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126508-0008.png",
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126515ln-0006.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_dnXqfPFRffI6DWphEG0s8aqpeWn3j5NsRCvQWVg",
+      "kind": "daytona",
+      "category": "daytona/迪通拿",
+      "title": "TW+ Factory's carbon fiber custom edition of the ROLEX Cosmograph Daytona series is not only lightweight but also durable. Each watch features a unique carbon fiber pattern. [Case] ​​The watch measure",
+      "before_first_image": "https://xcimg.szwego.com/img/341829ef/20250921/a1758418383932_4614.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 9,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126506-0001.png",
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126508-0008.png",
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126515ln-0006.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_dkGqf8sloNckafFR6c7rpu-UBkf-XOdzb4hsS_Q",
+      "kind": "daytona",
+      "category": "daytona/迪通拿",
+      "title": "TW+ Factory's carbon fiber custom edition of the ROLEX Cosmograph Daytona series is not only lightweight but also durable. Each watch features a unique carbon fiber pattern. [Case] ​​The watch measure",
+      "before_first_image": "https://xcimg.szwego.com/img/341829ef/20250921/a1758418355406_0640.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 9,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126506-0001.png",
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126508-0008.png",
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126515ln-0006.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    },
+    {
+      "id": "_dL9qftega6gHEtWRE5uytWN730j4UpLncsoG4mA",
+      "kind": "daytona",
+      "category": "daytona/迪通拿",
+      "title": "TW+ Factory's carbon fiber custom edition of the ROLEX Cosmograph Daytona series is not only lightweight but also durable. Each watch features a unique carbon fiber pattern. [Case] ​​The watch measure",
+      "before_first_image": "https://xcimg.szwego.com/img/341829ef/20250921/a1758418334384_7535.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "before_image_count": 9,
+      "after_images": [
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126506-0001.png",
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126508-0008.png",
+        "/assets/references/mom-300/watches/Rolex/Cosmograph Daytona/m126515ln-0006.png"
+      ],
+      "reference_root": "/assets/references/mom-300/watches"
+    }
+  ],
+  "before_after_sample": [
+    {
+      "id": "_dk9qf8BZxzpu4GOL9GvWtJDbEmg7iltM5lRCnMg",
+      "title": "RICHARD MILLE RM011-FM series 🎮RM. made of stainless steel Richard restored the original perfect ergonomic design consistent with the pursuit of perfection of the brand's iconic building. Every compon",
+      "before_first_image": "https://xcimg.szwego.com/img/126da278/20240701/i1719788494_3104_5.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "after_first_image": "/assets/references/mom-300/watches/RichardMille/RM_011/richard-mille-rm-011-automatic-chronograph-felipe-massa-45677.jpg"
+    },
+    {
+      "id": "_dHIqfo9gUJTQj4omvUflSXzDyYNd7qZO_IiqOyw",
+      "title": "🎩Richard Mille Richard Mille RM0.7, the latest special model with new craftsmanship, fashionable and avant-garde hollow design, mineral scratch-resistant mirror glass, 31.L stainless steel case, wear-",
+      "before_first_image": "https://xcimg.szwego.com/img/8dae74ea/20240818/i1723912800_8803_2.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "after_first_image": "/assets/references/mom-300/watches/RichardMille/RM_011/richard-mille-rm-011-automatic-chronograph-felipe-massa-45677.jpg"
+    },
+    {
+      "id": "_dgcqfFrMSvSmxXisMG0Y5PgCmz7FdIzyQHo9NQA",
+      "title": "🎩V2 Upgraded Richard Mille Richard Mille RM21-02 Series New upgraded .-position flywheel Equipped with fully automatic imported mechanical movement Size 40x50x1.mm The bezel and column made of carbon ",
+      "before_first_image": "https://xcimg.szwego.com/img/8dae74ea/20240117/i1705421569_6163_7.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "after_first_image": "/assets/references/mom-300/watches/RichardMille/RM_011/richard-mille-rm-011-automatic-chronograph-felipe-massa-45677.jpg"
+    },
+    {
+      "id": "_dL0qf55PHQW9D0AW0OdhfwaGtGi0kpt-SZuCAjA",
+      "title": "Model: Datejust 126333 · Black Diamond · Jubilee\nSpecs: Ø41mm | Power Reserve 70h\n✨ Highlights\nGlossy black dial with diamond markers pops against the yellow Rolesor.\nSwiss 3235 clone with accurate da",
+      "before_first_image": "https://xcimg.szwego.com/20230712/i1689159727_8884_0.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "after_first_image": "/assets/references/mom-300/watches/Rolex/Datejust/m126234-0051.png"
+    },
+    {
+      "id": "_dtHqfMiQlCwS_vuTuAmf4ItbeJuoL0d6WTrRPEg",
+      "title": "Model: Datejust 126334 · Blue Dial · Oyster Bracelet\nSpecs: Ø41mm | Power Reserve 70h\n✨ Highlights\nSunburst deep blue with white-gold fluted bezel—clean, versatile, business-ready.\nSwiss 3235 clone, q",
+      "before_first_image": "https://xcimg.szwego.com/20230812/i1691825885_2419_0.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/quality/100/format/jpg",
+      "after_first_image": "/assets/references/mom-300/watches/Rolex/Datejust/m126234-0051.png"
+    }
+  ]
+}

@@ -1,0 +1,485 @@
+{
+  "issue": "MOM-303",
+  "generated_at": "2026-04-26T19:37:21.507Z",
+  "source_catalog": "src/data/products.json",
+  "source_product_count": 1920,
+  "sample_size": 30,
+  "soft_title_cap": 30,
+  "changed_count": 30,
+  "unchanged_count": 0,
+  "uncertain_count": 12,
+  "method_breakdown": [
+    {
+      "value": "known_model_pattern",
+      "count": 16
+    },
+    {
+      "value": "safe_fallback",
+      "count": 12
+    },
+    {
+      "value": "rm_code_pattern",
+      "count": 2
+    }
+  ],
+  "brand_breakdown": [
+    {
+      "value": "Rolex",
+      "count": 5
+    },
+    {
+      "value": "Patek Philippe",
+      "count": 5
+    },
+    {
+      "value": "Omega",
+      "count": 5
+    },
+    {
+      "value": "Audemars Piguet",
+      "count": 5
+    },
+    {
+      "value": "Hublot",
+      "count": 5
+    },
+    {
+      "value": "Richard Mille",
+      "count": 3
+    },
+    {
+      "value": "Cartier",
+      "count": 2
+    }
+  ],
+  "uncertain_cases": [
+    {
+      "id": "_d-QqfzQ61HU-up4KTGOAlfIOJd0p7AD7cCx7Fpg",
+      "brand": "Rolex",
+      "original_title": "[Rose][Rose] 🔥🔥🔥Recommended best female model Rolex new R OLEX ladies jewelry series Moon [Moon] phase [Sun] series🏅9-digit sun, moon and star function, unique 4-hour small second logo, equipped with",
+      "cleaned_title": "Rose Rose Recommended best",
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d3Xqfvh44171eP1G-bmYAfv2rPmM879bQSBDxJw",
+      "brand": "Rolex",
+      "original_title": "[Rolex replica watch] Greenwich 11.759 luxury model. Extremely luxurious, perfectly restore the most expensive Rolex starry sky watch in history. Enjoy luxury, you deserve it! [Case] ​​The watch size",
+      "cleaned_title": "Greenwich 11.759 luxury .",
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d-bqfElo1pLs7O4Pz4anUyMpmjb0OQnldPP2Vng",
+      "brand": "Patek Philippe",
+      "original_title": "[Brand]: Patek Philippe🔥New Star🔥 [Type]: Fine men's watch [Strap]: Genuine cowhide/31. stainless steel strap [Movement]: High-end fully automatic mechanical movement [Mirror]: Mineral reinforced glas",
+      "cleaned_title": "New Star Type Fine men s Strap",
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d8AqfLL6CxghJcE64ISwlQIR70whrTrPIVc4F1A",
+      "brand": "Patek Philippe",
+      "original_title": "One-touch folding, original and consistent, high-quality products, known as the king of watches! Limited edition style New arrival, new products, latest styles, known as the king of watches, the king",
+      "cleaned_title": "One-touch folding original and",
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d9mqfVimyTHNhMpKh8pcvX4BCjbQ_7h7wLxqulQ",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe 5712GR \"King of Steel\" has made its debut! This is a truly landmark super integrated movement Cal.240 PS IRM C LU. The total number of movement parts is 2.5, with a flat hairspring, 21,",
+      "cleaned_title": "5712GR King of Steel has made",
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_dHIqfo9gUJTQj4omvUflSXzDyYNd7qZO_IiqOyw",
+      "brand": "Richard Mille",
+      "original_title": "🎩Richard Mille Richard Mille RM0.7, the latest special model with new craftsmanship, fashionable and avant-garde hollow design, mineral scratch-resistant mirror glass, 31.L stainless steel case, wear-",
+      "cleaned_title": "RM0.7 the special with new",
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d-EqfsWXPUMKN5K-49KzehGjIyEuOWYIyX6SLvw",
+      "brand": "Audemars Piguet",
+      "original_title": "[Elegant and refined, classic and domineering] Audemars Piguet-AP men's watch, fully automatic mechanical movement, mineral tempered glass, 31.L stainless steel case, genuine leather strap, stylis",
+      "cleaned_title": "Elegant and refined classic",
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d3nqf6fZK78Mtm4NLfYNq0zw_Zferblvun7ZOhA",
+      "brand": "Audemars Piguet",
+      "original_title": "Features of Audemars Piguet's strongest \"Steel King\" case 1. Consistent with the original: 41mm in diameter 2. 15400 is the only version on the market that can be interchanged with the origina",
+      "cleaned_title": "Features of s strongest Steel",
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d_6qfRCEkXKjkmP_NQ3wZFLYHFFgZ_twCMSkUyQ",
+      "brand": "Hublot",
+      "original_title": "HBF FACTORY HUBLOT 🐻Hublot's best replica of the year BlG BANG series 401.OQ.0123.VR carbon fiber bezel The hierarchical structure of the composite material bezel Unique charm serial number only 401.",
+      "cleaned_title": "HBF s best of the year BlG",
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d-mqfIUp6wkxRuDkuxzE9D3fa_uOozJc8MPYUfw",
+      "brand": "Hublot",
+      "original_title": "HBF FACTORY HUBLOT 🐻Hublot's best replica of the year BlG BANG series 401.OQ.0123.VR carbon fiber bezel The hierarchical structure of the composite material bezel Unique charm serial number only 401.",
+      "cleaned_title": "HBF s best of the year BlG",
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d-yqf_hUB-BmEqd87f2Ht2hg1oPinexPi-iC_yQ",
+      "brand": "Hublot",
+      "original_title": "Hublot🐻HUBLOT——Brave and fearless, punching hard, referred to as \"HUB\" and \"Hengbao\", BigBang element material chronograph v2 version ❶The case is made of imported 31. stainless steel material, with e",
+      "cleaned_title": "Brave and fearless punching",
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d_5qfUAihMG1CpIuZ-W_KsBgYJpqGdeysrwOaog",
+      "brand": "Cartier",
+      "original_title": "Superficie blu ghiaccio ❗️ Edizione limitata di fascia alta, cinturino in ceramica, temperamento lussuoso e nobile, deve essere [Amore] Serie di lusso a palloncino blu da donna di Cartier, gli orologi",
+      "cleaned_title": "Superficie blu ghiaccio",
+      "method": "safe_fallback",
+      "confidence": "low"
+    }
+  ],
+  "mapping": [
+    {
+      "id": "_d_oqf16MUi11MFL2pn8im5fdg5lyBQXopYZHUrA",
+      "sku": "default",
+      "category": "daytona/迪通拿",
+      "brand": "Rolex",
+      "original_title": "Model: Rolex Daytona 11.519LN · Grey Dial · Oysterflex Specs: Ø40mm | Power Reserve 72h ✨ Highlights Grey dial with black ceramic bezel, pure motorsport vibe Integrated 4130 chronograph, column wheel/",
+      "cleaned_title": "Daytona",
+      "changed": true,
+      "method": "known_model_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_d_wqf0itaka8WEq-OrhPJCxhExHkdXZYdiTCa0Q",
+      "sku": "default",
+      "category": "daytona/迪通拿",
+      "brand": "Rolex",
+      "original_title": "Model: Rolex Cosmograph Daytona · Ice-Blue Subs Pavé Dial · Oystersteel Bracelet Specs: Ø40mm | Power Reserve 72h ✨ Highlights Full pavé dial with ice-blue registers and baguette-set bezel—brilliant,",
+      "cleaned_title": "Daytona",
+      "changed": true,
+      "method": "known_model_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_d-QqfzQ61HU-up4KTGOAlfIOJd0p7AD7cCx7Fpg",
+      "sku": "default",
+      "category": "rolex/女表",
+      "brand": "Rolex",
+      "original_title": "[Rose][Rose] 🔥🔥🔥Recommended best female model Rolex new R OLEX ladies jewelry series Moon [Moon] phase [Sun] series🏅9-digit sun, moon and star function, unique 4-hour small second logo, equipped with",
+      "cleaned_title": "Rose Rose Recommended best",
+      "changed": true,
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d3Xqfvh44171eP1G-bmYAfv2rPmM879bQSBDxJw",
+      "sku": "default",
+      "category": "greenwich series/格林尼治",
+      "brand": "Rolex",
+      "original_title": "[Rolex replica watch] Greenwich 11.759 luxury model. Extremely luxurious, perfectly restore the most expensive Rolex starry sky watch in history. Enjoy luxury, you deserve it! [Case] ​​The watch size",
+      "cleaned_title": "Greenwich 11.759 luxury .",
+      "changed": true,
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d8NqfRYQbFnop0TOCB91hil--VysF0wzNdYJ3cw",
+      "sku": "default",
+      "category": "rolex/女表",
+      "brand": "Rolex",
+      "original_title": "Rolex Datejust ROLEX Xiaohongshu hot-selling model, the best goddess must-have model...💗💗💗Elegant beauty is eye-catching👀Equipped with NH05 automatic machinery imported from Japan with zero repair! Th",
+      "cleaned_title": "Datejust",
+      "changed": true,
+      "method": "known_model_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_d_lqfElE_gPPCERd1V7-8yEqOhlgb-7tPw9okcw",
+      "sku": "default",
+      "category": "patek philippe / 男表",
+      "brand": "Patek Philippe",
+      "original_title": "MMA Patek Philippe Aquanaut Series Grenade Series Watch Model: 59.A-001) Pmm stainless steel case, chronograph hands, outer edge track scale accurate to a quarter of a second, stainless steel case, ru",
+      "cleaned_title": "Aquanaut",
+      "changed": true,
+      "method": "known_model_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_d_MqfzCOP9Q6ISXatMg6lA6E9TT5cA2qtoRoqzw",
+      "sku": "default",
+      "category": "patek philippe / 女表",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe's sporty and elegant Nautilus women's watch P is coming! Details: 1⃣️ Equipped with a customized automatic movement, 45 hours of kinetic energy storage, and a vibration frequency of 28,",
+      "cleaned_title": "Nautilus",
+      "changed": true,
+      "method": "known_model_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_d-bqfElo1pLs7O4Pz4anUyMpmjb0OQnldPP2Vng",
+      "sku": "default",
+      "category": "patek philippe / 男表",
+      "brand": "Patek Philippe",
+      "original_title": "[Brand]: Patek Philippe🔥New Star🔥 [Type]: Fine men's watch [Strap]: Genuine cowhide/31. stainless steel strap [Movement]: High-end fully automatic mechanical movement [Mirror]: Mineral reinforced glas",
+      "cleaned_title": "New Star Type Fine men s Strap",
+      "changed": true,
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d8AqfLL6CxghJcE64ISwlQIR70whrTrPIVc4F1A",
+      "sku": "default",
+      "category": "patek philippe / 男表",
+      "brand": "Patek Philippe",
+      "original_title": "One-touch folding, original and consistent, high-quality products, known as the king of watches! Limited edition style New arrival, new products, latest styles, known as the king of watches, the king",
+      "cleaned_title": "One-touch folding original and",
+      "changed": true,
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d9mqfVimyTHNhMpKh8pcvX4BCjbQ_7h7wLxqulQ",
+      "sku": "default",
+      "category": "patek philippe / 男表",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe 5712GR \"King of Steel\" has made its debut! This is a truly landmark super integrated movement Cal.240 PS IRM C LU. The total number of movement parts is 2.5, with a flat hairspring, 21,",
+      "cleaned_title": "5712GR King of Steel has made",
+      "changed": true,
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_dgcqfFrMSvSmxXisMG0Y5PgCmz7FdIzyQHo9NQA",
+      "sku": "default",
+      "category": "richard miller / 男表",
+      "brand": "Richard Mille",
+      "original_title": "🎩V2 Upgraded Richard Mille Richard Mille RM21-02 Series New upgraded .-position flywheel Equipped with fully automatic imported mechanical movement Size 40x50x1.mm The bezel and column made of carbon",
+      "cleaned_title": "RM21-02",
+      "changed": true,
+      "method": "rm_code_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_dHIqfo9gUJTQj4omvUflSXzDyYNd7qZO_IiqOyw",
+      "sku": "default",
+      "category": "richard miller / 男表",
+      "brand": "Richard Mille",
+      "original_title": "🎩Richard Mille Richard Mille RM0.7, the latest special model with new craftsmanship, fashionable and avant-garde hollow design, mineral scratch-resistant mirror glass, 31.L stainless steel case, wear-",
+      "cleaned_title": "RM0.7 the special with new",
+      "changed": true,
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_dk9qf8BZxzpu4GOL9GvWtJDbEmg7iltM5lRCnMg",
+      "sku": "default",
+      "category": "richard miller / 男表",
+      "brand": "Richard Mille",
+      "original_title": "RICHARD MILLE RM011-FM series 🎮RM. made of stainless steel Richard restored the original perfect ergonomic design consistent with the pursuit of perfection of the brand's iconic building. Every compon",
+      "cleaned_title": "RM011",
+      "changed": true,
+      "method": "rm_code_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_d_JqfRARnMAGwXdl8eEUGmA1hHB1JijrZC6saJA",
+      "sku": "default",
+      "category": "omega / 男表",
+      "brand": "Omega",
+      "original_title": "🔥🔥 De Ville upgraded multifunctional model uses multifunctional 383. movement. Quality is guaranteed. The side of the case uses exquisite brushed craftsmanship. It has been imitated. Look for the mo",
+      "cleaned_title": "De Ville",
+      "changed": true,
+      "method": "known_model_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_d_ZqffzBfh9gDho_6pSA2Kpul6d_Bnh_I0vPHrQ",
+      "sku": "default",
+      "category": "omega / 男表",
+      "brand": "Omega",
+      "original_title": "Omega Seamaster Aqua Teera 150m watch! Diameter 41mm 1⃣️: Upgraded to match the genuine dial, with meticulous details! ️️ 2⃣: Screw-in embossed crown with new \"conical\" design for easier debugg",
+      "cleaned_title": "Seamaster",
+      "changed": true,
+      "method": "known_model_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_d-aqfiVwUKnnsDFoPnvyq22Kdz5EaMcPYDvz1kQ",
+      "sku": "default",
+      "category": "omega / 男表",
+      "brand": "Omega",
+      "original_title": "Omega Seamaster Aqua Teera 150m watch! Diameter 41mm 1⃣️: Upgraded to match the genuine dial, with meticulous details! ️️ 2⃣: Screw-in embossed crown with new \"conical\" design for easier debugg",
+      "cleaned_title": "Seamaster",
+      "changed": true,
+      "method": "known_model_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_d-bqfElo1pLs7O4Pz4anUyMpjgLgLQnldPP2Vng",
+      "sku": "default",
+      "category": "omega / 男表",
+      "brand": "Omega",
+      "original_title": "Omega Constellation Series 39mm 🏅️OB2 New Upgraded All-in-One Machine \"The Highest Version in the Market, Original Mold\" Demonstrates Extraordinariness in the Name of Classic. The 39mm Omega Fifth G",
+      "cleaned_title": "Constellation",
+      "changed": true,
+      "method": "known_model_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_d-uqfXJtViCtpcwSj_PzWOWkz_B7qsvY4v3zscQ",
+      "sku": "default",
+      "category": "omega / 男表",
+      "brand": "Omega",
+      "original_title": "Starlight Eternal Constellation Watch, the fifth generation of the Constellation series! Brand new original size 41MM watch! Fully automatic imported mechanical movement, 2025 hot-selling item‼ ️ Om",
+      "cleaned_title": "Constellation",
+      "changed": true,
+      "method": "known_model_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_d-1qf0zVwwFWeVdz-DZj0LTFJWzDHm_aCTGM1yQ",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "OMF AP Royal Oak 26238, with 12-bit seconds, is a popular 42-gauge diameter, showing the atmosphere without losing its exquisiteness. The dial is decorated with Mega Tapisserie \"super-large plaid, ful",
+      "cleaned_title": "Royal Oak",
+      "changed": true,
+      "method": "known_model_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_d-EqfsWXPUMKN5K-49KzehGjIyEuOWYIyX6SLvw",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "[Elegant and refined, classic and domineering] Audemars Piguet-AP men's watch, fully automatic mechanical movement, mineral tempered glass, 31.L stainless steel case, genuine leather strap, stylis",
+      "cleaned_title": "Elegant and refined classic",
+      "changed": true,
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d-SqfoPCwoxSiUzTbYOzZ2Oif3Fpd3e3LZMXwMw",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "🎩Versione V2, testa viva, ombra interna regolabile in entrambe le direzioni, versione ordinaria non commerciale, frutta della serie Audemars Piguet AP Royal Oak Modello: 2.703 orologio cronografo",
+      "cleaned_title": "Royal Oak",
+      "changed": true,
+      "method": "known_model_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_d-xqfqKGfzvTvmyyQYMOYh32_j3ieGO5A1dzDeQ",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Ceramiche prodotte da S1 TUR lancia sinceramente un capolavoro dall'estetica squisita: AP Audemars Piguet 🎮JT. Royal Oak Offshore Series, 44mm Super conveniente, la migliore versione a scelta, util",
+      "cleaned_title": "Royal Oak",
+      "changed": true,
+      "method": "known_model_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_d3nqf6fZK78Mtm4NLfYNq0zw_Zferblvun7ZOhA",
+      "sku": "default",
+      "category": "audemars piguet / 男表",
+      "brand": "Audemars Piguet",
+      "original_title": "Features of Audemars Piguet's strongest \"Steel King\" case 1. Consistent with the original: 41mm in diameter 2. 15400 is the only version on the market that can be interchanged with the origina",
+      "cleaned_title": "Features of s strongest Steel",
+      "changed": true,
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d_6qfRCEkXKjkmP_NQ3wZFLYHFFgZ_twCMSkUyQ",
+      "sku": "default",
+      "category": "hublot / 男表",
+      "brand": "Hublot",
+      "original_title": "HBF FACTORY HUBLOT 🐻Hublot's best replica of the year BlG BANG series 401.OQ.0123.VR carbon fiber bezel The hierarchical structure of the composite material bezel Unique charm serial number only 401.",
+      "cleaned_title": "HBF s best of the year BlG",
+      "changed": true,
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d_8qfS8IDRyGTFEA9jsQ7YKh48cmesuCWJG2zXA",
+      "sku": "default",
+      "category": "hublot / 男表",
+      "brand": "Hublot",
+      "original_title": "🔥BBF ultimate replica of HUBLOT BIG BANG series top artifact brand new customized Hublot exclusive UNICO HUB 128. automatic winding chronograph movement 3-digit hollow calendar circle, 3-digit dial ..",
+      "cleaned_title": "Big Bang",
+      "changed": true,
+      "method": "known_model_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_d-mqfIUp6wkxRuDkuxzE9D3fa_uOozJc8MPYUfw",
+      "sku": "default",
+      "category": "hublot / 男表",
+      "brand": "Hublot",
+      "original_title": "HBF FACTORY HUBLOT 🐻Hublot's best replica of the year BlG BANG series 401.OQ.0123.VR carbon fiber bezel The hierarchical structure of the composite material bezel Unique charm serial number only 401.",
+      "cleaned_title": "HBF s best of the year BlG",
+      "changed": true,
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d-pqf1ZrUctw27fx40u24A61TccrvE7g_QwRQ1w",
+      "sku": "default",
+      "category": "hublot / 男表",
+      "brand": "Hublot",
+      "original_title": "🔥BBF New core piece HUBLOT proudly releases the new SQUARE BANG UNICO watch Hublot square big bang Grade 5 titanium is light and comfortable to the hand High-transparency sapphire dial regardless of",
+      "cleaned_title": "Big Bang",
+      "changed": true,
+      "method": "known_model_pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "_d-yqf_hUB-BmEqd87f2Ht2hg1oPinexPi-iC_yQ",
+      "sku": "default",
+      "category": "hublot / 男表",
+      "brand": "Hublot",
+      "original_title": "Hublot🐻HUBLOT——Brave and fearless, punching hard, referred to as \"HUB\" and \"Hengbao\", BigBang element material chronograph v2 version ❶The case is made of imported 31. stainless steel material, with e",
+      "cleaned_title": "Brave and fearless punching",
+      "changed": true,
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d_5qfUAihMG1CpIuZ-W_KsBgYJpqGdeysrwOaog",
+      "sku": "default",
+      "category": "cartier / 女表",
+      "brand": "Cartier",
+      "original_title": "Superficie blu ghiaccio ❗️ Edizione limitata di fascia alta, cinturino in ceramica, temperamento lussuoso e nobile, deve essere [Amore] Serie di lusso a palloncino blu da donna di Cartier, gli orologi",
+      "cleaned_title": "Superficie blu ghiaccio",
+      "changed": true,
+      "method": "safe_fallback",
+      "confidence": "low"
+    },
+    {
+      "id": "_d_6qfRCEkXKjkmP_NQ3wZFLYHGl4Z_twCMSkUyQ",
+      "sku": "default",
+      "category": "cartier / 女表",
+      "brand": "Cartier",
+      "original_title": "Cartier🌐Il nuovo orologio per coppia Santos di Cartier! Apertura dello stampo autentica, meravigliosa interpretazione dei classici! Caratteristiche dettagliate: 1⃣️[Custodia] Apertura dello stampo o",
+      "cleaned_title": "Santos",
+      "changed": true,
+      "method": "known_model_pattern",
+      "confidence": "high"
+    }
+  ]
+}
