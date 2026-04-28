@@ -1,0 +1,2417 @@
+{
+  "issue": "MOM-304",
+  "generated_at": "2026-04-26T20:59:37.553Z",
+  "count": 241,
+  "cases": [
+    {
+      "id": "_dIqqfnAXttoZyZRDJWNiqniC3I-ogKGVZg6gM8Q",
+      "brand": "Cartier",
+      "original_title": "aggiornata quarzo con",
+      "cleaned_title": "aggiornata quarzo con",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dAGqfPwj9LGpAApct1IN-7zoJQvv_vb2_Sqgh1A",
+      "brand": "Cartier",
+      "original_title": "stile classico vendita",
+      "cleaned_title": "stile classico vendita",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_diLqfibV_saKYRB19qTd4Th1sy-NxTm_dc6lyYA",
+      "brand": "Vacheron Constantin",
+      "original_title": "Vacheron Constantin Complete",
+      "cleaned_title": "Vacheron Constantin Complete",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dlRqf4xjpjhwNeu7ICuPlr6R3eiRPm37gMFbumw",
+      "brand": "Rolex",
+      "original_title": "Rose Rose Recommended",
+      "cleaned_title": "Rose Rose Recommended",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d-QqfzQ61HU-up4KTGOAlfIOJd0p7AD7cCx7Fpg",
+      "brand": "Rolex",
+      "original_title": "Rose Rose Recommended",
+      "cleaned_title": "Rose Rose Recommended",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_daOqflviq3LmXytEhrB0X0LgzxrSMuAUwUsHgcg",
+      "brand": "Cartier",
+      "original_title": "Cartier-CARTIER MINI due",
+      "cleaned_title": "Cartier-CARTIER MINI due",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dnoqfa1mpiphNBGWriEbK4cV5Ywrf4CA7pmnjxA",
+      "brand": "Cartier",
+      "original_title": "Blue Balloon movimento",
+      "cleaned_title": "Blue Balloon movimento",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dkAqfdOMX93VkaanzrTOIyswyjaTo7JGqvbMd9A",
+      "brand": "Cartier",
+      "original_title": "ultimo classico",
+      "cleaned_title": "ultimo classico",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dwPqfwWHi2fNv-npo7TrqgT1Hz_bvGOCn5LQGjw",
+      "brand": "Cartier",
+      "original_title": "unico palloncino blu",
+      "cleaned_title": "unico palloncino blu",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dt_qfsuAk_DXgKfMu3t0JyC2EyPOfV4Hv-tkF1g",
+      "brand": "Cartier",
+      "original_title": "unico palloncino blu",
+      "cleaned_title": "unico palloncino blu",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dgOqf66BzPKOBJGiXix86Lb7xvh8ivJ6vwmbiKA",
+      "brand": "Cartier",
+      "original_title": "Blue Balloon design",
+      "cleaned_title": "Blue Balloon design",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_drzqfs6UVZrfRNJ0eq1TwWet_qu7ZdvZZYqw_tQ",
+      "brand": "Cartier",
+      "original_title": "Blue Balloon design",
+      "cleaned_title": "Blue Balloon design",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dEiqf5O2XF1TMqe6wN2KWx6cn6sFC8j9rsSbJLA",
+      "brand": "Cartier",
+      "original_title": "Blue Balloon design",
+      "cleaned_title": "Blue Balloon design",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dHPqf_39YVYoDJ6UBmMzqTznjUbGfoTsCkc1Yow",
+      "brand": "Cartier",
+      "original_title": "Tre codici uno",
+      "cleaned_title": "Tre codici uno",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dmFqfuG0_JAaynJH48s_iUbIauKtMb5aU3dEKTQ",
+      "brand": "Cartier",
+      "original_title": "Tre codici uno",
+      "cleaned_title": "Tre codici uno",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dPEqfY2KsB75GeUOfydXvQhh2B64WiIM_Wc4dJw",
+      "brand": "Cartier",
+      "original_title": "Tre codici uno",
+      "cleaned_title": "Tre codici uno",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dE9qfAenOyQMmHd1VnkT_iuvJyKXMUtVf4Lp-jQ",
+      "brand": "Cartier",
+      "original_title": "Edizione limitata fascia",
+      "cleaned_title": "Edizione limitata fascia",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d_DqfJgAwUFWI52CrnvFeLPagmlYUOCzaHdpf_w",
+      "brand": "Cartier",
+      "original_title": "Cheetah quadrante senza",
+      "cleaned_title": "Cheetah quadrante senza",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_deFqfcZCiv_-vxq_9LLaY12Cid0CYvIcBolz8rw",
+      "brand": "Cartier",
+      "original_title": "Cheetah quadrante senza",
+      "cleaned_title": "Cheetah quadrante senza",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dwlqfoyUVoOcs8DC5ls6525XtTGOkMqPHXJGrGQ",
+      "brand": "Cartier",
+      "original_title": "Cheetah quadrante senza",
+      "cleaned_title": "Cheetah quadrante senza",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dO-qf1DKgi2HWpZhUFZYDGxES3X6YH3xC1yM9CQ",
+      "brand": "Cartier",
+      "original_title": "aggiornata quarzo con",
+      "cleaned_title": "aggiornata quarzo con",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d9_qfakiWwyPsSt5WsiuPeu_R3ch2xv4gYSLL_Q",
+      "brand": "Cartier",
+      "original_title": "aggiornata quarzo con",
+      "cleaned_title": "aggiornata quarzo con",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d_5qfUAihMG1CpIuZ-W_KsBgYJpqGdeysrwOaog",
+      "brand": "Cartier",
+      "original_title": "Superficie blu ghiaccio",
+      "cleaned_title": "Superficie blu ghiaccio",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dxqqfAozc7mBZQpgH_HQK7U1b4nmgbrBYSrNATQ",
+      "brand": "Cartier",
+      "original_title": "Superficie blu ghiaccio",
+      "cleaned_title": "Superficie blu ghiaccio",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dwCqfAxHTDYKEcxAZGiqHpn0cWaytKHP8ncADbg",
+      "brand": "Cartier",
+      "original_title": "Tortoise Swiss quartz",
+      "cleaned_title": "Tortoise Swiss quartz",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dt5qfLQ24uqdrWoTzJ49dC_EvhGyMPg6xeXqcww",
+      "brand": "Cartier",
+      "original_title": "Superficie blu ghiaccio",
+      "cleaned_title": "Superficie blu ghiaccio",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dkLqfVBXNNCQ3Cd8fPH9oQjoyO5-X6gLoVm-o8g",
+      "brand": "Patek Philippe",
+      "original_title": "timepiece lot money",
+      "cleaned_title": "timepiece lot money",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dwnqfelMG58rg_rl8821Des3zIVKonErBVt0S_A",
+      "brand": "Patek Philippe",
+      "original_title": "The the fully",
+      "cleaned_title": "The the fully",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dmoqfyA7lSHA2XPjBp8xAnesJYUHjlvuKwMX3Eg",
+      "brand": "Patek Philippe",
+      "original_title": "female Patek Philippe",
+      "cleaned_title": "female Patek Philippe",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dthqfS67fj3MDkvK6pOymL7EXMeQpz2uQNnm8nA",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe Full",
+      "cleaned_title": "Patek Philippe Full",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dnIqfzZI_QmuQHTYTV1Wj9XnirlsTOTUmA0ZJAw",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe ceramic",
+      "cleaned_title": "Patek Philippe ceramic",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_duOqfT7XXExtGI5n1fmIOR0F25oCOxf3J8nUnMQ",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe Type",
+      "cleaned_title": "Patek Philippe Type",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dh1qfygGsxSffwgKloG2D7Ktc7fs7s4L6KpPwUA",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe Boutique",
+      "cleaned_title": "Patek Philippe Boutique",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dfVqf7r_CMWC5b_LyIzfXNE2m_l1KbeYce_PGIA",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe patek",
+      "cleaned_title": "Patek Philippe patek",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_djDqfqcuiovHdjnr97UZodfbtiXIMD3ixD2J9Cg",
+      "brand": "Patek Philippe",
+      "original_title": "atek Philippe PATEK",
+      "cleaned_title": "atek Philippe PATEK",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dvHqf2e89WpzjKjpEJon1k0AJOaUmN5t5Tpelbg",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe Grenade",
+      "cleaned_title": "Patek Philippe Grenade",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dtdqfL1dDdfTdiAiDrV2vYb3k0vf7rKZD_PX8Yw",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Master Moon Phase",
+      "cleaned_title": "Master Moon Phase",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dkLqfVBXNNCQ3Cd8fPH9oQjo-PZmS6gLoVm-o8g",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "upgraded Real diamonds",
+      "cleaned_title": "upgraded Real diamonds",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dbMqfe-pTRkLocGIOhnedZCIFxZuU-ciawa132Q",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "upgraded Real diamonds",
+      "cleaned_title": "upgraded Real diamonds",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dgpqfkk38BjYgf36kN87ZYKpqC7oXvTc2_2xMHg",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "upgraded Real diamonds",
+      "cleaned_title": "upgraded Real diamonds",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dtJqfxoeonOrXZLDsrBcEgJ4EWhkosZFT8Q23Ew",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Rendez-Vous The upgraded",
+      "cleaned_title": "Rendez-Vous The upgraded",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dqHqfUcoGxwgAQFWlMF1AQBcIZLEEYDdqx1Qdzg",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Rendez-Vous The upgraded",
+      "cleaned_title": "Rendez-Vous The upgraded",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dzMqfpTS04BHVV2v1-Ccqyn6TH-AskkhXwO0bFQ",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "upgraded Real diamonds",
+      "cleaned_title": "upgraded Real diamonds",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_daMqf1jEZ8WgP_meCNkexw_iLpQ9S65qTrYLmPg",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Rendez-Vous The upgraded",
+      "cleaned_title": "Rendez-Vous The upgraded",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dNTqf3TADYOVkbmoozfRQU3a3ReFDv01Titexdw",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "upgraded Real diamonds",
+      "cleaned_title": "upgraded Real diamonds",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dfJqfFtlkA5a9_qGzfJThgESzIPy0u06ZReApIQ",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "release Moving meteor",
+      "cleaned_title": "release Moving meteor",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dw7qf7SOi9d7aZ8QaFe9jkJn6_iyW1Vuo1D2ZxQ",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "release Moving meteor",
+      "cleaned_title": "release Moving meteor",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d_eqfIbxzMcWJlaFUemMGlAarutGTRZhp_ryNXw",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Reverso One VS-grade",
+      "cleaned_title": "Reverso One VS-grade",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_djyqfzJZllePyj4R0AdJWbIMQ7STt19bapKQNxw",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "The sun moon",
+      "cleaned_title": "The sun moon",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d-tqfqbQ9qLt_y2M1m7D_XlzhIMMc-OpMj3Jq4g",
+      "brand": "Cartier",
+      "original_title": "Classico versatile vendita",
+      "cleaned_title": "Classico versatile vendita",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d9iqfuXKoJEVMHh85N6K8GhXuT_GI1ueIYp_RKA",
+      "brand": "Cartier",
+      "original_title": "Classico versatile vendita",
+      "cleaned_title": "Classico versatile vendita",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_deYqfDG_I9P8kd8nA7QQKtCWNf2AtvqNB5hjhXA",
+      "brand": "Cartier",
+      "original_title": "classici riappaiono",
+      "cleaned_title": "classici riappaiono",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dbDqfjwUpCv8hfIfDXL9fNee2xqNi446en-UwXA",
+      "brand": "Cartier",
+      "original_title": "classici riappaiono",
+      "cleaned_title": "classici riappaiono",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_duNqfbwzK3C_SdHPKZxMHqGErAEqFGBDyBdkqlg",
+      "brand": "Cartier",
+      "original_title": "classici riappaiono",
+      "cleaned_title": "classici riappaiono",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dffqfzNUisGsv0yD3PDc25XUQ-BMlGEhyxA-x8w",
+      "brand": "Cartier",
+      "original_title": "movimento meccanico",
+      "cleaned_title": "movimento meccanico",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dvlqfyxFAgiva0PeUFvUO5L6Uwxs4se63WeafFQ",
+      "brand": "Cartier",
+      "original_title": "Design semplice elegante",
+      "cleaned_title": "Design semplice elegante",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d-SqfoPCwoxSiUzTbYO3c0e2Y0FFT3e3LZMXwMw",
+      "brand": "Cartier",
+      "original_title": "design elegante elegante",
+      "cleaned_title": "design elegante elegante",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dclqfUPzUULUzLJAyYWb8bjuIQ9RerSHzlALrvA",
+      "brand": "Cartier",
+      "original_title": "Semplice alla moda",
+      "cleaned_title": "Semplice alla moda",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d9DqfUrMAh0SX-9eH41YBuZg6IiTJ92ire5rPaA",
+      "brand": "Cartier",
+      "original_title": "Semplice alla moda",
+      "cleaned_title": "Semplice alla moda",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dqdqfQdL5Ey_7ippTdlSHArW2syp73E4FKFHQLA",
+      "brand": "Cartier",
+      "original_title": "stile classico vendita",
+      "cleaned_title": "stile classico vendita",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dehqfBzaU83PNow82zb4ZbBbIh4o3NnH9TYDlwQ",
+      "brand": "Cartier",
+      "original_title": "design elegante elegante",
+      "cleaned_title": "design elegante elegante",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_drPqfcION-XD0ERweX9M6Gx_Zmj1AVzs-HZfeKg",
+      "brand": "Cartier",
+      "original_title": "stile vendita calda",
+      "cleaned_title": "stile vendita calda",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dovqf1p0L8zqX4UWVHihC6JQjg0CDu28Ws2axCA",
+      "brand": "Cartier",
+      "original_title": "stile classico vendita",
+      "cleaned_title": "stile classico vendita",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_daWqfqmq-nY9qU06nkg_w_rgQVCxomrezWo3n1w",
+      "brand": "Cartier",
+      "original_title": "stile classico vendita",
+      "cleaned_title": "stile classico vendita",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_doDqfq7lHXgN8k9D8E8HbgJjQeyhZJ4AKAL7caQ",
+      "brand": "Cartier",
+      "original_title": "stile classico vendita",
+      "cleaned_title": "stile classico vendita",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dD8qfFGqLJVWp7JCnRbmLZYkGXjpmEqUiogk22w",
+      "brand": "Cartier",
+      "original_title": "Type stainless Mirror",
+      "cleaned_title": "Type stainless Mirror",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d9gqfEBuiMpO44aeRgxv102fOT6XTuTVkRSIiuQ",
+      "brand": "Cartier",
+      "original_title": "Flywheel business and",
+      "cleaned_title": "Flywheel business and",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dehqfBzaU83PNow82zb4ZbBbGgY86NnH9TYDlwQ",
+      "brand": "Cartier",
+      "original_title": "London ultra-thin Genuine",
+      "cleaned_title": "London ultra-thin Genuine",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_disqfD6wXPu4ZNi-6J-Op_bIcazIwG-8WeMAdrw",
+      "brand": "Cartier",
+      "original_title": "boutique stainless fully",
+      "cleaned_title": "boutique stainless fully",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_diLqfibV_saKYRB19qTd4Th1mz-l7Tm_dc6lyYA",
+      "brand": "Cartier",
+      "original_title": "Case Edition Stainless",
+      "cleaned_title": "Case Edition Stainless",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_daFqfKnNCsmzCfsMZSeqDT0NJmvCKx34bekRXrw",
+      "brand": "Cartier",
+      "original_title": "Case Edition Stainless",
+      "cleaned_title": "Case Edition Stainless",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dmZqf6CtVGPXvsSBFgqOqP0lL-j9CawPWe3yP_A",
+      "brand": "Cartier",
+      "original_title": "Square Edition Stainless",
+      "cleaned_title": "Square Edition Stainless",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dqHqfUcoGxwgAQFWlMF1AQBcGZLIHYDdqx1Qdzg",
+      "brand": "Cartier",
+      "original_title": "Case Edition Stainless",
+      "cleaned_title": "Case Edition Stainless",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d8_qfqJWGevqa4qhUmtbihCaKs-NQUhhseL8ktw",
+      "brand": "Cartier",
+      "original_title": "Square Edition Stainless",
+      "cleaned_title": "Square Edition Stainless",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dcLqf8Y0PG6BYekcGWf9alXRMbhgWtysOrEM4iQ",
+      "brand": "Cartier",
+      "original_title": "Square Edition Stainless",
+      "cleaned_title": "Square Edition Stainless",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dsjqfWsDE6KZ73S9n3Ds8hIoPC5HGiFBJrxadsA",
+      "brand": "Cartier",
+      "original_title": "Case Edition Stainless",
+      "cleaned_title": "Case Edition Stainless",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_duqqfXHArqTflXDsOPl9ByO1wFb7UMh3NunLZeg",
+      "brand": "Cartier",
+      "original_title": "Case Edition Stainless",
+      "cleaned_title": "Case Edition Stainless",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dQIqf-zpY_vsRqcEXVqwmXO-nPIUd0OXD2_Id4Q",
+      "brand": "Cartier",
+      "original_title": "fully mineral tempered",
+      "cleaned_title": "fully mineral tempered",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dt3qf9na141KOHD4uRHtMnliVxTLC8evyd-z1xA",
+      "brand": "Cartier",
+      "original_title": "Case Edition Stainless",
+      "cleaned_title": "Case Edition Stainless",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dnvqf8bMSil6XoqHtWi1oeE24TSu0cdEtyVeMhg",
+      "brand": "Cartier",
+      "original_title": "diving the generation",
+      "cleaned_title": "diving the generation",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dglqf-bgiKe2NatWQNJju633qKzLkfY0Qkz8Jyw",
+      "brand": "Hublot",
+      "original_title": "TWFactory Tudor Black",
+      "cleaned_title": "TWFactory Tudor Black",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_djYqfC7MBGIsKdZJiWx_9rcYJHYeJV10QbI3YRA",
+      "brand": "Hublot",
+      "original_title": "HB1110 the level",
+      "cleaned_title": "HB1110 the level",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dw0qfTYiDUdgGGueCSZwazwVS19rlhgSvO2Qedw",
+      "brand": "Hublot",
+      "original_title": "HB1110 the level",
+      "cleaned_title": "HB1110 the level",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_drVqffLvsdZ6RCjvCslMvG6qHkSfKWu8p25U3yw",
+      "brand": "Hublot",
+      "original_title": "HB1110 the level",
+      "cleaned_title": "HB1110 the level",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dssqfxIq4Q_w8D98zowwUC-5QP2mQCkzWC0AHXw",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dwyqfU8N1lDJXY5JXM6KZE4oyClPTaFmdodOr3Q",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dk0qfhqZpSOP4hPY59THisx2OI2rNis-VHA0ZAA",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dDzqfKYqQcn2xxL7Fk-VAqvpXmzAbh-5pMvJK4g",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_ddnqfMtElM7pWo0qCva-ualnnITGWK368KBkbww",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dm_qfhCfc9Z3S-hNdDLAQR9dhPHWO_7ekocxyRA",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dkqqfKRzGxvABQLM_mMpHMH8KT2Co-VIq3NQUtA",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d9PqfACrudr5_1R4ItByK-KDBwvOHHqDDbLN8Pw",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dj1qfKbi9G8k5qoWHRC_7lrH3Tg71BOLmwSMaeQ",
+      "brand": "Hublot",
+      "original_title": "upgraded upgraded follows",
+      "cleaned_title": "upgraded upgraded follows",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_du1qfGm3qGc5mLGYON9K4cFqWzFvBgNNz1ISyzw",
+      "brand": "Hublot",
+      "original_title": "HB1110 the level",
+      "cleaned_title": "HB1110 the level",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dklqfWQd9HealTm01-ozIgAQpWUgr8iV5mZQHHQ",
+      "brand": "Hublot",
+      "original_title": "HB1110 the level",
+      "cleaned_title": "HB1110 the level",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dnWqf0pZPDZdbFK5S_m6i17I94ICniA88PYEYaA",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe three-hand",
+      "cleaned_title": "Patek Philippe three-hand",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dUqqf0PebtAUa9xe38FcBkoqV9DKghUqBvgANcw",
+      "brand": "Patek Philippe",
+      "original_title": "Elegant noble temperament",
+      "cleaned_title": "Elegant noble temperament",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_djSqfYrM8FntdCo3shWgy8cHtBn-D6pwHpsu9vw",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe Type",
+      "cleaned_title": "Patek Philippe Type",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dhiqfVVTgPW6uKABh3NfOAikJLCtoOx_KF7w1kQ",
+      "brand": "Patek Philippe",
+      "original_title": "The highest quality",
+      "cleaned_title": "The highest quality",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d8AqfLL6CxghJcE64ISwlQIR70whrTrPIVc4F1A",
+      "brand": "Patek Philippe",
+      "original_title": "One-touch folding and",
+      "cleaned_title": "One-touch folding and",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dlzqfaWJ68kWgWo0qaFwR_pX0r7iJoZ2IA6UEZA",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe Type",
+      "cleaned_title": "Patek Philippe Type",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dvZqfzbRQQxG_XRhatJU0A4xp_LG-aQlBp-ZN4w",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe Type",
+      "cleaned_title": "Patek Philippe Type",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dp4qfOH5o_Vb0s7K7ziNmwEyUDioAet3eB9dNYQ",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe TWENTY",
+      "cleaned_title": "Patek Philippe TWENTY",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dM9qfvHVJhQB-nj8LE_JfuaCyJD1g7lpTe2-Xnw",
+      "brand": "Patek Philippe",
+      "original_title": "Quality big manufacturer",
+      "cleaned_title": "Quality big manufacturer",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d-bqfElo1pLs7O4Pz4anUyMpmjb0OQnldPP2Vng",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe Star",
+      "cleaned_title": "Patek Philippe Star",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dp6qfdUyLTr7lOvJoMNRoH271Im2DRwvQX1MFjQ",
+      "brand": "Patek Philippe",
+      "original_title": "Explorer",
+      "cleaned_title": "Explorer",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_da4qft_a_fUy-U5N7XXn3-cezN9FqBf8T_P9UOw",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe Type",
+      "cleaned_title": "Patek Philippe Type",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dWJqf9uAyxkwD0vuZ8NIzFRmNgZmUdMnogcmgWw",
+      "brand": "Patek Philippe",
+      "original_title": "The Patek Philippe",
+      "cleaned_title": "The Patek Philippe",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dqHqfUcoGxwgAQFWlMF1AQBcHZbQHYDdqxVYUxg",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe PATEK",
+      "cleaned_title": "Patek Philippe PATEK",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dYIqfNwoLt6LMlVyF7uWvD61DR77GaPo7fS3ypg",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe Type",
+      "cleaned_title": "Patek Philippe Type",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dpoqfH6QqSQLHDBkPcK5zeJXjf5_U8xmpFmRt0w",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe Complex",
+      "cleaned_title": "Patek Philippe Complex",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_duhqf_BCncIgUn5d2s6Zg15xeqrp5D9R-MNdxUw",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe Type",
+      "cleaned_title": "Patek Philippe Type",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dTwqfEkNdrncy1-yf1yaSDfC_MvFCTlPaGO0kqw",
+      "brand": "Patek Philippe",
+      "original_title": "Patek Philippe actual",
+      "cleaned_title": "Patek Philippe actual",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dmFqfuG0_JAaynJH48s_iUbIUvK5Kb5aU3dEKTQ",
+      "brand": "Patek Philippe",
+      "original_title": "Popular Patek Philippe",
+      "cleaned_title": "Popular Patek Philippe",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dqpqfYXwgmrnUJR2n8cM7uUWWfcyokPp3W-FXQA",
+      "brand": "Patek Philippe",
+      "original_title": "Popular Patek Philippe",
+      "cleaned_title": "Popular Patek Philippe",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d9AqfreQb5P3jpeoTTXUSa7gLpZW3yqRMgBADjg",
+      "brand": "Panerai",
+      "original_title": "Type Case stainless",
+      "cleaned_title": "Type Case stainless",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dkdqfaU8xRtY_ruWljxY01MJ4-qP9whzw8EXxWg",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_diiqflM28INlZ4r-eaM7BBtbTlub5GnuMwavugQ",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dLyqf3z47zpHfuVSBJieDR65_Cm0anzNyZSh3dA",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dJQqfnkp4cdlDEOBs5eiIWjdHsCe3ENBReVscSA",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_ddeqfnKru3dieWMFMLXjUs14QzTV2rCo6h16_nA",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_daoqf2eY88SziGMR7JiEod_7h1zztJYXNU8uIlQ",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_da_qf2qYLD257TFOqyT1nHyHMg01ZxFmHeeGk2Q",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dycqfQsNoeK-NApmC-LkLIHAvThu1_Do_7967sg",
+      "brand": "Panerai",
+      "original_title": "Curved coated glass",
+      "cleaned_title": "Curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dvbqfMW3IC6KObjLKrA411dKZ2Pezlqofh6sMbg",
+      "brand": "Panerai",
+      "original_title": "love Nahai and",
+      "cleaned_title": "love Nahai and",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_djoqfR3iQCgUWkjUczMNOWWd-rVV2_Kwbk_OL0Q",
+      "brand": "Panerai",
+      "original_title": "love Nahai and",
+      "cleaned_title": "love Nahai and",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dkIqfAJURU9vV0da8ya5X7EJ_epITB_FsRPceVg",
+      "brand": "Panerai",
+      "original_title": "love Nahai and",
+      "cleaned_title": "love Nahai and",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dj6qf-xcdoUEDfZzsF2hUmD-u4KUjpo6he94HZw",
+      "brand": "Panerai",
+      "original_title": "love Nahai and",
+      "cleaned_title": "love Nahai and",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dtaqfDVJxdDfaccQyQIdgnWyM5RZg8JNoktaU7g",
+      "brand": "Panerai",
+      "original_title": "love Nahai and",
+      "cleaned_title": "love Nahai and",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dabqfA7_dxqOWFSSH6BBTVW06WOFP1dLy-l7INw",
+      "brand": "Panerai",
+      "original_title": "love Nahai and",
+      "cleaned_title": "love Nahai and",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dqzqfF7y_tYFMKHBViHkIz93HkFz87V0TA5CZpA",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_ddBqfHuV_20iGywZ3ZOs_SxJojba-gvISXqw8Gg",
+      "brand": "Panerai",
+      "original_title": "Deeply love Nahai",
+      "cleaned_title": "Deeply love Nahai",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dwOqfzzcPxWQ_e5uaxTbjV1ymIseSPQxvtduDAQ",
+      "brand": "Panerai",
+      "original_title": "vetro rivestito curvo",
+      "cleaned_title": "vetro rivestito curvo",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dMBqfog4YDRlNTj8ZI_KP0ewh_nZUTAQc0nh2RA",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_denqfPm9iKwn3tAsHLcfAT2-usArTdDEsuJQeJQ",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dmIqfWuDJnOEZXija0mRd8WTSSDOuG1WNrB-sEg",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_ds2qf4AvDSmkVoPNF2_lja4LAgBXIYl2ehi6hvg",
+      "brand": "Panerai",
+      "original_title": "deep love for",
+      "cleaned_title": "deep love for",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_di_qfmggJTFEJCH2jVEAnXU9FEVmnBc758oWKKQ",
+      "brand": "Panerai",
+      "original_title": "deep love for",
+      "cleaned_title": "deep love for",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dwkqfqix0fG8sC-aMFQ9_KIvcA1Y9DDwNjtZ-Xg",
+      "brand": "Panerai",
+      "original_title": "Deeply love Nahai",
+      "cleaned_title": "Deeply love Nahai",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dbWqfyn0UY3lVw4aq1zwaVyGO3USQEGMfoXgPvQ",
+      "brand": "Panerai",
+      "original_title": "Deeply love Nahai",
+      "cleaned_title": "Deeply love Nahai",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dXbqffPj_zEJ9pf97rBC1-b8Kx9xifwvXjIemjQ",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dcgqfeKaO4WupgEzrVAOR90-Y2MBPdMbs12J4kA",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dA9qflrnAxzK4j57QXkYi42DRNA95NHu9h7XfnQ",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d_xqfCJ_VnErCOM-pfl3r96DbgDa8GrE-zFEaLA",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dpdqfYaAJzuy6E8cWNKeIzO6xi9bs2ZTQ0IExNg",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dpJqfuUnAzqoflKDUICQRbNsOb6T5kDlwChh6hw",
+      "brand": "Panerai",
+      "original_title": "curved coated glass",
+      "cleaned_title": "curved coated glass",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_drdqfBQctwMF-Wvj1TiRN4gelO7O2ZiJEC-lY0Q",
+      "brand": "Panerai",
+      "original_title": "launches the Navy",
+      "cleaned_title": "launches the Navy",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_deYqfDG_I9P8kd8nA7QUPvSCIfWcgvqNB5hjhXA",
+      "brand": "Panerai",
+      "original_title": "Rademi PAM0102 fully",
+      "cleaned_title": "Rademi PAM0102 fully",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dxJqfoIcxYtezGPr7enq8MFX1x6kfbgKat0XxSw",
+      "brand": "Panerai",
+      "original_title": "SUBMERSIBLE Dwayne Johnson",
+      "cleaned_title": "SUBMERSIBLE Dwayne Johnson",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dpfqftk0WnC6dKnblmsUv_Q0OfSUo4g-Z-I7zJA",
+      "brand": "Panerai",
+      "original_title": "SUBMERSIBLE Dwayne Johnson",
+      "cleaned_title": "SUBMERSIBLE Dwayne Johnson",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dHIqfo9gUJTQj4omvUflSXzDyYNd7qZO_IiqOyw",
+      "brand": "Richard Mille",
+      "original_title": "Richard Mille Richard",
+      "cleaned_title": "Richard Mille Richard",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dlBqfSDT9y0WrnWzTpYnBqFzR0mqKu1x_7t48Kw",
+      "brand": "Audemars Piguet",
+      "original_title": "Exclusive price Audemars",
+      "cleaned_title": "Exclusive price Audemars",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dmUqfNhJobRcEqHJLiUK6LHanwtyo5oU546Ok3A",
+      "brand": "Audemars Piguet",
+      "original_title": "Exclusive price Audemars",
+      "cleaned_title": "Exclusive price Audemars",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dkmqfzyy-DEIqPUPjdRNnUdkXWNuGrBRDkDxUWQ",
+      "brand": "Audemars Piguet",
+      "original_title": "Exclusive price Audemars",
+      "cleaned_title": "Exclusive price Audemars",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_drzqfs6UVZrfRNJ0eq1X1UO57q-3fdvZZYqw_tQ",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet masterpiece",
+      "cleaned_title": "Audemars Piguet masterpiece",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dTcqfsV61LPd5cWdXw-zGOQrgeV5o2pX7AQbNOw",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet masterpiece",
+      "cleaned_title": "Audemars Piguet masterpiece",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dAlqf3gGhKI7K-TJWs8SfzKxXLTfa7SGB9rSR3g",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet masterpiece",
+      "cleaned_title": "Audemars Piguet masterpiece",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_djoqfR3iQCgUWkjUczMJLUGJ6rlN1_KwbkPGC3w",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet masterpiece",
+      "cleaned_title": "Audemars Piguet masterpiece",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dCSqfk8c0N9Z-jgzRiHzMskE-0102E9tppoASNg",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet masterpiece",
+      "cleaned_title": "Audemars Piguet masterpiece",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dlgqfKQAqVlWY2QSQaEHvgrOZBz4eOmNsZ8zdeA",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet Type",
+      "cleaned_title": "Audemars Piguet Type",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d8Zqf0kBUYuv41R_HZnxY4DUCLxMYDRl5DXdmVA",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet Type",
+      "cleaned_title": "Audemars Piguet Type",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d-EqfsWXPUMKN5K-49KzehGjIyEuOWYIyX6SLvw",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegant and refined",
+      "cleaned_title": "Elegant and refined",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_ddeqfnKru3dieWMFMLXnRulsayjV-rCo6h16_nA",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegant and refined",
+      "cleaned_title": "Elegant and refined",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_drrqfuf0qSN4_21By-zCUGAso3GgNj69oFDEsGA",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegant and refined",
+      "cleaned_title": "Elegant and refined",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dTAqf0irU3IJYQs8fLYiU_anVdkoQiyW-ep7aJA",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegant and refined",
+      "cleaned_title": "Elegant and refined",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dDgqfZ_W3gHbLHyKvDeDYr4HrM-gtrCabu4mUbA",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegant and refined",
+      "cleaned_title": "Elegant and refined",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dwKqfee1fi1JMT5w5BnMV1NFXy3PaawmzZtiQ9g",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegant and refined",
+      "cleaned_title": "Elegant and refined",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dq8qfCj5raPF-kT-Jmq_kVPps0WxPpbFBxYAHBQ",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet prodotto",
+      "cleaned_title": "Audemars Piguet prodotto",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d95qfY79620c833RK_PzORm2D4D3diaVzkDVkPw",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet prodotto",
+      "cleaned_title": "Audemars Piguet prodotto",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_drvqfPr2UfjAxMs_9gdba_Nq2rlhfpA_0F4HYPw",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet prodotto",
+      "cleaned_title": "Audemars Piguet prodotto",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dwGqfe1tLciZlIzcSwA6poUvEZrqqg1kqNAljRQ",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet prodotto",
+      "cleaned_title": "Audemars Piguet prodotto",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dLBqfL4WRKHg5HHXyaWmmcuCgDWSZfqSmorFyWw",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet prodotto",
+      "cleaned_title": "Audemars Piguet prodotto",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dncqf-cfGueB_GMzwAuGAreGSAb7Xsx7bIDCl9A",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet prodotto",
+      "cleaned_title": "Audemars Piguet prodotto",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d9zqf0J6HhJTCr6GGceBlAn3dMZYD7aqhCRyZPw",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet prodotto",
+      "cleaned_title": "Audemars Piguet prodotto",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dfuqfusyzHrKQhTYuVgeYlPxb3TY_X8U1q1rp-A",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet prodotto",
+      "cleaned_title": "Audemars Piguet prodotto",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dq8qfCj5raPF-kT-Jmq_kVPpq2mtFpbFBxYAHBQ",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet prodotto",
+      "cleaned_title": "Audemars Piguet prodotto",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dnDqfzZ1nKS2RoxJPyMAuk8bxv0o6qabBQ-wSmA",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet prodotto",
+      "cleaned_title": "Audemars Piguet prodotto",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dxDqfqgQHVJAOYvb9yEp-4xMsEfbvx_OT5rzaYQ",
+      "brand": "Audemars Piguet",
+      "original_title": "Audemars Piguet prodotto",
+      "cleaned_title": "Audemars Piguet prodotto",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dxYqfIOJkjCjeZfCUgrTLXJu7v4Fn4CGVciytyg",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegante raffinato classico",
+      "cleaned_title": "Elegante raffinato classico",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dw-qf7PMKEzTs3USNasPWoGeDMdRP9Z6TKp_Ojg",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegante raffinato classico",
+      "cleaned_title": "Elegante raffinato classico",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dkzqf2Wt3BieITvEfICXWCCcMJqkgbVyRaGqNVg",
+      "brand": "Audemars Piguet",
+      "original_title": "Migliore Arrivato Ottimo",
+      "cleaned_title": "Migliore Arrivato Ottimo",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dnQqfmTlwusUVPn1Qz6pExG3VDKeQ_Pk9bhxNqw",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegante raffinato classico",
+      "cleaned_title": "Elegante raffinato classico",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dkXqfp2E8RHEEz-n6VTFH5ZmppPQ14iTznqmvhQ",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegante raffinato classico",
+      "cleaned_title": "Elegante raffinato classico",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dmWqf13GPxrW0p0eddQLVW7P5ZLNXEvEYBwir5Q",
+      "brand": "Audemars Piguet",
+      "original_title": "Debutto del miglior",
+      "cleaned_title": "Debutto del miglior",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dasqf8ns6agS2ltvcUaJnF_D2dJzOJxf2_pJBNQ",
+      "brand": "Audemars Piguet",
+      "original_title": "Debutto del miglior",
+      "cleaned_title": "Debutto del miglior",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dsNqf1gJ289LjzHpBnYs0YkkVV7z8VHMRq9S3sQ",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegante raffinato classico",
+      "cleaned_title": "Elegante raffinato classico",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dqvqfJrGVGjv-b2-buRuPUBHk18it3Ae6NdR3dw",
+      "brand": "Audemars Piguet",
+      "original_title": "Elegante raffinato classico",
+      "cleaned_title": "Elegante raffinato classico",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_djEqfW8nJQJQ0HVWOoo-stKNpV9Tw21eR5672GA",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "The upgraded has",
+      "cleaned_title": "The upgraded has",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dFbqfiQqUdyR0CjIff65FejPksxUHk7wgVaf_ng",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "simple two-hand exquisite",
+      "cleaned_title": "simple two-hand exquisite",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d-uqfXJtViCtpcwSj_P3TMGwy_RbvsvY4v3zscQ",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Jaeger Lecoultre Master",
+      "cleaned_title": "Jaeger Lecoultre Master",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dolqf5PGreVAzicn-u2hMGcErs-Jf9G7icI0WMg",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Master sector The",
+      "cleaned_title": "Master sector The",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d-jqfIVnvLYT1WqXo_i5WvC7b-7FsE1fEXRYk2w",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "the city heritage",
+      "cleaned_title": "the city heritage",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dCrqfWXzQ0aC0vzfTfET7KzwXDoqNptPL7Xn2IQ",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "The iconic feature",
+      "cleaned_title": "The iconic feature",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d-2qfcqhudcjuYDHMruwAqAEIQyphaQOHQc7WSA",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Polaris watches elegant",
+      "cleaned_title": "Polaris watches elegant",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dwkqfqix0fG8sC-aMFQ56IY7XDVY6DDwNjN5_XA",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Polaris watches elegant",
+      "cleaned_title": "Polaris watches elegant",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dtTqft97KmDqr_GKglRizbmu8vMn-gLyafAppRw",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Polaris watches elegant",
+      "cleaned_title": "Polaris watches elegant",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d-xqfqKGfzvTvmyyQYMOYh325g3SQGO5A1dzDeQ",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Polaris watches elegant",
+      "cleaned_title": "Polaris watches elegant",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dpZqfiSB-XjD5xsZpzjecxvw3ff5usarDzeweaA",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Polaris watches elegant",
+      "cleaned_title": "Polaris watches elegant",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dgHqf7QniGrRlgElvCQSr6GdfKn4ZukdkymfDOQ",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "The iconic feature",
+      "cleaned_title": "The iconic feature",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dv_qfL9YOy2Il841vY7hCtwxJJamNc2hss3ZvRg",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "The Ultra-Thin Master",
+      "cleaned_title": "The Ultra-Thin Master",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dAaqf4f4ugkbAqfoGxV7-XxT9bVLAA3PzmWHKwA",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "The iconic feature",
+      "cleaned_title": "The iconic feature",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dfEqf-FDgFbfpuS3riHatbPR1pGsA7zSU4X89og",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Simple design fully",
+      "cleaned_title": "Simple design fully",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dzQqftlmIgSnehe8zad2oGmS9NEG-l1rWQv6xHw",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Polaris watches elegant",
+      "cleaned_title": "Polaris watches elegant",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dwIqfpH-xsu5WGs76CmVxwytW6pO6uTX04JEoNQ",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Master The band",
+      "cleaned_title": "Master The band",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dqDqfdGXx_9hLPCUbwJr4GwNmc29PAFCJ2wkm2Q",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "The Ultra-Thin Master",
+      "cleaned_title": "The Ultra-Thin Master",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dIuqfnZsjTHni7od0H2PJuKevHE2a25e6e20vPw",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "The Ultra-Thin Master",
+      "cleaned_title": "The Ultra-Thin Master",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dszqfQaiSlmpvvIperIrt5d95S3d1WMzG1WPFDw",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "The Ultra-Thin Master",
+      "cleaned_title": "The Ultra-Thin Master",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_drqqfrLzFSYNjXsXgaPa30zoW7vHt8jZyum9kLw",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "The Ultra-Thin Master",
+      "cleaned_title": "The Ultra-Thin Master",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dhOqf715f6bt8IvrvHJiADCJ0U45gvWpjo0RHgA",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "The Ultra-Thin Master",
+      "cleaned_title": "The Ultra-Thin Master",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dtlqfIWpRZIZNKu_j4wcUkuU4YLJj913YT1an1w",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "The Ultra-Thin Master",
+      "cleaned_title": "The Ultra-Thin Master",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d87qfB8hlUfeRignnBnv6ajgCDd8FQRi0V7mP_g",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "The Ultra-Thin Master",
+      "cleaned_title": "The Ultra-Thin Master",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_diYqfCMExm2dJg9d_9z4MNmPEMvl9AqPvOSM26g",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "The Ultra-Thin Master",
+      "cleaned_title": "The Ultra-Thin Master",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_difqfnV64VxAb7sTEK5xdiyAH448avppbnzeD2g",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Type Case stainless",
+      "cleaned_title": "Type Case stainless",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dGXqfz6WZ-1UT9q-UIOPqHbcje1PxvmsHVdXRaA",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Type Case stainless",
+      "cleaned_title": "Type Case stainless",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dj6qf-xcdoUEDfZzsF2hUmD-u4aErpo6he94HZw",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "spends lot money",
+      "cleaned_title": "spends lot money",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_ds9qfBrHMxvYnUqijPo3WZXoOQsgASHZKD9UJmA",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "spends lot money",
+      "cleaned_title": "spends lot money",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d-lqfepClBauLhLcQ_ciMFDnLhHWS0dt2lYPFsA",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "spends lot money",
+      "cleaned_title": "spends lot money",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_divqfbp6iQ_mZDXtH5XYaHafES75_BKypYTKxBQ",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "spends lot money",
+      "cleaned_title": "spends lot money",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dnDqfzZ1nKS2RoxJPyMErmsP8s0I_qabBR-0Tkg",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Polaris watches elegant",
+      "cleaned_title": "Polaris watches elegant",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_duJqfArq94KI9FudlDXHiFFQAOcs2hNZm5lMM2w",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Polaris watches elegant",
+      "cleaned_title": "Polaris watches elegant",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dqlqf7DdhP7hoV8RiqgXZZrqiT9cWpOWLeg-ZAw",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Polaris watches elegant",
+      "cleaned_title": "Polaris watches elegant",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dnAqf-R9C9OGhlD8IsXeNBPf7aaUcy7T1uZUfvw",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Master RK4 harmonious",
+      "cleaned_title": "Master RK4 harmonious",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dlLqfxff9pqkVfkjgwNE0VK5gCCPP4QQdluKbMQ",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Factory2023 masterpiece The",
+      "cleaned_title": "Factory2023 masterpiece The",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dw9qfRTYIwKzmqUdLMai0ranu89CsFLpMorD38Q",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Master Upgraded Master",
+      "cleaned_title": "Master Upgraded Master",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d9vqfUKjvFVsplTk5nl4UljO75-KsPu76hFy2kw",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Master The band",
+      "cleaned_title": "Master The band",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dcWqfGEUpNcB3cKuH98xQFvRW3AofkbYrASTrUg",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "The Master Ultra",
+      "cleaned_title": "The Master Ultra",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dp9qf5Uxkz75QY6YCLbPP1sX9hNXtU6NXKsdEHw",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Master harmonious tradition",
+      "cleaned_title": "Master harmonious tradition",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_ddIqfcD2W16URzEz8ZXas-RVmLcdKvCDzWWNrlQ",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Master harmonious tradition",
+      "cleaned_title": "Master harmonious tradition",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dfYqf2NSpD0I0uF2D6V9O7LcPlFJ07-j6K_7LsQ",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Polaris watches elegant",
+      "cleaned_title": "Polaris watches elegant",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_ds3qf9jF_mSzQ5eAg5qajZWXQ9NB3RVf1tWbU8w",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "Polaris watches elegant",
+      "cleaned_title": "Polaris watches elegant",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_du7qfJtuUOlXimvm7fUWT3ER-m9HQUble0VXfDg",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "lot money Master",
+      "cleaned_title": "lot money Master",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dcwqfoq7GEKyOiRKPRM_17dS1wcoosvqbrXUgnA",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "lot money Master",
+      "cleaned_title": "lot money Master",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dtdqfL1dDdfTdiAiDrVyqaLjl1_r8rKZD_PX8Yw",
+      "brand": "Jaeger-LeCoultre",
+      "original_title": "lot money Master",
+      "cleaned_title": "lot money Master",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d8tqfO68crQByLE1RuVwqDhDLFGr1OQgTjvTE4g",
+      "brand": "Tudor",
+      "original_title": "produced item return",
+      "cleaned_title": "produced item return",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dn1qfGNOFkbApsABIJ_MP-mWEijauWvrleDA0ig",
+      "brand": "Tudor",
+      "original_title": "produced item return",
+      "cleaned_title": "produced item return",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_drBqf46zHrZBCA_wFdEdf8FU5viawfjuxT-u_Wg",
+      "brand": "Tudor",
+      "original_title": "Official Synchronization",
+      "cleaned_title": "Official Synchronization",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dADqf6Kt4fVPTxOb-Y8aSDKkWF-OAX2GQtzFJqw",
+      "brand": "Tudor",
+      "original_title": "TWFactory Black Bay",
+      "cleaned_title": "TWFactory Black Bay",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_d_qqfooqOIoTA_1Zqp1u54IOK7bYvwka_d8gMPA",
+      "brand": "Tudor",
+      "original_title": "TWFactory Black Bay",
+      "cleaned_title": "TWFactory Black Bay",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dCsqfvkaEv1F4BRY2TFEYmyYwkewcBhQjJd5ceQ",
+      "brand": "Omega",
+      "original_title": "Type Case stainless",
+      "cleaned_title": "Type Case stainless",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dwJqf8Ws7KiWhMlmqvQIbnrXHHtRydQql0IfZ_g",
+      "brand": "Omega",
+      "original_title": "Type Case stainless",
+      "cleaned_title": "Type Case stainless",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    },
+    {
+      "id": "_dpFqf7TbpGzfn1Z21yEq3m_CmtPXVYmKdfJo79w",
+      "brand": "Omega",
+      "original_title": "upgraded Pearl shell",
+      "cleaned_title": "upgraded Pearl shell",
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "reason_for_uncertainty": "no_known_model_pattern"
+    }
+  ]
+}

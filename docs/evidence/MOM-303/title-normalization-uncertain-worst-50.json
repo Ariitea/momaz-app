@@ -1,0 +1,960 @@
+{
+  "issue": "MOM-303",
+  "generated_at": "2026-04-26T20:14:31.870Z",
+  "sample_size": 50,
+  "method": "deterministic_worst_case_ranking",
+  "source": "LOW confidence tier from full report",
+  "rank_formula": "score=(abs(original_length-cleaned_length)/original_length)*100 + original_length",
+  "checks": [
+    {
+      "id": "_de3qfd2wDnTlkHMZ9nLFDEQlbAxMwa6N04kf25g",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_djWqfeCXVULdGceG-ktSXq939V0itUACewzRlOw",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dfMqfhBWdwxmPA6MTzx5xT0l9hMNRmbaMCgyQNw",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_diSqfQMVfWtqTK4qdnZ4LhBPPRJX0jmCEwapJ3w",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dBjqftugqqdvL3IatVDSjAS5VEQgav6e3wCH6Bw",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_df_qfgdDNOJQsA-5gC1zd5G5HtYWXmPSw2cjseA",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_d_fqfOez039NA4E5WP3CKYxVbC33AwGOee7_B_g",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dl6qfvUZUzmt-5Dk1yAEYWv1m308bKMJJfyFhKA",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_duSqfD65z8E7DVdUhsxYv18cGztMg-BfHz0IgIQ",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dPYqf1WJ3HcifALoSC2JksXVYXK2o8P5YCNDVXQ",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dj6qf-xcdoUEDfZzsF2lRkTqv46Ygpo6he94HZw",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dkYqfrD-H1Z-KDiO1gHu5C7oRxyvsG4kb-BFHfg",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_du4qfYu3TwaORYdCEACafgx4IlqwE9zExJ8N-1A",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_diqqfJ7tzgNM3jY5ZFNu7gm_gPmfg7un2lPeazQ",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_doOqfMBTmruk4kLV3Ndz5yGPstZ5ZywQ8cpRmbQ",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dxjqf2EOdkneGDdAz_mnx4vw07OBILbDm4H6ALg",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dhpqfAaPfr6U7Zcfy0f_oeNViEbmV9NdPJ2Jgyw",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_d8eqfUxdqe1y7ajRiyHiS9MNx9FIDMgi-V7U-sw",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dw1qfw2Vc-H_7Sp0tOgrOUt5skcrlovrwu4zfFA",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dmhqf8jYAa0wgz1T_LXae7he9WN3RgxVEZWsAyA",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_doHqfwsXxYnb3UJwOa8d8Io6rNX34m2SsRnvuGg",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_deZqfyBtmNv9AkwQmtLlaXMZZi986RaSG-IOMGQ",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dwbqfTmU7cyUGovo0Ud--cecKo6Qo-tCMA5cHeg",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dqiqfU3t9FbDf0uLAxljn3jLWvJyof5a3HqePNw",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dj8qflolacUo6C9dA2lMxWL0QThhDEsbzBnEAag",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_duhqf_BCncIgUn5d2s6Zg15xUoLx9D9R-MNdxUw",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_d-Lqf5Cm_akHZ7fP0wA015MST6iy0165p1OaCHA",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_djiqfl-_UfAyHZI0i9yKkQU5tVyBlD0yFT-Yl2Q",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dqVqfx27E1sBi74u3v7JF9D2UP-n6gZ-ZVXEA1g",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dhLqfX7_M7LpT4fYb3aD5zTbDB4NKmPIwfEm4pA",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dRZqfo7fkhEiF07x1aKUI9VoiLUCUYgJ_3kfYTQ",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dqHqfUcoGxwgAQFWlMF1AQBcLabIBYDdqx1Qdzg",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dtRqf1lcXb0T0L4X9Hce2TdRZdpcs8gywbj7IZQ",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_duWqf-fXCS9tkLZ5lGnKoXu7yovcmbsbV77L_Mw",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dj5qfC5WvtDAHHQ0AAqbFGJ3pbGSNRa1dHbhesg",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dnFqfmjjnC6I9V5LdQkyi8hPP1o0UgwZhLozMeQ",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dpRqfTDAh6oNwOuPyaq-oB8R4pbA_ymR68zcFdg",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dp5qfa0wenvz4dL_Rw_GU71wxyAMXSpyUwZtrIw",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dnyqfPqRWlLxsTXPETCgVrIQg9kY866ZnStXarQ",
+      "sku": "default",
+      "category": "louis vuitton / 女包",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dl2qfHggy4cWAH_yBGuUUxpUYnlw6Ne3OZMW2sw",
+      "sku": "default",
+      "category": "uncategorized",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_didqfRIZZspIGmq32cM5gPzgUYpESLDYIlV7-SA",
+      "sku": "default",
+      "category": "uncategorized",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_do_qfvJIEE7ymYDhJxJ_8LUzRoym4qZIGdrOYJw",
+      "sku": "default",
+      "category": "uncategorized",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dl2qfHggy4cWAH_yBGuUUxpUYnFo-Ne3OZ8e2sQ",
+      "sku": "default",
+      "category": "uncategorized",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_d_6qfRCEkXKjkmP_NQ30cHbMCG1gc_twCMSkUyQ",
+      "sku": "default",
+      "category": "uncategorized",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_du7qfJtuUOlXimvm7fUSW1UF5lNHSUble0VXfDg",
+      "sku": "default",
+      "category": "uncategorized",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dzXqfDYE9eNyGqIr_atETo53bbdu44pHEqwN71Q",
+      "sku": "default",
+      "category": "uncategorized",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dqIqfzwrw9kDYt_keCd-9K3Dg5UhDe4MhDEz_3Q",
+      "sku": "default",
+      "category": "uncategorized",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_d9tqfD9zAterq5fOqiH4An7MP1vk98FnQHAjfTw",
+      "sku": "default",
+      "category": "uncategorized",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dtvqfcesJCRgq1M8RhfruJ_ZfHG8vM1oHzmd5jg",
+      "sku": "default",
+      "category": "uncategorized",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    },
+    {
+      "id": "_dtPqfcMa2SfzfjuKfvg0TUPBROJjhuJf5fy5f-Q",
+      "sku": "default",
+      "category": "uncategorized",
+      "brand": "Unknown",
+      "original_title": "Louis Vuitton",
+      "cleaned_title": "Louis Vuitton",
+      "changed": false,
+      "method": "gentle_original_fallback",
+      "confidence": "low",
+      "confidence_level": "LOW",
+      "uncertainty_reason": "no_known_model_pattern",
+      "deterministic": true,
+      "worst_case_metrics": {
+        "original_length": 13,
+        "cleaned_length": 13,
+        "modification_score": 13
+      }
+    }
+  ]
+}

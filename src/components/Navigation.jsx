@@ -42,6 +42,16 @@ function Navigation() {
         <a href="/#archive">Archive</a>
       </div>
 
+      <label className="reference-nav__search" htmlFor="reference-nav-search">
+        <input
+          id="reference-nav-search"
+          type="search"
+          placeholder="Search"
+          autoComplete="off"
+          aria-label="Search catalog"
+        />
+      </label>
+
       <div className="momaz-nav__group momaz-nav__right">
         <a href="/#bag">Bag 0</a>
         <a href="/#account">Account</a>
