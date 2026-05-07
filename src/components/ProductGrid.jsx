@@ -396,9 +396,9 @@ function ProductGrid() {
               onFocus={(event) => activateProduct(event, product.id)}
               onClick={() => openProduct(product.id)}
             >
-              <span>{getDisplayIndex(currentPageIndex, index)}</span>
-              <strong>{cleanTitle(product.title)}</strong>
-              <em>{cleanCategory(product.category)}</em>
+              <span className="catalog-row__index">{getDisplayIndex(currentPageIndex, index)}</span>
+              <strong className="catalog-row__title">{cleanTitle(product.title)}</strong>
+              <em className="catalog-row__meta">{cleanCategory(product.category)}</em>
             </button>
           ))}
         </div>

@@ -587,33 +587,19 @@ body {
     transform 160ms ease;
 }
 
-.catalog-row span,
-.catalog-row em,
+.catalog-row__index,
+.catalog-row__meta,
 .catalog-row small {
   color: rgba(0, 0, 0, 0.45);
   font-style: normal;
   font-weight: 400;
 }
 
-.catalog-row strong {
+.catalog-row__title {
   font-weight: 500;
   letter-spacing: -0.035em;
 }
 
-.catalog-row.is-active,
-.catalog-row:hover,
-.catalog-row:focus-visible {
-  color: #000;
-  transform: translateX(8px);
-}
-
-.catalog-row.is-active strong,
-.catalog-row:hover strong,
-.catalog-row:focus-visible strong {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
 
 .catalog-floating-preview {
   position: fixed;
@@ -667,7 +653,7 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
 
-  .catalog-row em,
+  .catalog-row__meta,
   .catalog-row small {
     grid-column: 2;
   }
@@ -697,24 +683,6 @@ body {
   transform: translateX(0);
 }
 
-.catalog-row.is-active span,
-.catalog-row.is-active em,
-.catalog-row.is-active small,
-.catalog-row:hover span,
-.catalog-row:hover em,
-.catalog-row:hover small,
-.catalog-row:focus-visible span,
-.catalog-row:focus-visible em,
-.catalog-row:focus-visible small {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.catalog-row.is-active strong,
-.catalog-row:hover strong,
-.catalog-row:focus-visible strong {
-  color: #ffffff;
-  text-decoration: none;
-}
 
 /* ===== CURSOR PRODUCT PREVIEW ===== */
 
@@ -764,7 +732,7 @@ body {
     grid-template-columns: 42px 1fr;
   }
 
-  .catalog-row em {
+  .catalog-row__meta {
     grid-column: 2;
   }
 }
@@ -999,12 +967,6 @@ body {
   color: #fff;
 }
 
-.catalog-row:hover span,
-.catalog-row:hover em,
-.catalog-row.is-active span,
-.catalog-row.is-active em {
-  color: rgba(255,255,255,0.7);
-}
 
 
 /* ===== FIX FULL WIDTH HOVER BAND ===== */
@@ -1042,21 +1004,6 @@ body {
   background: transparent !important;
 }
 
-.catalog-row.is-active,
-.catalog-row:hover,
-.catalog-row:focus-visible {
-  color: #ffffff !important;
-}
-
-.catalog-row.is-active span,
-.catalog-row.is-active em,
-.catalog-row:hover span,
-.catalog-row:hover em,
-.catalog-row:focus-visible span,
-.catalog-row:focus-visible em {
-  color: rgba(255, 255, 255, 0.76) !important;
-}
-
 /* preview image cleaner */
 .catalog-cursor-preview {
   z-index: 20;
@@ -1077,7 +1024,6 @@ body {
 
 .catalog-side {
   z-index: 25;
-  mix-blend-mode: difference;
 }
 
 .catalog-side a {
@@ -1159,15 +1105,15 @@ body {
     display: block;
   }
 
-  .catalog-row span {
+  .catalog-row__index {
     display: none;
   }
 
-  .catalog-row em {
+  .catalog-row__meta {
     display: none;
   }
 
-  .catalog-row strong {
+  .catalog-row__title {
     display: block;
     font-size: 0.75rem;
     margin-top: 6px;
@@ -1272,13 +1218,13 @@ body {
     cursor: pointer;
   }
 
-  .catalog-row span {
+  .catalog-row__index {
     display: block;
     color: rgba(0, 0, 0, 0.45);
     font-size: 0.86rem;
   }
 
-  .catalog-row strong {
+  .catalog-row__title {
     display: block;
     font-size: 1rem;
     line-height: 1;
@@ -1286,7 +1232,7 @@ body {
     letter-spacing: -0.035em;
   }
 
-  .catalog-row em {
+  .catalog-row__meta {
     display: block;
     grid-column: 2;
     margin-top: -6px;
@@ -1299,15 +1245,6 @@ body {
     display: none !important;
   }
 
-  .catalog-row.is-active {
-    background: #050505 !important;
-    color: #fff !important;
-  }
-
-  .catalog-row.is-active span,
-  .catalog-row.is-active em {
-    color: rgba(255, 255, 255, 0.7) !important;
-  }
 
   .catalog-hover-band,
   .catalog-cursor-preview {
@@ -2859,7 +2796,6 @@ body:has(.pdp) #root {
 /* effet de contraste avec le selector (blend mode) */
 .catalog-hover-band ~ .catalog-categories span,
 .catalog-hover-band ~ .catalog-categories a {
-  mix-blend-mode: difference;
   color: #000;
 }
 
@@ -2900,7 +2836,6 @@ body:has(.pdp) #root {
 
 /* effet avec selector */
 .catalog-hover-band ~ .catalog-categories a {
-  mix-blend-mode: difference;
 }
 
 /* mobile off */
@@ -3065,26 +3000,11 @@ body:has(.pdp) #root {
     color: rgba(255, 255, 255, 0.76) !important;
   }
 
-  .catalog-row span,
-  .catalog-row em {
+  .catalog-row__index,
+  .catalog-row__meta {
     color: rgba(255, 255, 255, 0.46) !important;
   }
 
-  .catalog-row.is-active,
-  .catalog-row:hover,
-  .catalog-row:focus-visible {
-    background: #ffffff !important;
-    color: #050505 !important;
-  }
-
-  .catalog-row.is-active span,
-  .catalog-row.is-active em,
-  .catalog-row:hover span,
-  .catalog-row:hover em,
-  .catalog-row:focus-visible span,
-  .catalog-row:focus-visible em {
-    color: rgba(0, 0, 0, 0.62) !important;
-  }
 
   .catalog-hover-band {
     background: #ffffff !important;
@@ -3106,634 +3026,7 @@ body:has(.pdp) #root {
   }
 }
 
-/* ===== FIX SINGLE SELECTOR + READABLE TEXT IN LIGHT/DARK ===== */
-
-/* jamais de background direct sur la ligne : seule la bande doit exister */
-.catalog-row,
-.catalog-row.is-active,
-.catalog-row:hover,
-.catalog-row:focus-visible {
-  background: transparent !important;
-}
-
-/* LIGHT MODE : sélecteur noir, texte blanc */
-.catalog-hover-band {
-  background: #050505 !important;
-}
-
-.catalog-row.is-active,
-.catalog-row:hover,
-.catalog-row:focus-visible {
-  color: #ffffff !important;
-}
-
-.catalog-row.is-active span,
-.catalog-row.is-active em,
-.catalog-row:hover span,
-.catalog-row:hover em,
-.catalog-row:focus-visible span,
-.catalog-row:focus-visible em {
-  color: rgba(255, 255, 255, 0.72) !important;
-}
-
-/* DARK MODE : sélecteur blanc, texte noir */
-@media (prefers-color-scheme: dark) {
-  .catalog-hover-band {
-    background: #ffffff !important;
-  }
-
-  .catalog-row,
-  .catalog-row.is-active,
-  .catalog-row:hover,
-  .catalog-row:focus-visible {
-    background: transparent !important;
-  }
-
-  .catalog-row.is-active,
-  .catalog-row:hover,
-  .catalog-row:focus-visible {
-    color: #050505 !important;
-  }
-
-  .catalog-row.is-active span,
-  .catalog-row.is-active em,
-  .catalog-row:hover span,
-  .catalog-row:hover em,
-  .catalog-row:focus-visible span,
-  .catalog-row:focus-visible em {
-    color: rgba(0, 0, 0, 0.62) !important;
-  }
-
-  .catalog-side {
-    mix-blend-mode: normal !important;
-  }
-}
-
-
-/* ===== TEXT COLOR INVERSION INSIDE SELECTOR ===== */
-
-/* état normal (light mode) */
-.catalog-row {
-  color: #050505;
-}
-
-.catalog-row span,
-.catalog-row em {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-/* quand la ligne est dans le selector → inversion */
-.catalog-row.is-active {
-  color: #ffffff !important;
-}
-
-.catalog-row.is-active span,
-.catalog-row.is-active em {
-  color: rgba(255, 255, 255, 0.7) !important;
-}
-
-/* ===== DARK MODE ===== */
-
-@media (prefers-color-scheme: dark) {
-  .catalog-row {
-    color: #ffffff;
-  }
-
-  .catalog-row span,
-  .catalog-row em {
-    color: rgba(255, 255, 255, 0.5);
-  }
-
-  /* inversion → texte noir sur selector blanc */
-  .catalog-row.is-active {
-    color: #050505 !important;
-  }
-
-  .catalog-row.is-active span,
-  .catalog-row.is-active em {
-    color: rgba(0, 0, 0, 0.6) !important;
-  }
-}
-
-
-/* ===== FINAL HARD FIX — SELECTOR TEXT INVERSION ===== */
-
-/* LIGHT MODE BASE */
-.catalog-row,
-.catalog-row *,
-.catalog-row strong,
-.catalog-row span,
-.catalog-row em {
-  color: #050505 !important;
-}
-
-/* LIGHT MODE ACTIVE/HOVER = TEXT WHITE */
-.catalog-row.is-active,
-.catalog-row.is-active *,
-.catalog-row.is-active strong,
-.catalog-row.is-active span,
-.catalog-row.is-active em,
-.catalog-row:hover,
-.catalog-row:hover *,
-.catalog-row:hover strong,
-.catalog-row:hover span,
-.catalog-row:hover em,
-.catalog-row:focus-visible,
-.catalog-row:focus-visible *,
-.catalog-row:focus-visible strong,
-.catalog-row:focus-visible span,
-.catalog-row:focus-visible em {
-  color: #ffffff !important;
-}
-
-/* prevent second selector/background */
-.catalog-row,
-.catalog-row.is-active,
-.catalog-row:hover,
-.catalog-row:focus-visible {
-  background: transparent !important;
-}
-
-/* DARK MODE BASE */
-@media (prefers-color-scheme: dark) {
-  .catalog-row,
-  .catalog-row *,
-  .catalog-row strong,
-  .catalog-row span,
-  .catalog-row em {
-    color: #ffffff !important;
-  }
-
-  /* DARK MODE ACTIVE/HOVER = TEXT BLACK */
-  .catalog-row.is-active,
-  .catalog-row.is-active *,
-  .catalog-row.is-active strong,
-  .catalog-row.is-active span,
-  .catalog-row.is-active em,
-  .catalog-row:hover,
-  .catalog-row:hover *,
-  .catalog-row:hover strong,
-  .catalog-row:hover span,
-  .catalog-row:hover em,
-  .catalog-row:focus-visible,
-  .catalog-row:focus-visible *,
-  .catalog-row:focus-visible strong,
-  .catalog-row:focus-visible span,
-  .catalog-row:focus-visible em {
-    color: #050505 !important;
-  }
-}
-
-
-/* ===== FIX SELECTOR Z-INDEX BEHIND TEXT ===== */
-
-.catalog-hover-band {
-  z-index: 2 !important;
-}
-
-.catalog-list,
-.catalog-row,
-.catalog-row * {
-  position: relative;
-  z-index: 5 !important;
-}
-
-/* la preview image doit rester au-dessus */
-.catalog-cursor-preview {
-  z-index: 30 !important;
-}
-
-/* panneaux latéraux au-dessus si besoin */
-.catalog-side,
-.catalog-right-panel {
-  z-index: 25 !important;
-}
-
-
-/* ===== FINAL FIX — SELECTOR BEHIND ROW TEXT ===== */
-
-/* disable old fixed selector layer */
-.catalog-hover-band {
-  display: none !important;
-}
-
-/* row becomes its own selector layer */
-.catalog-row {
-  position: relative !important;
-  isolation: isolate !important;
-  background: transparent !important;
-}
-
-/* full-width selector behind text */
-.catalog-row::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 100vw;
-  transform: translateX(-50%);
-  background: #050505;
-  opacity: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* show selector */
-.catalog-row.is-active::before,
-.catalog-row:hover::before,
-.catalog-row:focus-visible::before {
-  opacity: 1;
-}
-
-/* keep text above selector */
-.catalog-row span,
-.catalog-row strong,
-.catalog-row em {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-/* light mode active text */
-.catalog-row.is-active span,
-.catalog-row.is-active strong,
-.catalog-row.is-active em,
-.catalog-row:hover span,
-.catalog-row:hover strong,
-.catalog-row:hover em {
-  color: #ffffff !important;
-}
-
-/* dark mode */
-@media (prefers-color-scheme: dark) {
-  .catalog-row::before {
-    background: #ffffff;
-  }
-
-  .catalog-row.is-active span,
-  .catalog-row.is-active strong,
-  .catalog-row.is-active em,
-  .catalog-row:hover span,
-  .catalog-row:hover strong,
-  .catalog-row:hover em {
-    color: #050505 !important;
-  }
-}
-
-
-/* ===== FIX SELECTOR VISIBILITY (FULL WIDTH + VISIBLE) ===== */
-
-.catalog-row {
-  position: relative !important;
-  background: transparent !important;
-}
-
-/* vrai selector */
-.catalog-row::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-
-  left: calc(-50vw + 50%);
-  width: 100vw;
-
-  background: #050505;
-  opacity: 0;
-  z-index: 1;
-  pointer-events: none;
-  transition: opacity 160ms ease;
-}
-
-/* actif */
-.catalog-row.is-active::before,
-.catalog-row:hover::before,
-.catalog-row:focus-visible::before {
-  opacity: 1;
-}
-
-/* texte au-dessus */
-.catalog-row span,
-.catalog-row strong,
-.catalog-row em {
-  position: relative;
-  z-index: 2;
-}
-
-/* DARK MODE */
-@media (prefers-color-scheme: dark) {
-  .catalog-row::before {
-    background: #ffffff;
-  }
-}
-
-
-/* ===== DEFINITIVE SELECTOR FIX — FULL BLEED VIA BOX-SHADOW ===== */
-
-/* kill every previous selector layer */
-.catalog-hover-band,
-.catalog-row::before,
-.catalog-row::after {
-  display: none !important;
-  content: none !important;
-}
-
-/* row itself becomes the selector */
-.catalog-row {
-  position: relative !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  clip-path: none !important;
-  isolation: auto !important;
-}
-
-/* active selector full screen */
-.catalog-row.is-active,
-.catalog-row:hover,
-.catalog-row:focus-visible {
-  background: #050505 !important;
-  box-shadow: 0 0 0 100vmax #050505 !important;
-  clip-path: inset(0 -100vmax) !important;
-}
-
-/* text above / readable */
-.catalog-row.is-active span,
-.catalog-row.is-active strong,
-.catalog-row.is-active em,
-.catalog-row:hover span,
-.catalog-row:hover strong,
-.catalog-row:hover em,
-.catalog-row:focus-visible span,
-.catalog-row:focus-visible strong,
-.catalog-row:focus-visible em {
-  color: #ffffff !important;
-}
-
-/* dark mode inverse */
-@media (prefers-color-scheme: dark) {
-  .catalog-row.is-active,
-  .catalog-row:hover,
-  .catalog-row:focus-visible {
-    background: #ffffff !important;
-    box-shadow: 0 0 0 100vmax #ffffff !important;
-  }
-
-  .catalog-row.is-active span,
-  .catalog-row.is-active strong,
-  .catalog-row.is-active em,
-  .catalog-row:hover span,
-  .catalog-row:hover strong,
-  .catalog-row:hover em,
-  .catalog-row:focus-visible span,
-  .catalog-row:focus-visible strong,
-  .catalog-row:focus-visible em {
-    color: #050505 !important;
-  }
-}
-
-
-/* ===== ALLOW FULL-BLEED SELECTOR TO ESCAPE CONTAINERS ===== */
-
-.catalog-page--list,
-.catalog-list-panel,
-.catalog-list {
-  overflow: visible !important;
-}
-
-.catalog-row.is-active,
-.catalog-row:hover,
-.catalog-row:focus-visible {
-  box-shadow: 0 0 0 100vw #050505 !important;
-  clip-path: inset(0 -100vw) !important;
-}
-
-@media (prefers-color-scheme: dark) {
-  .catalog-row.is-active,
-  .catalog-row:hover,
-  .catalog-row:focus-visible {
-    box-shadow: 0 0 0 100vw #ffffff !important;
-    clip-path: inset(0 -100vw) !important;
-  }
-}
-
-
-/* ===== CLEAN FULL WIDTH SELECTOR (FINAL) ===== */
-
-/* reset hacks précédents */
-.catalog-row,
-.catalog-row::before,
-.catalog-row::after {
-  box-shadow: none !important;
-  clip-path: none !important;
-}
-
-/* le vrai selector */
-.catalog-hover-band {
-  position: fixed !important;
-  left: 0 !important;
-  width: 100vw !important;
-  height: 44px; /* ajuste selon ta row */
-  transform: translateY(-50%);
-  background: #050505;
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* texte au-dessus */
-.catalog-row,
-.catalog-row span,
-.catalog-row strong,
-.catalog-row em {
-  position: relative;
-  z-index: 3;
-}
-
-/* inversion texte */
-.catalog-row.is-active,
-.catalog-row:hover,
-.catalog-row:focus-visible {
-  color: #ffffff !important;
-}
-
-.catalog-row.is-active span,
-.catalog-row.is-active em,
-.catalog-row:hover span,
-.catalog-row:hover em,
-.catalog-row:focus-visible span,
-.catalog-row:focus-visible em {
-  color: rgba(255,255,255,0.7) !important;
-}
-
-/* DARK MODE */
-@media (prefers-color-scheme: dark) {
-  .catalog-hover-band {
-    background: #ffffff;
-  }
-
-  .catalog-row.is-active,
-  .catalog-row:hover,
-  .catalog-row:focus-visible {
-    color: #050505 !important;
-  }
-
-  .catalog-row.is-active span,
-  .catalog-row.is-active em,
-  .catalog-row:hover span,
-  .catalog-row:hover em,
-  .catalog-row:focus-visible span,
-  .catalog-row:focus-visible em {
-    color: rgba(0,0,0,0.6) !important;
-  }
-}
-
-
-/* ===== FINAL CLEAN SELECTOR RESET ===== */
-
-/* supprimer tous les anciens sélecteurs attachés aux lignes */
-.catalog-row,
-.catalog-row.is-active,
-.catalog-row:hover,
-.catalog-row:focus-visible {
-  background: transparent !important;
-  box-shadow: none !important;
-  clip-path: none !important;
-}
-
-.catalog-row::before,
-.catalog-row::after {
-  display: none !important;
-  content: none !important;
-}
-
-/* vrai sélecteur full viewport */
-.catalog-hover-band {
-  display: block !important;
-  position: fixed !important;
-  left: 0 !important;
-  right: 0 !important;
-  width: 100vw !important;
-  max-width: none !important;
-  height: 28px !important;
-  transform: translateY(-50%) !important;
-  background: #ffffff !important;
-  z-index: 8 !important;
-  pointer-events: none !important;
-  opacity: 0 !important;
-}
-
-.catalog-hover-band.is-visible {
-  opacity: 1 !important;
-}
-
-/* texte au-dessus du sélecteur */
-.catalog-list,
-.catalog-row,
-.catalog-row span,
-.catalog-row strong,
-.catalog-row em {
-  position: relative !important;
-  z-index: 12 !important;
-}
-
-/* dark mode : sélecteur blanc, texte noir */
-@media (prefers-color-scheme: dark) {
-  .catalog-hover-band {
-    background: #ffffff !important;
-  }
-
-  .catalog-row.is-active span,
-  .catalog-row.is-active strong,
-  .catalog-row.is-active em,
-  .catalog-row:hover span,
-  .catalog-row:hover strong,
-  .catalog-row:hover em {
-    color: #050505 !important;
-  }
-}
-
-/* light mode : sélecteur noir, texte blanc */
-@media (prefers-color-scheme: light) {
-  .catalog-hover-band {
-    background: #050505 !important;
-  }
-
-  .catalog-row.is-active span,
-  .catalog-row.is-active strong,
-  .catalog-row.is-active em,
-  .catalog-row:hover span,
-  .catalog-row:hover strong,
-  .catalog-row:hover em {
-    color: #ffffff !important;
-  }
-}
-
-
-/* ===== FINAL SELECTOR TEXT VISIBILITY — BLEND MODE ===== */
-
-/* le vrai sélecteur reste full screen */
-.catalog-hover-band {
-  display: block !important;
-  position: fixed !important;
-  left: 0 !important;
-  width: 100vw !important;
-  height: 28px !important;
-  transform: translateY(-50%) !important;
-  pointer-events: none !important;
-  z-index: 5 !important;
-}
-
-/* aucune couleur/background directement sur la ligne */
-.catalog-row,
-.catalog-row.is-active,
-.catalog-row:hover,
-.catalog-row:focus-visible {
-  background: transparent !important;
-  box-shadow: none !important;
-  clip-path: none !important;
-}
-
-/* texte au-dessus du sélecteur */
-.catalog-list,
-.catalog-row {
-  position: relative !important;
-  z-index: 20 !important;
-}
-
-/* inversion automatique : blanc sur noir, noir sur blanc */
-.catalog-row span,
-.catalog-row strong,
-.catalog-row em,
-.catalog-row.is-active span,
-.catalog-row.is-active strong,
-.catalog-row.is-active em,
-.catalog-row:hover span,
-.catalog-row:hover strong,
-.catalog-row:hover em,
-.catalog-row:focus-visible span,
-.catalog-row:focus-visible strong,
-.catalog-row:focus-visible em {
-  color: #ffffff !important;
-  mix-blend-mode: difference !important;
-  position: relative !important;
-  z-index: 30 !important;
-}
-
-/* light mode = bande noire */
-@media (prefers-color-scheme: light) {
-  .catalog-hover-band {
-    background: #050505 !important;
-  }
-}
-
-/* dark mode = bande blanche */
-@media (prefers-color-scheme: dark) {
-  .catalog-hover-band {
-    background: #ffffff !important;
-  }
-}
-
-
-/* ===== FINAL Z-INDEX FIX: TEXT ABOVE FULL WIDTH SELECTOR ===== */
+/* ===== MOM-346 CANONICAL CATALOG FOREGROUND SYSTEM ===== */
 
 .catalog-page--list {
   position: relative !important;
@@ -3741,55 +3034,73 @@ body:has(.pdp) #root {
 }
 
 .catalog-hover-band {
-  z-index: 2 !important;
+  display: block !important;
+  position: fixed !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 28px !important;
+  transform: translateY(-50%) !important;
+  pointer-events: none !important;
+  background: #050505 !important;
+  z-index: 8 !important;
+  opacity: 0 !important;
+}
+
+.catalog-hover-band.is-visible {
+  opacity: 1 !important;
+}
+
+.catalog-list-panel,
+.catalog-list,
+.catalog-row {
+  position: relative !important;
 }
 
 .catalog-list-panel {
-  position: relative !important;
   z-index: 10 !important;
 }
 
 .catalog-list {
-  position: relative !important;
   z-index: 20 !important;
 }
 
-.catalog-row,
-.catalog-row span,
-.catalog-row strong,
-.catalog-row em {
+.catalog-row {
+  z-index: 25 !important;
+  background: transparent !important;
+}
+
+.catalog-row__index,
+.catalog-row__title,
+.catalog-row__meta {
   position: relative !important;
   z-index: 30 !important;
+  color: #ffffff !important;
   mix-blend-mode: normal !important;
 }
 
-/* texte actif lisible */
-.catalog-row.is-active span,
-.catalog-row.is-active strong,
-.catalog-row.is-active em,
-.catalog-row:hover span,
-.catalog-row:hover strong,
-.catalog-row:hover em {
+.catalog-row.is-active .catalog-row__index,
+.catalog-row.is-active .catalog-row__title,
+.catalog-row.is-active .catalog-row__meta,
+.catalog-row:hover .catalog-row__index,
+.catalog-row:hover .catalog-row__title,
+.catalog-row:hover .catalog-row__meta,
+.catalog-row:focus-visible .catalog-row__index,
+.catalog-row:focus-visible .catalog-row__title,
+.catalog-row:focus-visible .catalog-row__meta {
   color: #ffffff !important;
+  mix-blend-mode: difference !important;
 }
 
 @media (prefers-color-scheme: dark) {
-  .catalog-row.is-active span,
-  .catalog-row.is-active strong,
-  .catalog-row.is-active em,
-  .catalog-row:hover span,
-  .catalog-row:hover strong,
-  .catalog-row:hover em {
-    color: #050505 !important;
+  .catalog-hover-band {
+    background: #ffffff !important;
   }
 }
 
-/* preview image au-dessus du reste */
 .catalog-cursor-preview {
   z-index: 60 !important;
 }
 
-/* panels latéraux */
 .catalog-side,
 .catalog-right-panel {
   z-index: 40 !important;
@@ -3950,7 +3261,7 @@ body:has(.pdp) #root {
 
 /* ===== RESET PRODUCT CATEGORY POSITION ===== */
 
-.catalog-row em {
+.catalog-row__meta {
   position: absolute !important;
   right: 20px !important; /* aligné avec le header */
   top: 50% !important;
@@ -3962,14 +3273,14 @@ body:has(.pdp) #root {
 
 /* desktop ajustement fin */
 @media (min-width: 1024px) {
-  .catalog-row em {
+  .catalog-row__meta {
     right: 32px !important;
   }
 }
 
 /* mobile fallback */
 @media (max-width: 820px) {
-  .catalog-row em {
+  .catalog-row__meta {
     position: static !important;
     transform: none !important;
     margin-left: auto;
@@ -4060,7 +3371,7 @@ body:has(.pdp) #root {
   align-items: center !important;
 }
 
-.catalog-row em {
+.catalog-row__meta {
   position: relative !important;
   grid-column: 3 !important;
   justify-self: end !important;
@@ -4081,7 +3392,7 @@ body:has(.pdp) #root {
     grid-template-columns: 42px 1fr !important;
   }
 
-  .catalog-row em {
+  .catalog-row__meta {
     grid-column: 2 !important;
     justify-self: start !important;
   }
@@ -5059,157 +4370,6 @@ body:has(.pdp) #root {
   }
 }
 
-/* ===== SIDE PANELS TEXT ALWAYS VISIBLE (BLEND MODE) ===== */
-
-/* panneau gauche (catégories) */
-.catalog-side,
-.catalog-side a {
-  mix-blend-mode: difference;
-  color: #ffffff; /* base pour inversion */
-}
-
-/* panneau droit (infos produit) */
-.catalog-right-panel,
-.catalog-right-panel * {
-  mix-blend-mode: difference;
-  color: #ffffff;
-}
-
-/* évite bugs d’empilement */
-.catalog-side,
-.catalog-right-panel {
-  position: relative;
-  z-index: 40;
-}
-
-/* important : ne PAS appliquer au reste */
-.catalog-list,
-.catalog-row {
-  mix-blend-mode: normal !important;
-}
-
-
-/* ===== FIX SIDE PANELS BLEND WITHOUT MOVING LAYOUT ===== */
-
-/* restore fixed positions */
-.catalog-side {
-  position: fixed !important;
-  left: clamp(20px, 5vw, 80px) !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  z-index: 80 !important;
-}
-
-.catalog-right-panel {
-  position: fixed !important;
-  right: clamp(24px, 5vw, 86px) !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  z-index: 80 !important;
-}
-
-/* blend mode only on text, not container layout */
-.catalog-side a,
-.catalog-right-panel span,
-.catalog-right-panel strong,
-.catalog-right-panel em,
-.catalog-right-panel p {
-  mix-blend-mode: difference !important;
-  color: #ffffff !important;
-}
-
-/* keep containers normal */
-.catalog-side,
-.catalog-right-panel {
-  mix-blend-mode: normal !important;
-}
-
-/* mobile fallback */
-@media (max-width: 820px) {
-  .catalog-side {
-    position: sticky !important;
-    top: 48px !important;
-    transform: none !important;
-    left: auto !important;
-  }
-
-  .catalog-right-panel {
-    display: none !important;
-  }
-}
-
-
-/* ===== LEFT CATEGORIES Z-INDEX ABOVE SELECTOR ===== */
-
-.catalog-hover-band {
-  z-index: 10 !important;
-}
-
-.catalog-side {
-  z-index: 120 !important;
-  isolation: isolate !important;
-}
-
-.catalog-side a {
-  position: relative !important;
-  z-index: 121 !important;
-  mix-blend-mode: difference !important;
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
-
-.catalog-right-panel {
-  z-index: 120 !important;
-}
-
-.catalog-right-panel * {
-  position: relative !important;
-  z-index: 121 !important;
-}
-
-
-.catalog-side {
-  isolation: auto !important;
-}
-
-
-/* ===== FORCE LEFT CATEGORIES DIFFERENCE BLEND ===== */
-
-.catalog-side {
-  mix-blend-mode: difference !important;
-  color: #ffffff !important;
-  z-index: 9999 !important;
-}
-
-.catalog-side a,
-.catalog-side a:first-child {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-  mix-blend-mode: normal !important;
-}
-
-.catalog-hover-band {
-  z-index: 10 !important;
-}
-
-
-/* ===== FORCE RIGHT PANEL DIFFERENCE BLEND ===== */
-
-.catalog-right-panel {
-  mix-blend-mode: difference !important;
-  color: #ffffff !important;
-  z-index: 9999 !important;
-}
-
-.catalog-right-panel span,
-.catalog-right-panel strong,
-.catalog-right-panel em,
-.catalog-right-panel p {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-  mix-blend-mode: normal !important;
-}
-
 
 /* ===== REMOVE BLACK BAND ON PRODUCT PAGE ===== */
 
@@ -5503,23 +4663,12 @@ body.route-home .pdp-back {
   }
 
   .catalog-row,
-  .catalog-row span,
-  .catalog-row strong,
-  .catalog-row em {
+  .catalog-row__index,
+  .catalog-row__title,
+  .catalog-row__meta {
     color: #050505 !important;
   }
 
-  .catalog-row.is-active span,
-  .catalog-row.is-active strong,
-  .catalog-row.is-active em,
-  .catalog-row:hover span,
-  .catalog-row:hover strong,
-  .catalog-row:hover em,
-  .catalog-row:focus-visible span,
-  .catalog-row:focus-visible strong,
-  .catalog-row:focus-visible em {
-    color: #ffffff !important;
-  }
 
   .catalog-side,
   .catalog-side a,
@@ -5893,21 +5042,6 @@ body.route-home .pdp-back {
   content: none !important;
 }
 
-/* Fix invisible first/active product row */
-.catalog-row,
-.catalog-row span,
-.catalog-row strong,
-.catalog-row em,
-.catalog-row.is-active,
-.catalog-row.is-active span,
-.catalog-row.is-active strong,
-.catalog-row.is-active em,
-.catalog-row:first-child,
-.catalog-row:first-child span,
-.catalog-row:first-child strong,
-.catalog-row:first-child em {
-  color: rgba(255,255,255,0.92) !important;
-}
 
 .catalog-row:not(.is-active) {
   opacity: 0.86 !important;
