@@ -17,7 +17,24 @@ const sortOptions = [
 ];
 
 const DEBOUNCE_MS = 200;
-const PAGE_SIZE = 24;
+const PAGE_SIZE = 15;
+const MAX_SEARCH_SUGGESTIONS = 6;
+
+const brandDefinitions = [
+  { label: "Louis Vuitton", patterns: [/\blv\b/i, /louis\s+vuitton/i] },
+  { label: "Canada Goose", patterns: [/canada\s+goose/i, /\bgoose\b/i] },
+  { label: "Audemars Piguet", patterns: [/audemars\s+piguet/i, /\bap\b/i, /royal\s+oak/i] },
+  { label: "Richard Mille", patterns: [/richard\s+mille/i, /\brm\s*\d+/i] },
+  { label: "Patek Philippe", patterns: [/patek\s+philippe/i, /nautilus/i, /calatrava/i] },
+  { label: "Rolex", patterns: [/rolex/i, /daytona/i, /datejust/i, /submariner/i] },
+  { label: "Omega", patterns: [/omega/i, /speedmaster/i, /seamaster/i] },
+  { label: "Hublot", patterns: [/hublot/i, /big\s+bang/i] },
+  { label: "Tudor", patterns: [/tudor/i, /pelagos/i] },
+  { label: "Chanel", patterns: [/chanel/i] },
+  { label: "Dior", patterns: [/dior/i] },
+  { label: "Prada", patterns: [/prada/i] },
+  { label: "Saint Laurent", patterns: [/\bysl\b/i, /saint\s+laurent/i] },
+];
 
 const categoryTokens = {
   watches: [
@@ -117,15 +134,64 @@ function cleanCategory(category = "") {
   return cleaned || "curated";
 }
 
+function formatLabel(text = "") {
+  return text
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+    .join(" ");
+}
+
+function getCategoryParts(category = "") {
+  return cleanCategory(category)
+    .split("/")
+    .map((part) => part.trim())
+    .filter(Boolean);
+}
+
+function inferBrandLabel(product = {}) {
+  const haystack = [product.title, product.category, product.brand].filter(Boolean).join(" ");
+  const matchedBrand = brandDefinitions.find(({ patterns }) => patterns.some((pattern) => pattern.test(haystack)));
+
+  if (matchedBrand) {
+    return matchedBrand.label;
+  }
+
+  const [categoryStem] = getCategoryParts(product.category);
+  if (categoryStem && categoryStem.toLowerCase() !== "uncategorized") {
+    return formatLabel(categoryStem);
+  }
+
+  return cleanTitle(product.title);
+}
+
+function inferCollectionLabel(product = {}) {
+  const categoryParts = getCategoryParts(product.category);
+
+  if (categoryParts.length > 1) {
+    return formatLabel(categoryParts[1]);
+  }
+
+  if (categoryParts[0] && categoryParts[0].toLowerCase() !== "uncategorized") {
+    return formatLabel(categoryParts[0]);
+  }
+
+  return "Curated selection";
+}
+
 function searchTokens(query = "") {
   return normalizeSearchText(query).split(" ").filter(Boolean);
 }
 
 function getProductSearchFields(product = {}) {
+  const brandLabel = inferBrandLabel(product);
+  const collectionLabel = inferCollectionLabel(product);
+
   return {
     title: normalizeSearchText(product.title),
     category: normalizeSearchText(product.category),
-    brand: normalizeSearchText(product.brand),
+    brand: normalizeSearchText(product.brand || brandLabel),
+    collection: normalizeSearchText(collectionLabel),
   };
 }
 
@@ -136,6 +202,8 @@ function productSearchText(product = {}) {
     product.brand,
     product.name,
     product.sku,
+    inferBrandLabel(product),
+    inferCollectionLabel(product),
     ...(Array.isArray(product.tags) ? product.tags : []),
   ]
     .map(normalizeSearchText)
@@ -153,7 +221,7 @@ function matchesQuery(product, queryTokens) {
   if (!queryTokens.length) return true;
 
   const fields = getProductSearchFields(product);
-  const merged = [fields.title, fields.category, fields.brand].filter(Boolean).join(" ");
+  const merged = [fields.title, fields.category, fields.brand, fields.collection].filter(Boolean).join(" ");
   return queryTokens.every((token) => merged.includes(token));
 }
 
@@ -161,12 +229,13 @@ function computeRelevance(product, queryTokens) {
   if (!queryTokens.length) return 0;
 
   const fields = getProductSearchFields(product);
-  const merged = [fields.title, fields.category, fields.brand].filter(Boolean).join(" ");
+  const merged = [fields.title, fields.category, fields.brand, fields.collection].filter(Boolean).join(" ");
 
   return queryTokens.reduce((score, token) => {
     if (!merged.includes(token)) return score;
     if (fields.title.includes(token)) return score + 5;
     if (fields.brand.includes(token)) return score + 3;
+    if (fields.collection.includes(token)) return score + 2;
     return score + 2;
   }, 0);
 }
@@ -200,6 +269,8 @@ function ProductGrid() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const [highlightedSuggestionIndex, setHighlightedSuggestionIndex] = useState(-1);
   const [sortBy, setSortBy] = useState("relevance");
   const [pageIndex, setPageIndex] = useState(0);
   const [activeProductId, setActiveProductId] = useState(null);
@@ -253,6 +324,48 @@ function ProductGrid() {
   const activeProductIndex = Math.max(0, visibleProducts.findIndex((product) => product.id === activeProduct?.id));
 
   const activeImage = activeProduct?.images?.[0] || activeProduct?.image || "";
+  const activeBrandLabel = activeProduct ? inferBrandLabel(activeProduct) : "";
+  const activeCollectionLabel = activeProduct ? inferCollectionLabel(activeProduct) : "";
+  const searchSuggestions = useMemo(() => {
+    const normalizedQuery = normalizeSearchText(searchQuery);
+
+    if (!normalizedQuery) {
+      return [];
+    }
+
+    const rankedSuggestions = new Map();
+
+    for (const product of categoryFilteredProducts) {
+      const labels = [
+        cleanTitle(product.title),
+        inferBrandLabel(product),
+        inferCollectionLabel(product),
+      ];
+
+      for (const label of labels) {
+        const normalizedLabel = normalizeSearchText(label);
+        if (!normalizedLabel || !normalizedLabel.includes(normalizedQuery)) {
+          continue;
+        }
+
+        const currentRank = rankedSuggestions.get(label) ?? Number.POSITIVE_INFINITY;
+        const nextRank = normalizedLabel.startsWith(normalizedQuery) ? 0 : 1;
+        rankedSuggestions.set(label, Math.min(currentRank, nextRank));
+      }
+    }
+
+    return [...rankedSuggestions.entries()]
+      .sort((left, right) => {
+        if (left[1] !== right[1]) {
+          return left[1] - right[1];
+        }
+
+        return left[0].localeCompare(right[0]);
+      })
+      .slice(0, MAX_SEARCH_SUGGESTIONS)
+      .map(([label]) => label);
+  }, [categoryFilteredProducts, searchQuery]);
+  const showSearchSuggestions = isSearchFocused && searchSuggestions.length > 0;
 
   function resetInteractionState() {
     setActiveProductId(null);
@@ -260,10 +373,24 @@ function ProductGrid() {
     setCursor((current) => ({ ...current, visible: false }));
   }
 
+  function commitSearch(nextQuery = searchQuery) {
+    setSearchQuery(nextQuery);
+    setDebouncedQuery(nextQuery);
+    setPageIndex(0);
+    setHighlightedSuggestionIndex(-1);
+    resetInteractionState();
+  }
+
+  function selectSuggestion(suggestion) {
+    commitSearch(suggestion);
+    setIsSearchFocused(false);
+  }
+
   function clearFilters() {
     setActiveCategory("all");
     setSearchQuery("");
     setDebouncedQuery("");
+    setHighlightedSuggestionIndex(-1);
     setSortBy("relevance");
     setPageIndex(0);
     resetInteractionState();
@@ -309,6 +436,7 @@ function ProductGrid() {
             key={category.value}
             type="button"
             className={activeCategory === category.value ? "is-active" : undefined}
+            aria-pressed={activeCategory === category.value}
             onClick={() => {
               setActiveCategory(category.value);
               setPageIndex(0);
@@ -323,21 +451,89 @@ function ProductGrid() {
       <section className="catalog-list-panel">
         <div className="catalog-list-panel__bg">{activeImage ? <img key={activeProduct?.id} src={activeImage} alt="" /> : null}</div>
 
-        <header className="catalog-toolbar">
+        <form
+          className="catalog-toolbar"
+          onSubmit={(event) => {
+            event.preventDefault();
+            const fallbackSuggestion = searchSuggestions[0];
+            const nextQuery =
+              showSearchSuggestions && highlightedSuggestionIndex >= 0
+                ? searchSuggestions[highlightedSuggestionIndex]
+                : searchQuery || fallbackSuggestion || "";
+
+            commitSearch(nextQuery);
+            setIsSearchFocused(false);
+          }}
+        >
           <label className="catalog-toolbar__search" htmlFor="catalog-search-input">
             <span>Search</span>
             <input
               id="catalog-search-input"
               type="search"
               value={searchQuery}
+              onFocus={() => setIsSearchFocused(true)}
+              onBlur={() => {
+                window.setTimeout(() => {
+                  setIsSearchFocused(false);
+                  setHighlightedSuggestionIndex(-1);
+                }, 120);
+              }}
               onChange={(event) => {
                 setSearchQuery(event.target.value);
                 setPageIndex(0);
+                setHighlightedSuggestionIndex(0);
                 resetInteractionState();
+              }}
+              onKeyDown={(event) => {
+                if (event.key === "ArrowDown" && searchSuggestions.length) {
+                  event.preventDefault();
+                  setIsSearchFocused(true);
+                  setHighlightedSuggestionIndex((current) => (current + 1) % searchSuggestions.length);
+                }
+
+                if (event.key === "ArrowUp" && searchSuggestions.length) {
+                  event.preventDefault();
+                  setIsSearchFocused(true);
+                  setHighlightedSuggestionIndex((current) =>
+                    current <= 0 ? searchSuggestions.length - 1 : current - 1,
+                  );
+                }
+
+                if (event.key === "Escape") {
+                  setIsSearchFocused(false);
+                  setHighlightedSuggestionIndex(-1);
+                }
               }}
               placeholder="Search title, category, brand"
               autoComplete="off"
+              aria-autocomplete="list"
+              aria-controls="catalog-search-suggestions"
+              aria-expanded={showSearchSuggestions}
+              aria-activedescendant={
+                showSearchSuggestions && highlightedSuggestionIndex >= 0
+                  ? `catalog-search-suggestion-${highlightedSuggestionIndex}`
+                  : undefined
+              }
             />
+            {showSearchSuggestions ? (
+              <div className="catalog-search-suggestions" id="catalog-search-suggestions" role="listbox">
+                {searchSuggestions.map((suggestion, index) => (
+                  <button
+                    key={suggestion}
+                    id={`catalog-search-suggestion-${index}`}
+                    type="button"
+                    role="option"
+                    className={index === highlightedSuggestionIndex ? "is-highlighted" : undefined}
+                    aria-selected={index === highlightedSuggestionIndex}
+                    onMouseDown={(event) => event.preventDefault()}
+                    onMouseEnter={() => setHighlightedSuggestionIndex(index)}
+                    onClick={() => selectSuggestion(suggestion)}
+                  >
+                    {suggestion}
+                  </button>
+                ))}
+              </div>
+            ) : null}
           </label>
           <label className="catalog-toolbar__sort" htmlFor="catalog-sort-select">
             <span>Sort</span>
@@ -357,7 +553,7 @@ function ProductGrid() {
               ))}
             </select>
           </label>
-        </header>
+        </form>
 
         <div className="catalog-results-meta">
           <p>{`${totalResults} result${totalResults === 1 ? "" : "s"}`}</p>
@@ -398,7 +594,7 @@ function ProductGrid() {
             >
               <span className="catalog-row__index">{getDisplayIndex(currentPageIndex, index)}</span>
               <strong className="catalog-row__title">{cleanTitle(product.title)}</strong>
-              <em className="catalog-row__meta">{cleanCategory(product.category)}</em>
+              <em className="catalog-row__meta">{inferBrandLabel(product)}</em>
             </button>
           ))}
         </div>
@@ -433,8 +629,8 @@ function ProductGrid() {
       <aside className="catalog-right-panel" aria-label="Active product details">
         <span>{String(activeProductIndex + 1).padStart(3, "0")}</span>
         <strong>{cleanTitle(activeProduct?.title)}</strong>
-        <em>{cleanCategory(activeProduct?.category)}</em>
-        <p>Hover selection / click to open product view</p>
+        <em>{activeBrandLabel}</em>
+        <p>{activeCollectionLabel}</p>
       </aside>
 
       <div
