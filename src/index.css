@@ -4530,26 +4530,37 @@ body.route-home .pdp-back {
 .catalog-page--list {
   position: relative !important;
   isolation: isolate !important;
-  --catalog-panel-bg: rgba(255, 255, 255, 0.84);
-  --catalog-panel-border: rgba(5, 5, 5, 0.08);
-  --catalog-row-text: rgba(5, 5, 5, 0.74);
-  --catalog-row-muted: rgba(5, 5, 5, 0.46);
+  --catalog-page-bg: #ffffff;
+  --catalog-panel-bg: rgba(255, 255, 255, 0.96);
+  --catalog-panel-border: rgba(5, 5, 5, 0.12);
+  --catalog-panel-shadow: 0 24px 60px rgba(5, 5, 5, 0.07);
+  --catalog-bg-image-opacity: 0.1;
+  --catalog-row-text: rgba(5, 5, 5, 0.9);
+  --catalog-row-muted: rgba(5, 5, 5, 0.62);
   --catalog-row-title: #050505;
-  --catalog-row-active-text: #ffffff;
+  --catalog-row-active-source: #ffffff;
   --catalog-band-bg: #050505;
-  --catalog-side-text: rgba(5, 5, 5, 0.42);
+  --catalog-side-text: rgba(5, 5, 5, 0.62);
   --catalog-side-active: #050505;
-  --catalog-side-hover: rgba(5, 5, 5, 0.68);
-  --catalog-panel-text: rgba(5, 5, 5, 0.58);
+  --catalog-side-hover: rgba(5, 5, 5, 0.86);
+  --catalog-panel-text: rgba(5, 5, 5, 0.72);
   --catalog-panel-strong: #050505;
-  --catalog-search-border: rgba(5, 5, 5, 0.2);
-  --catalog-search-placeholder: rgba(5, 5, 5, 0.42);
+  --catalog-search-border: rgba(5, 5, 5, 0.3);
+  --catalog-search-placeholder: rgba(5, 5, 5, 0.56);
+  --catalog-pagination-text: rgba(5, 5, 5, 0.58);
+  background: var(--catalog-page-bg) !important;
+  color: var(--catalog-row-title) !important;
 }
 
 .catalog-list-panel {
   background: var(--catalog-panel-bg) !important;
   border-color: var(--catalog-panel-border) !important;
+  box-shadow: var(--catalog-panel-shadow) !important;
   z-index: 10 !important;
+}
+
+.catalog-list-panel__bg {
+  opacity: var(--catalog-bg-image-opacity) !important;
 }
 
 .catalog-list {
@@ -4604,7 +4615,7 @@ body.route-home .pdp-back {
   padding: 5px 8px !important;
   background: transparent !important;
   color: var(--catalog-row-text) !important;
-  opacity: 0.76;
+  opacity: 1;
   transition:
     color 160ms ease,
     opacity 160ms ease !important;
@@ -4617,6 +4628,9 @@ body.route-home .pdp-back {
   position: relative !important;
   z-index: 30 !important;
   mix-blend-mode: normal !important;
+  transition:
+    color 140ms ease,
+    mix-blend-mode 140ms ease !important;
 }
 
 .catalog-row__index,
@@ -4638,7 +4652,7 @@ body.route-home .pdp-back {
 .catalog-row.is-active,
 .catalog-row:focus-visible {
   opacity: 1 !important;
-  color: var(--catalog-row-active-text) !important;
+  color: var(--catalog-row-title) !important;
   transform: none !important;
   outline: none;
 }
@@ -4652,7 +4666,8 @@ body.route-home .pdp-back {
 .catalog-row:focus-visible .catalog-row__index,
 .catalog-row:focus-visible .catalog-row__title,
 .catalog-row:focus-visible .catalog-row__meta {
-  color: var(--catalog-row-active-text) !important;
+  color: var(--catalog-row-active-source) !important;
+  mix-blend-mode: difference !important;
 }
 
 .catalog-right-panel {
@@ -4757,8 +4772,8 @@ body.route-home .pdp-back {
 }
 
 .catalog-pagination {
-  color: var(--catalog-row-muted) !important;
-  opacity: 0.82 !important;
+  color: var(--catalog-pagination-text) !important;
+  opacity: 1 !important;
 }
 
 .catalog-pagination button {
@@ -4767,20 +4782,24 @@ body.route-home .pdp-back {
 
 @media (prefers-color-scheme: dark) {
   .catalog-page--list {
-    --catalog-panel-bg: rgba(5, 5, 5, 0.8);
-    --catalog-panel-border: rgba(255, 255, 255, 0.12);
-    --catalog-row-text: rgba(255, 255, 255, 0.78);
-    --catalog-row-muted: rgba(255, 255, 255, 0.46);
+    --catalog-page-bg: #050505;
+    --catalog-panel-bg: rgba(5, 5, 5, 0.94);
+    --catalog-panel-border: rgba(255, 255, 255, 0.16);
+    --catalog-panel-shadow: 0 28px 72px rgba(0, 0, 0, 0.34);
+    --catalog-bg-image-opacity: 0.14;
+    --catalog-row-text: rgba(255, 255, 255, 0.88);
+    --catalog-row-muted: rgba(255, 255, 255, 0.6);
     --catalog-row-title: #ffffff;
-    --catalog-row-active-text: #050505;
+    --catalog-row-active-source: #ffffff;
     --catalog-band-bg: #ffffff;
-    --catalog-side-text: rgba(255, 255, 255, 0.44);
+    --catalog-side-text: rgba(255, 255, 255, 0.64);
     --catalog-side-active: #ffffff;
-    --catalog-side-hover: rgba(255, 255, 255, 0.74);
-    --catalog-panel-text: rgba(255, 255, 255, 0.56);
+    --catalog-side-hover: rgba(255, 255, 255, 0.9);
+    --catalog-panel-text: rgba(255, 255, 255, 0.72);
     --catalog-panel-strong: #ffffff;
-    --catalog-search-border: rgba(255, 255, 255, 0.24);
-    --catalog-search-placeholder: rgba(255, 255, 255, 0.4);
+    --catalog-search-border: rgba(255, 255, 255, 0.3);
+    --catalog-search-placeholder: rgba(255, 255, 255, 0.56);
+    --catalog-pagination-text: rgba(255, 255, 255, 0.62);
   }
 
   .catalog-search-suggestions {
@@ -4862,10 +4881,10 @@ body.route-home .pdp-back {
   min-width: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
-  color: rgba(255,255,255,0.45) !important;
+  color: var(--catalog-pagination-text) !important;
   font-size: 0.52rem !important;
   line-height: 1 !important;
-  opacity: 0.56 !important;
+  opacity: 1 !important;
 }
 
 .catalog-pagination button {

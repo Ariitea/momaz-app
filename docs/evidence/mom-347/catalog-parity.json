@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-05-07T15:07:59.830Z",
+  "capturedAt": "2026-05-07T15:20:37.936Z",
   "baseUrl": "http://127.0.0.1:4173/",
   "desktopViewport": {
     "width": 1600,
@@ -15,16 +15,62 @@
           },
           {
             "label": "watches",
-            "color": "rgba(5, 5, 5, 0.42)"
+            "color": "rgba(5, 5, 5, 0.62)"
           },
           {
             "label": "bags",
-            "color": "rgba(5, 5, 5, 0.42)"
+            "color": "rgba(5, 5, 5, 0.62)"
           }
         ],
         "active": {
           "label": "all",
           "color": "rgb(5, 5, 5)"
+        }
+      },
+      "pagination": {
+        "visibleRows": 15,
+        "label": "01 / 128"
+      }
+    },
+    "hover": {
+      "row": {
+        "label": "CANADA GOOSE",
+        "color": "rgb(5, 5, 5)",
+        "indexColor": "rgb(255, 255, 255)",
+        "titleColor": "rgb(255, 255, 255)",
+        "metaColor": "rgb(255, 255, 255)"
+      },
+      "hoverBand": {
+        "visibleClass": true,
+        "background": "rgb(5, 5, 5)",
+        "height": "32px"
+      }
+    },
+    "search": {
+      "suggestions": [],
+      "expanded": "false"
+    }
+  },
+  "dark": {
+    "baseline": {
+      "rail": {
+        "sample": [
+          {
+            "label": "all",
+            "color": "rgb(255, 255, 255)"
+          },
+          {
+            "label": "watches",
+            "color": "rgba(255, 255, 255, 0.64)"
+          },
+          {
+            "label": "bags",
+            "color": "rgba(255, 255, 255, 0.64)"
+          }
+        ],
+        "active": {
+          "label": "all",
+          "color": "rgb(255, 255, 255)"
         }
       },
       "pagination": {
@@ -42,58 +88,6 @@
       },
       "hoverBand": {
         "visibleClass": true,
-        "background": "rgb(5, 5, 5)",
-        "height": "32px"
-      }
-    },
-    "search": {
-      "suggestions": [
-        "Louis Vuitton",
-        "Louis vuitton 2 24 autumn an…",
-        "Louis Vuitton 2 24 embroider…",
-        "Louis vuitton 2 24 monogram…",
-        "Louis Vuitton 24ss Blurry Mo…",
-        "Louis Vuitton monogram print…"
-      ]
-    }
-  },
-  "dark": {
-    "baseline": {
-      "rail": {
-        "sample": [
-          {
-            "label": "all",
-            "color": "rgb(255, 255, 255)"
-          },
-          {
-            "label": "watches",
-            "color": "rgba(255, 255, 255, 0.44)"
-          },
-          {
-            "label": "bags",
-            "color": "rgba(255, 255, 255, 0.44)"
-          }
-        ],
-        "active": {
-          "label": "all",
-          "color": "rgb(255, 255, 255)"
-        }
-      },
-      "pagination": {
-        "visibleRows": 15,
-        "label": "01 / 128"
-      }
-    },
-    "hover": {
-      "row": {
-        "label": "CANADA GOOSE",
-        "color": "rgba(5, 5, 5, 1)",
-        "indexColor": "rgb(5, 5, 5)",
-        "titleColor": "rgb(5, 5, 5)",
-        "metaColor": "rgb(5, 5, 5)"
-      },
-      "hoverBand": {
-        "visibleClass": true,
         "background": "rgb(255, 255, 255)",
         "height": "32px"
       }
@@ -106,7 +100,8 @@
         "Louis vuitton 2 24 monogram…",
         "Louis Vuitton 24ss Blurry Mo…",
         "Louis Vuitton monogram print…"
-      ]
+      ],
+      "expanded": "true"
     }
   }
 }
